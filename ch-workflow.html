@@ -192,10 +192,11 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-workflow.html" class="internal"><span class="codenumber">3</span> <span class="title">Codespace Workflow</span></a></div>
 <ul class="structural toc-item-list active">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-workflow.html#sec-build-and-generate" class="internal"><span class="codenumber">3.1</span> <span class="title">Build and Generate</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-workflow.html#sec-previewing" class="internal"><span class="codenumber">3.2</span> <span class="title">Previewing</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-workflow.html#sec-saving" class="internal"><span class="codenumber">3.3</span> <span class="title">Saving your work</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-workflow.html#sec-deploy" class="internal"><span class="codenumber">3.4</span> <span class="title">Deploy</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-workflow.html#sec-prerequisites" class="internal"><span class="codenumber">3.1</span> <span class="title">Prerequisites</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-workflow.html#sec-build" class="internal"><span class="codenumber">3.2</span> <span class="title">Build</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-workflow.html#sec-previewing" class="internal"><span class="codenumber">3.3</span> <span class="title">Previewing</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-workflow.html#sec-saving" class="internal"><span class="codenumber">3.4</span> <span class="title">Saving your work</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-workflow.html#sec-deploy" class="internal"><span class="codenumber">3.5</span> <span class="title">Deploy</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -246,49 +247,51 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-workflow"><h2 class="heading">
 <span class="type">Chapter</span><span class="space"> </span><span class="codenumber">3</span><span class="space"> </span><span class="title">Codespace Workflow</span>
 </h2>
-<section class="introduction" id="ch-workflow-2"><div class="para" id="ch-workflow-2-1">Once you create content in PreTeXt, it is time to <dfn class="terminology">build</dfn> it, perhaps <dfn class="terminology">generate assets</dfn> (if your project has such assets), <dfn class="terminology">view</dfn> the result to make sure it looks good, and when you are ready, <dfn class="terminology">deploy</dfn> your web output to a live webpage for others to marvel at.</div>
-<div class="para" id="ch-workflow-2-2">In this chapter we will walk through the steps to do this inside a codespace environment.</div></section><section class="section" id="sec-build-and-generate"><h3 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.1</span><span class="space"> </span><span class="title">Build and Generate</span>
+<section class="introduction" id="ch-workflow-2"><div class="para" id="ch-workflow-2-1">Once you create content in PreTeXt, it is time to <dfn class="terminology">build</dfn> it, <dfn class="terminology">view</dfn> the result to make sure it looks good, and when you are ready, <dfn class="terminology">deploy</dfn> your web output to a live webpage for others to marvel at.</div>
+<div class="para" id="ch-workflow-2-2">In this chapter we will walk through the steps to do this inside a codespace environment.</div></section><section class="section" id="sec-prerequisites"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.1</span><span class="space"> </span><span class="title">Prerequisites</span>
 </h3>
-<div class="para logical" id="sec-build-and-generate-2">
-<div class="para">Inside the VS Code window you opened through codespaces, have a <code class="code-inline tex2jax_ignore">.ptx</code> file open.  You can build your entire project in a few different ways.</div>
-<ul class="disc" id="sec-build-and-generate-2-2">
-<li id="sec-build-and-generate-2-2-1"><div class="para" id="sec-build-and-generate-2-2-1-1">Click the “PreTeXt” button in the VS Code status bar (just left of center on the bottom of the window), or use the keyboard shortcut <code class="code-inline tex2jax_ignore">CTRL+ALT+p</code>, to bring up the PreTeXt Commands menu.  Select “Build” from the menu.  This will bring up a list of build targets.  Select “web” from the list.  This will build your entire project, and put the output in the <code class="code-inline tex2jax_ignore">build/web</code> folder.</div></li>
-<li id="sec-build-and-generate-2-2-2"><div class="para" id="sec-build-and-generate-2-2-2-1">You can type <code class="code-inline tex2jax_ignore">pretext build web</code> from the terminal (this uses the CLI directly).  If you don’t see a terminal window at the bottom of the screen, you can open it with <code class="code-inline tex2jax_ignore">CTRL+`</code>.</div></li>
-<li id="sec-build-and-generate-2-2-3"><div class="para" id="sec-build-and-generate-2-2-3-1">You can use the keyboard shortcut <code class="code-inline tex2jax_ignore">CTRL+ALT+b</code>.  This will build the project using the last build target you used.  If you haven’t built yet, it will use the default build target, which is “web”.</div></li>
+<div class="para logical" id="sec-prerequisites-2">
+<div class="para">In this chapter we assume you are working in a GitHub Codespaces, and have already initialized a PreTeXt project there.  A few notes:</div>
+<ul class="disc" id="sec-prerequisites-2-2">
+<li id="sec-prerequisites-2-2-1"><div class="para" id="sec-prerequisites-2-2-1-1">If you do not have a <dfn class="terminology">repository</dfn> for a PreTeXt project yet, go to <a class="external" href="https://github.com/pretextbook/pretext-codespace" target="_blank"><code class="code-inline tex2jax_ignore">https://github.com/pretextbook/pretext-codespace</code></a>.  On that page, below a short list of files, you will see a README that gives instruction for creating a project from that template.</div></li>
+<li id="sec-prerequisites-2-2-2"><div class="para" id="sec-prerequisites-2-2-2-1">If you have a project already (on GitHub, in a repository), then to get back to the codespaces, navigate to the repository on GitHub.com.  When you are on the page for your repository, you can restart or create a Codespace using the green (or blue) “Code” button.</div></li>
+<li id="sec-prerequisites-2-2-3"><div class="para" id="sec-prerequisites-2-2-3-1">Most of the content below is also available as a walkthrough in VS Code.  Open the Command Palette (or use the search bar at the top of the window and start with “&gt;”) and search for “Welcome: Open Walkthrough...”.  Then select the “Get Started with PreTeXt” option.</div></li>
+<li id="sec-prerequisites-2-2-4"><div class="para" id="sec-prerequisites-2-2-4-1">If you prefer to work locally, almost all of what follows will be exactly the same if you use VS Code on your own computer (but you will need to ensure you have PreTeXt and other tools installed).</div></li>
+</ul>
+</div></section><section class="section" id="sec-build"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.2</span><span class="space"> </span><span class="title">Build</span>
+</h3>
+<div class="para logical" id="sec-build-2">
+<div class="para">Inside the VS Code window you opened through codespaces, have a <code class="code-inline tex2jax_ignore">.ptx</code> file open (these should all be inside your <code class="code-inline tex2jax_ignore">source</code> folder).  You can build your entire project in a few different ways.</div>
+<ul class="disc" id="sec-build-2-3">
+<li id="sec-build-2-3-1"><div class="para" id="sec-build-2-3-1-1">Click the “PreTeXt” button in the VS Code status bar (just left of center on the bottom of the window), or use the keyboard shortcut <code class="code-inline tex2jax_ignore">CTRL+ALT+p</code>, to bring up the PreTeXt Commands menu.  Select “Build default target” from the menu.  This will build your files and put the output inside the <code class="code-inline tex2jax_ignore">output/web</code> folder.</div></li>
+<li id="sec-build-2-3-2"><div class="para" id="sec-build-2-3-2-1">You can type <code class="code-inline tex2jax_ignore">pretext build web</code> from the terminal (this uses the CLI directly).  If you don’t see a terminal window at the bottom of the screen, you can open it with <code class="code-inline tex2jax_ignore">CTRL+`</code> or go to “Terminal” menu and select “New Terminal”.</div></li>
 </ul>
 </div>
-<article class="note remark-like" id="sec-build-and-generate-3"><h4 class="heading">
-<span class="type">Note</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span>
+<div class="para" id="sec-build-3">That should be it.  If you get a popup saying that your project was</div>
+<article class="note remark-like" id="sec-build-4"><h4 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span>
 </h4>
-<div class="para" id="sec-build-and-generate-3-1">All shortcuts listed in this guide assume you are using Windows or Linux.  If you are using a Mac, you will need to use <code class="code-inline tex2jax_ignore">CMD</code> instead of <code class="code-inline tex2jax_ignore">CTRL</code>.</div></article><div class="para logical" id="sec-build-and-generate-4">
-<div class="para">If your documentment contains some more complicated elements, you might need to <dfn class="terminology">generate</dfn> them for them to show up.  The elements that require this are (depending on what your build target is):</div>
-<ul class="disc" id="sec-build-and-generate-4-2">
-<li id="sec-build-and-generate-4-2-1"><div class="para" id="p-derived-sec-build-and-generate-4-2-1"><code class="code-inline tex2jax_ignore">&lt;latex-image&gt;</code></div></li>
-<li id="sec-build-and-generate-4-2-2"><div class="para" id="p-derived-sec-build-and-generate-4-2-2"><code class="code-inline tex2jax_ignore">&lt;sagemath&gt;</code></div></li>
-<li id="sec-build-and-generate-4-2-3"><div class="para" id="p-derived-sec-build-and-generate-4-2-3"><code class="code-inline tex2jax_ignore">&lt;asymptote&gt;</code></div></li>
-<li id="sec-build-and-generate-4-2-4"><div class="para" id="p-derived-sec-build-and-generate-4-2-4">
+<div class="para" id="sec-build-4-1">All shortcuts listed in this guide assume you are using Windows or Linux.  If you are using a Mac, you will need to use <code class="code-inline tex2jax_ignore">CMD</code> instead of <code class="code-inline tex2jax_ignore">CTRL</code>.</div></article><div class="para logical" id="sec-build-5">
+<div class="para">If your document contains some more complicated elements, you might need to <dfn class="terminology">generate</dfn> them for them to show up.  The elements that require this are (depending on what your build target is):</div>
+<ul class="disc" id="sec-build-5-2">
+<li id="sec-build-5-2-1"><div class="para" id="p-derived-sec-build-5-2-1"><code class="code-inline tex2jax_ignore">&lt;latex-image&gt;</code></div></li>
+<li id="sec-build-5-2-2"><div class="para" id="p-derived-sec-build-5-2-2"><code class="code-inline tex2jax_ignore">&lt;prefigure&gt;</code></div></li>
+<li id="sec-build-5-2-3"><div class="para" id="p-derived-sec-build-5-2-3"><code class="code-inline tex2jax_ignore">&lt;asymptote&gt;</code></div></li>
+<li id="sec-build-5-2-4"><div class="para" id="p-derived-sec-build-5-2-4"><code class="code-inline tex2jax_ignore">&lt;sageplot&gt;</code></div></li>
+<li id="sec-build-5-2-5"><div class="para" id="p-derived-sec-build-5-2-5">
 <code class="code-inline tex2jax_ignore">&lt;youtube&gt;</code> (for thumbnail previews)</div></li>
-<li id="sec-build-and-generate-4-2-5"><div class="para" id="p-derived-sec-build-and-generate-4-2-5"><code class="code-inline tex2jax_ignore">&lt;webwork&gt;</code></div></li>
-<li id="sec-build-and-generate-4-2-6"><div class="para" id="p-derived-sec-build-and-generate-4-2-6"><code class="code-inline tex2jax_ignore">&lt;codelense&gt;</code></div></li>
+<li id="sec-build-5-2-6"><div class="para" id="p-derived-sec-build-5-2-6"><code class="code-inline tex2jax_ignore">&lt;webwork&gt;</code></div></li>
+<li id="sec-build-5-2-7"><div class="para" id="p-derived-sec-build-5-2-7"><code class="code-inline tex2jax_ignore">&lt;codelense&gt;</code></div></li>
 </ul>
 </div>
-<div class="para" id="sec-build-and-generate-5">You can generate assets in much the same way you run a build.  The PreTeXt command menu has a <code class="code-inline tex2jax_ignore">Generate</code> choice that you select, and then select your target (different target formats have different requirements for what is generated).  You can also type <code class="code-inline tex2jax_ignore">pretext generate</code> in the terminal, or use the keyboard shortcut <code class="code-inline tex2jax_ignore">CTRL+ALT+g</code>.</div>
-<article class="note remark-like" id="sec-build-and-generate-6"><h4 class="heading">
-<span class="type">Note</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span>
+<div class="para" id="sec-build-6">All such elements <em class="emphasis">should</em> get generated automatically when you build.  If you don’t change them, then the next time you run a build things should be faster.</div>
+<article class="note remark-like" id="sec-build-7"><h4 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="period">.</span>
 </h4>
-<div class="para logical" id="sec-build-and-generate-6-1">
-<div class="para">Note that generating assets requires additional software, like <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span> or Sage.  Depending on your codespace setup, you can likely fix erorrs as follows.</div>
-<ol class="decimal" id="sec-build-and-generate-6-1-2">
-<li id="sec-build-and-generate-6-1-2-1"><div class="para" id="sec-build-and-generate-6-1-2-1-1">Open the file <code class="code-inline tex2jax_ignore">.devcontainer.json</code>
-</div></li>
-<li id="sec-build-and-generate-6-1-2-2"><div class="para" id="sec-build-and-generate-6-1-2-2-1">Delete the first line of the file (so that pretext doesn’t “fix” it for you).</div></li>
-<li id="sec-build-and-generate-6-1-2-3"><div class="para" id="sec-build-and-generate-6-1-2-3-1">Comment out line 18 (add two forward slashes).</div></li>
-<li id="sec-build-and-generate-6-1-2-4"><div class="para" id="sec-build-and-generate-6-1-2-4-1">Uncomment line 20 (remove the two forward slashes).</div></li>
-<li id="sec-build-and-generate-6-1-2-5"><div class="para" id="sec-build-and-generate-6-1-2-5-1">After saving, vs-code should offer to rebuild your “container,” which you should do.  Otherwise, clicking the gree button in the bottom of the window (labeled “Codespaces”) and selecting “Rebuild Container” should get you set up correctly.</div></li>
-</ol>
-</div></article></section><section class="section" id="sec-previewing"><h3 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.2</span><span class="space"> </span><span class="title">Previewing</span>
+<div class="para" id="sec-build-7-1">Note that generating assets requires additional software, like <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span> or Sage.  The default Codespace setup has <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span> installed, but not Sage.  If you want to use <code class="code-inline tex2jax_ignore">&lt;sageplot&gt;</code> images, or run into problems generateing tikz images, look at the README that is included in your project.</div></article></section><section class="section" id="sec-previewing"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.3</span><span class="space"> </span><span class="title">Previewing</span>
 </h3>
 <div class="para logical" id="sec-previewing-2">
 <div class="para">You can check the output of what you built using the <dfn class="terminology">View</dfn> command.  Again, you can access this in multiple ways. If you use the PreTeXt Commands menu ans select “view”, you will get a choice for your viewer.  We currently suggest using “Live Preview”, although on codespace this requires a few extra steps:</div>
@@ -300,7 +303,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="sec-previewing-3">You can also experiment with the CLI view command, by selecting that from the pop-up menu, or by typing <code class="code-inline tex2jax_ignore">pretext view web</code> in the terminal.  This should pop up a new browser tab with the preview.  The only reason we caution against this currently is that the local server that gets started to preview the files will keep running as long as your codespace is active, and we don’t understand how this affects resource use.</div>
 <div class="para" id="sec-previewing-4">When you make edits to your source files, you will need to build again, and then refresh the preview window to see the changes.</div></section><section class="section" id="sec-saving"><h3 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.3</span><span class="space"> </span><span class="title">Saving your work</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.4</span><span class="space"> </span><span class="title">Saving your work</span>
 </h3>
 <div class="para" id="sec-saving-2">Using codespaces will keep all your files “in the cloud” on GitHub’s server.  As long as you don’t delete your codespace, your files will be saved there.  However, you will want to <dfn class="terminology">push</dfn> these files to your <dfn class="terminology">git repository</dfn> on GitHub to make this save perminent.  This has the benefit of allowing collaborators to access your files as well (your codespace is unique to your account).</div>
 <div class="para" id="sec-saving-3">There is a <em class="emphasis">lot</em> to learn about git, but luckily using VS Code lets you do everything you need using menus (you don’t need to use the command line, unless you want to).  Everything can be controlled using the <dfn class="terminology">Source Control</dfn> view: it should be third from the top on the very left of the window, an icon with splitting paths, and likely a badge showing how many files you have changed.</div>
@@ -327,10 +330,10 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="sec-saving-7">The green button should now turn into a “Sync” button.  When you click that, it will do a quick pull and then a push, to sync changes with GitHub.</div>
 <div class="para" id="sec-saving-8">The only small point about using git is that no all files will be tracked.  This is on purpose, since temporary files really should not be “remembered” using this version control setting.  Which files or types of files are ignored by git is controled by the “.gitignore” file in your repository.</div>
 <div class="para" id="sec-saving-9">In particular, we do not track the output of builds.  Git is used to track progress on your source, which you build into output at any time.  If you want others to be able to see the output of your work without building it themselves, you need to deploy your work.</div></section><section class="section" id="sec-deploy"><h3 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.4</span><span class="space"> </span><span class="title">Deploy</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.5</span><span class="space"> </span><span class="title">Deploy</span>
 </h3>
 <div class="para" id="sec-deploy-2">So you have worked tirelessly to prepare course notes or a book, built and previewed, synced changes using git, and now you are ready to share the results of your efforts with the world.  It’s time to <dfn class="terminology">deploy</dfn> your project.</div>
-<div class="para" id="sec-deploy-3">With our codespace setup this is simple.  From the “PreTeXt Commands” menu, click on “Deploy”.  This will automatically take the most recent build of your web target and host it through <a class="external" href="https://pages.github.com/" target="_blank">GitHub Pages</a><details class="ptx-footnote" aria-live="polite" id="sec-deploy-3-4"><summary class="ptx-footnote__number" title="Footnote 3.4.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="sec-deploy-3-4"><code class="code-inline tex2jax_ignore">pages.github.com/</code></div></details>.  Watch the output pane for a link to your published site. (It can take a few minutes for the site to get set up or updated; there should be another link to view the progress of the GitHub “action” that reports the progress.)</div></section></section></div>
+<div class="para" id="sec-deploy-3">With our codespace setup this is simple.  From the “PreTeXt Commands” menu, click on “Deploy”.  This will automatically take the most recent build of your web target and host it through <a class="external" href="https://pages.github.com/" target="_blank">GitHub Pages</a><details class="ptx-footnote" aria-live="polite" id="sec-deploy-3-4"><summary class="ptx-footnote__number" title="Footnote 3.5.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="sec-deploy-3-4"><code class="code-inline tex2jax_ignore">pages.github.com/</code></div></details>.  Watch the output pane for a link to your published site. (It can take a few minutes for the site to get set up or updated; there should be another link to view the progress of the GitHub “action” that reports the progress.)</div></section></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="ch-intro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-exercises.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
