@@ -107,6 +107,29 @@
     <p>
       An alternative way to preview your work is to use a tool called <term>CodeChat</term>.  From the <pretext /> menu, select <q>Preview file with CodeChat.</q>  This requires that you are looking at a specific <pretext /> file (and as you navigate to other files, the preview will follow you, usually).  You should see a preview in a new tap in your editor, right next to your source.
     </p>
+
+    <note>
+      <p>
+        Sometimes the view commands don't work well in Codespaces (forwarding ports is tricky).  If you try to view and get errors, or the new tab that opens up does not show anything, you can try the following:
+        <ul>
+          <li>
+            <p>
+              On your codespaces tab, reload the web page.  You shouldn't lose any work, but it will restart the web app that is showing VS Code.
+            </p>
+          </li>
+          <li>
+            <p>
+              If that doesn't work, open a terminal (<q>Terminal</q> menu, <q>New Terminal</q>, or <c>Ctrl+`</c>) and type <c>pretext view -s</c> and then <c>pretext view</c>.  The first command will stop any running webservers, and the second will start a new one that hopefully works better.
+            </p>
+          </li>
+          <li>
+            <p>
+              If that's still not working, you can restart the codespace.  This is basically like turning the computer off and on again.  You can do this by going to the Codespaces button on the bottom left of the window, selecting <q>Stop Current Codespace</q>.  You should then be able to restart it.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </note>
   </section>
 
   <section xml:id="sec-deploy">
@@ -194,6 +217,5 @@
       In particular, we do not track the output of builds.  Git is used to track progress on your source, which you build into output at any time.  If you want others to be able to see the output of your work without building it themselves, you need to deploy your work.
     </p>
   </section>
-
 
 </chapter>
