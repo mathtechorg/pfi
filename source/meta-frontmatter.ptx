@@ -4,7 +4,8 @@
 <!-- works.                                                        -->
 
 <frontmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="meta-frontmatter">
-  <titlepage>
+  <bibinfo>
+
     <author>
       <personname>Steven Clontz</personname>
       <department>Department of Mathematics and Statistics</department>
@@ -15,7 +16,11 @@
       <department>Department of Mathematical Sciences</department>
       <institution>University of Northern Colorado</institution>
     </author>
-    <date>Spring 2024</date>
+    <date><today/></date>
+  </bibinfo>
+    
+  <titlepage>
+      <titlepage-items/>
   </titlepage>
 
   <preface>
