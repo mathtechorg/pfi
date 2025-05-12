@@ -5,7 +5,14 @@
   <introduction>
     <p>
       Let's get our hands dirty and try writing some PreTeXt.  If you have some ideas of what you want to try, go for it.  Otherwise, try to implement as many of the following as you can.  
-      <!-- For each <term>exploration</term> below, if you get stuck, click on the hint, and if you want to see how to implement it completely, click on the solution. -->
+    </p>
+    
+    <p>
+      Some of the <term>practice</term> activities below have hints, and if you want to see how to implement it completely, click on the solution.
+    </p>
+
+    <p>
+      This is a good time to check out the <url href="https://pretextbook.org/doc/guide/html/part-basics.html"><pretext /> Guide</url>.  Two other useful resources are the <url href="https://pretextbook.org/examples/sample-article/annotated/section-interesting-corollary.html">Annotated Sample Article</url> and the <url href="https://pretextbook.org/examples/sample-book/annotated/rune.html">Annotated Sample Book</url>.  In each of these, you can see the PreTeXt source for each element to copy/paste examples.
     </p>
   </introduction>
   <section>
