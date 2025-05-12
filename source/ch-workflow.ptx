@@ -5,7 +5,7 @@
 
   <introduction>
     <p>
-      Once you create content in PreTeXt, it is time to <term>build</term> it, perhaps <term>generate assets</term> (if your project has such assets), <term>view</term> the result to make sure it looks good, and when you are ready, <term>deploy</term> your web output to a live webpage for others to marvel at.
+      Once you create content in PreTeXt, it is time to <term>build</term> it, <term>view</term> the result to make sure it looks good, and when you are ready, <term>deploy</term> your web output to a live webpage for others to marvel at.
     </p>
 
     <p>
@@ -13,27 +13,55 @@
     </p>
   </introduction>
 
-  <section xml:id="sec-build-and-generate">
-    <title>Build and Generate</title>
+  <section xml:id="sec-prerequisites">
+    <title>Prerequisites</title>
     <p>
-      Inside the VS Code window you opened through codespaces, have a <c>.ptx</c> file open.  You can build your entire project in a few different ways.
+      In this chapter we assume you are working in a GitHub Codespaces, and have already initialized a <pretext /> project there.  A few notes:
       <ul>
         <li>
           <p>
-            Click the <q>PreTeXt</q> button in the VS Code status bar (just left of center on the bottom of the window), or use the keyboard shortcut <c>CTRL+ALT+p</c>, to bring up the PreTeXt Commands menu.  Select <q>Build</q> from the menu.  This will bring up a list of build targets.  Select <q>web</q> from the list.  This will build your entire project, and put the output in the <c>build/web</c> folder.
+            If you do not have a <term>repository</term> for a <pretext /> project yet, go to <url href="https://github.com/pretextbook/pretext-codespace" />.  On that page, below a short list of files, you will see a README that gives instruction for creating a project from that template.
           </p>
         </li>
         <li>
           <p>
-            You can type <c>pretext build web</c> from the terminal (this uses the CLI directly).  If you don't see a terminal window at the bottom of the screen, you can open it with <c>CTRL+`</c>.
+            If you have a project already (on GitHub, in a repository), then to get back to the codespaces, navigate to the repository on GitHub.com.  When you are on the page for your repository, you can restart or create a Codespace using the green (or blue) <q>Code</q> button. 
           </p>
         </li>
         <li>
           <p>
-            You can use the keyboard shortcut <c>CTRL+ALT+b</c>.  This will build the project using the last build target you used.  If you haven't built yet, it will use the default build target, which is <q>web</q>.
+            Most of the content below is also available as a walkthrough in VS Code.  Open the Command Palette (or use the search bar at the top of the window and start with <q>&gt;</q>) and search for <q>Welcome: Open Walkthrough...</q>.  Then select the <q>Get Started with PreTeXt</q> option.
+          </p>
+        </li>
+        <li>
+          <p>
+            If you prefer to work locally, almost all of what follows will be exactly the same if you use VS Code on your own computer (but you will need to ensure you have <pretext /> and other tools installed).
           </p>
         </li>
       </ul>
+    </p>
+  </section>
+
+  <section xml:id="sec-build">
+    <title>Build</title>
+    <p>
+      Inside the VS Code window you opened through codespaces, have a <c>.ptx</c> file open (these should all be inside your <c>source</c> folder).  You can build your entire project in a few different ways.
+      <ul>
+        <li>
+          <p>
+            Click the <q>PreTeXt</q> button in the VS Code status bar (just left of center on the bottom of the window), or use the keyboard shortcut <c>CTRL+ALT+p</c>, to bring up the PreTeXt Commands menu.  Select <q>Build default target</q> from the menu.  This will build your files and put the output inside the <c>output/web</c> folder.
+          </p>
+        </li>
+        <li>
+          <p>
+            You can type <c>pretext build web</c> from the terminal (this uses the CLI directly).  If you don't see a terminal window at the bottom of the screen, you can open it with <c>CTRL+`</c> or go to <q>Terminal</q> menu and select <q>New Terminal</q>.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      That should be it.  If you get a message proclaiming <q>Build successful!</q>, you can jump to the next section.
     </p>
 
     <note>
@@ -43,11 +71,12 @@
     </note>
 
     <p>
-      If your documentment contains some more complicated elements, you might need to <term>generate</term> them for them to show up.  The elements that require this are (depending on what your build target is):
+      If your document contains some more complicated elements, you might need to <term>generate</term> them for them to show up.  The elements that require this are (depending on what your build target is):
       <ul>
         <li><tag>latex-image</tag></li>
-        <li><tag>sagemath</tag></li>
+        <li><tag>prefigure</tag></li>
         <li><tag>asymptote</tag></li>
+        <li><tag>sageplot</tag></li>
         <li><tag>youtube</tag> (for thumbnail previews)</li>
         <li><tag>webwork</tag></li>
         <li><tag>codelense</tag></li>
@@ -55,39 +84,12 @@
     </p>
 
     <p>
-      You can generate assets in much the same way you run a build.  The <pretext /> command menu has a <c>Generate</c> choice that you select, and then select your target (different target formats have different requirements for what is generated).  You can also type <c>pretext generate</c> in the terminal, or use the keyboard shortcut <c>CTRL+ALT+g</c>.
+      All such elements <em>should</em> get generated automatically when you build.  If you don't change them, then the next time you run a build things should be faster.  
     </p>
 
     <note>  
       <p>
-        Note that generating assets requires additional software, like <latex /> or Sage.  Depending on your codespace setup, you can likely fix erorrs as follows.
-        <ol>
-          <li>
-            <p>
-              Open the file <c>.devcontainer.json</c>
-            </p>
-          </li>
-          <li>
-            <p>
-              Delete the first line of the file (so that pretext doesn't <q>fix</q> it for you).
-            </p>
-          </li>
-          <li>
-            <p>
-              Comment out line 18 (add two forward slashes).
-            </p>
-          </li>
-          <li>
-            <p>
-              Uncomment line 20 (remove the two forward slashes).
-            </p>
-          </li>
-          <li>
-            <p>
-              After saving, vs-code should offer to rebuild your <q>container,</q> which you should do.  Otherwise, clicking the gree button in the bottom of the window (labeled <q>Codespaces</q>) and selecting <q>Rebuild Container</q> should get you set up correctly.
-            </p>
-          </li>
-        </ol>
+        Note that generating assets requires additional software, like <latex /> or Sage.  The default Codespace setup has <latex /> installed, but not Sage.  If you want to use <tag>sageplot</tag> images, or run into problems generateing tikz images, look at the README that is included in your project.
       </p>
     </note>
   </section>
@@ -95,44 +97,45 @@
   <section xml:id="sec-previewing">
     <title>Previewing</title>
     <p>
-      You can check the output of what you built using the <term>View</term> command.  Again, you can access this in multiple ways. If you use the <pretext /> Commands menu ans select <q>view</q>, you will get a choice for your viewer.  We currently suggest using <q>Live Preview</q>, although on codespace this requires a few extra steps:
-      <ol>
-        <li>
-          <p>
-            When the side preview opens, it will ask you if you want to open in an external browser.  Click <q>Open in browser</q>.  If you don't see the pop-up, you can clicke on <q>Port: 3000</q> in the bottom status bar of VS Code and select <q>Open in browser</q> from the pop-up menu.
-          </p>
-        </li>
-        <li>
-          <p>
-            Now close the new tab that opens, and also close the side panel in VS Code that opened.
-          </p>
-        </li>
-        <li>
-          <p>
-            Finally select <q>View</q> again, and it should just work.  You can drag the VS Code tab to un-split the window to make it easier to view.
-          </p>
-        </li>
-      </ol>
+      You can check the output of what you built using the <term>View</term> command.  Again, you can access this in multiple ways. If you use the <pretext /> menu and select <q>View full document</q>, you will get a choice of targets to view.  At this point, you still want to view the <c>web</c> target.
     </p>
 
     <p>
-      You can also experiment with the CLI view command, by selecting that from the pop-up menu, or by typing <c>pretext view web</c> in the terminal.  This should pop up a new browser tab with the preview.  The only reason we caution against this currently is that the local server that gets started to preview the files will keep running as long as your codespace is active, and we don't understand how this affects resource use.
+      If you like using the command line, in a terminal enter <c>pretext view web</c>.  This should open a new tab in your browser that will display your book. 
     </p>
 
     <p>
-      When you make edits to your source files, you will need to build again, and then refresh the preview window to see the changes.
+      An alternative way to preview your work is to use a tool called <term>CodeChat</term>.  From the <pretext /> menu, select <q>Preview file with CodeChat.</q>  This requires that you are looking at a specific <pretext /> file (and as you navigate to other files, the preview will follow you, usually).  You should see a preview in a new tap in your editor, right next to your source.
     </p>
   </section>
 
-
-  <section xml:id="sec-saving">
-    <title>Saving your work</title>
+  <section xml:id="sec-deploy">
+    <title>Deploy</title>
     <p>
-      Using codespaces will keep all your files <q>in the cloud</q> on GitHub's server.  As long as you don't delete your codespace, your files will be saved there.  However, you will want to <term>push</term> these files to your <term>git repository</term> on GitHub to make this save perminent.  This has the benefit of allowing collaborators to access your files as well (your codespace is unique to your account).
+      So you have worked tirelessly to prepare course notes or a book, built and previewed, and now you are ready to share the results of your efforts with the world.  It's time to <term>deploy</term> your project.
     </p>
 
     <p>
-      There is a <em>lot</em> to learn about git, but luckily using VS Code lets you do everything you need using menus (you don't need to use the command line, unless you want to).  Everything can be controlled using the <term>Source Control</term> view: it should be third from the top on the very left of the window, an icon with splitting paths, and likely a badge showing how many files you have changed.
+      With the codespace setup this is simple.  From the <pretext /> menu, select <q>Deploy</q>.  This will automatically take the most recent build of your web target and host it through <url href="https://pages.github.com/">GitHub Pages</url>.  Watch the output pane for a link to your published site. (It can take a few minutes for the site to get set up or updated; there should be another link to view the progress of the GitHub <q>action</q> that reports the progress.)
+    </p>
+
+    <p>
+      You can find a link to the site later by going back to your repository on GitHub.  Click the <q>Settings</q> tab, and scroll down to the <q>Pages</q> section.  There you will find a link to your site.
+    </p>
+  </section>
+
+  <section xml:id="sec-saving">
+    <title>Important: Saving your work</title>
+    <p>
+      Using codespaces will keep all your files <q>in the cloud</q> on GitHub's server.  As long as you don't delete your codespace (which GitHub might do after a few days automatically, depending on your settings), your files will be saved there.  However, you will want to <term>push</term> these files to your <term>repository</term> on GitHub to make this save perminent.  This has the benefit of allowing collaborators to access your files as well (your codespace is unique to your account).
+    </p>
+
+    <p>
+      If you deploy your project, your changes will be saved and pushed to GitHub automatically.  However, if you are not deploying, you will need to do this manually.
+    </p>
+
+    <p>
+      There is a <em>lot</em> to learn about <term>git</term> (the software behind GitHub), but luckily using VS Code lets you do everything you need using menus (you don't need to use the command line, unless you want to).  Everything can be controlled using the <term>Source Control</term> view: it should be third from the top on the very left of the window, an icon with splitting paths, and likely a badge showing how many files you have changed.
     </p>
 
     <p>
@@ -165,7 +168,7 @@
         </li>
         <li>
           <p>
-            Once you have one or more commits, you need to sync these changes with GitHub.  To <q>upload</q> your changes, you <term>push</term> the repository.  To download changes that you are someone else made, you <term>pull</term> the repository.
+            Once you have one or more commits, you need to sync these changes with GitHub.  To <q>upload</q> your changes, you <term>push</term> the repository.  To download changes that you are someone else made, you <term>pull</term> the repository.  In VS Code, you might have the option to <term>sync</term>, which does both of these at once.
           </p>
         </li>
       </ul>
@@ -184,7 +187,7 @@
     </p>
 
     <p>
-      The only small point about using git is that no all files will be tracked.  This is on purpose, since temporary files really should not be <q>remembered</q> using this version control setting.  Which files or types of files are ignored by git is controled by the <q>.gitignore</q> file in your repository.
+      The only small point about using git is that not all files will be tracked.  This is on purpose, since temporary files really should not be <q>remembered</q> using this version control setting.  Which files or types of files are ignored by git is controled by the <q>.gitignore</q> file in your repository.
     </p>
 
     <p>
@@ -192,14 +195,5 @@
     </p>
   </section>
 
-  <section xml:id="sec-deploy">
-    <title>Deploy</title>
-    <p>
-      So you have worked tirelessly to prepare course notes or a book, built and previewed, synced changes using git, and now you are ready to share the results of your efforts with the world.  It's time to <term>deploy</term> your project.
-    </p>
 
-    <p>
-      With our codespace setup this is simple.  From the <q>PreTeXt Commands</q> menu, click on <q>Deploy</q>.  This will automatically take the most recent build of your web target and host it through <url href="https://pages.github.com/">GitHub Pages</url>.  Watch the output pane for a link to your published site. (It can take a few minutes for the site to get set up or updated; there should be another link to view the progress of the GitHub <q>action</q> that reports the progress.)
-    </p>
-  </section>
 </chapter>
