@@ -11,7 +11,7 @@
 <publication>
   <common>
     <chunking level="1"/>
-    <exercise-project solution="no" hint="no"/>
+    <exercise-project solution="yes" hint="yes"/>
   </common>
   <!-- Set where external assets and generated assets will be   -->
   <!-- stored or created.  Directories are relative to the main -->
@@ -58,7 +58,7 @@
     <!-- @colors now implemented                               -->
     <!-- also @knowls, @toc, and @banner, although no          -->
     <!-- alternative styles exist yet for those.               -->
-    <css style="oscarlevin" colors="green_plum" toc="crc" navbar="crc" banner="crc" shell="crc"/>
+    <css theme="denver" />
     <!-- Magic IDs identify HTML pages to analytics services   -->
     <!-- Presence implies relevant Javascript will be added    -->
     <!-- StatCounter requires both values to be set            -->
