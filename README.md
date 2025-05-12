@@ -1,2 +1,3 @@
-# pfi
-PreTeXt for Instructors
+# COMaT
+
+Website for the Collaborative OER Mathematics Textbooks (COMaT) project

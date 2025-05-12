@@ -1,0 +1,791 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ch-intro">
+    <title>Write Once, Read Anywhere</title>
+    <objectives>
+        <introduction>
+            <p>
+                At the end of this chapter, you'll
+            </p>
+        </introduction>
+        <ol>
+            <li>
+                <p>
+                    Become aware of the eleven PreTeXt Principles.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Be able to identify several features of PreTeXt.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Have a working GitHub Codespaces environment to suitable for
+                    authoring and editing in PreTeXt.
+                </p>
+            </li>
+        </ol>
+    </objectives>
+    <section xml:id="sec-setting-up-codespaces">
+        <title>Setting up Codespaces</title>
+        <p> A <term>Codespace</term> is an authoring environment that lives in the <q>cloud</q>,
+            that is, a virtual machine hosted by GitHub that has all of the software needed to
+            create great accessible documents, accessible with just a web browser. </p>
+        <p>
+            This coding environment uses a web version of Virtual Studio
+            Code, an open-source editor, along with the PreTeXt community's
+            custom plugins and software to get started authoring quickly.
+        </p>
+        <p> Follow the instructions at <url href="https://github.com/PreTeXtBook/pretext-codespace" />
+            to get started. Let this run for a few minutes in the background while you review the
+            rest of this section. </p>
+        <note>
+            <p>Codespaces works best in the Chrome or Edge web browsers.</p>
+        </note>
+    </section>
+    <section xml:id="sec-principles">
+        <title>PreTeXt Principles</title>
+        <p>
+            A more detailed monograph on 
+            <url href="https://pretextbook.org/doc/guide/html/philosophy.html">PreTeXt's philosophy</url>
+            is availabe in the PreTeXt Guide.
+        </p>
+             <list xml:id="list-principles">
+                <title><pretext /> Principles</title>
+
+                <ol>
+                    <li xml:id="principle-markup"><pretext /> is a markup language that captures the structure of textbooks and research papers.</li>
+
+                    <li xml:id="principle-readable"><pretext /> is human-readable and human-writable.</li>
+
+                    <li xml:id="principle-multiple-outputs"><pretext /> documents serve as a single source which can be easily converted to multiple other formats, current and future.</li>
+
+                    <li xml:id="principle-good-design"><pretext /> respects the good design practices which have been developed over the past centuries.</li>
+
+                    <li xml:id="principle-common-and-reasonable"><pretext /> makes it easy for authors to implement features which are both common and reasonable.</li>
+
+                    <li xml:id="principle-web-versions"><pretext /> supports online documents which make use of the full capabilities of the Web.</li>
+
+                    <li xml:id="principle-output-styles"><pretext /> output is styled by selecting from a list of available templates, relieving the author of the burden involved in micromanaging the output format.</li>
+
+                    <li xml:id="principle-open-software"><pretext /> is free: the software is available at no cost, with an open license. The use of <pretext /> does not impose any constraints on documents prepared with the system.</li>
+
+                    <li xml:id="principle-open"><pretext /> is not a closed system: documents can be converted to <latex /> and then developed using standard <latex /> tools.</li>
+
+                    <li xml:id="principle-users"><pretext /> recognizes that scholarly documents involve the interaction of authors, publishers, scholars, curators, instructors, students, and readers, with each group having its own needs and goals.</li>
+
+                    <li xml:id="principle-accessibility"><pretext/> recognizes the inherent value in producing material that is accessible to everyone.</li>
+                </ol>
+            </list>
+    </section>
+    <section xml:id="sec-xml">
+        <title><pretext/> is XML</title>
+        <p>
+Since <pretext /> uses the XML markup language, all content is structured in terms
+of <term>elements</term>. The root <c>pretext</c> element nests many other elements
+inside of it. This is accomplished by surrounding everything with a starting
+<c>&lt;pretext&gt;</c> <term>tag</term> and an ending <c>&lt;/pretext&gt;</c> tag.
+(Folks with HTML experience will find this pattern familiar, akin to the <q>HTML</q>
+root element.)
+        </p>
+        <p>
+<xref ref="listing-simple"/> is a very simple <pretext />/XML document.
+(The first line is boilerplate that lets various programs know the rest of the
+file is XML, and the third-to-last line is an example of a comment that
+won't appear in the output.)
+        </p>
+        <listing xml:id="listing-simple">
+            <caption>Source of a simple <pretext /> book project.</caption>
+            <program language="xml">
+                <input>
+                    <![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+<pretext>
+    <article>
+        <title>Hello world!</title>
+        <p>Welcome to PreTeXt!</p>
+        <!-- TODO: find something more to say... -->
+    </article>
+</pretext>
+                    ]]>
+                </input>
+            </program>
+        </listing>
+    </section>
+    <section xml:id="sec-divisions">
+        <title>Books and Divisions</title>
+        <p>
+There are several documents you can write in <pretext/>, such as
+<c>&lt;article&gt;</c>s and <c>&lt;slideshow&gt;</c>s. This tutorial will
+focus on <c>&lt;book&gt;</c>s.
+        </p>
+        <p>
+A <c>&lt;book&gt;</c> typically includes
+<c>&lt;frontmatter&gt;</c>, and <c>&lt;backmatter&gt;</c>.
+        </p>
+        <p>
+Between <c>&lt;frontmatter&gt;</c>, and <c>&lt;backmatter&gt;</c>
+are either several <c>&lt;chapter&gt;</c>s
+or <c>&lt;part&gt;</c>s. If used, <c>&lt;part&gt;</c>s are subdivided into
+<c>&lt;chapter&gt;</c>s. Then <c>&lt;chapter&gt;</c>s subdivide into
+<c>&lt;section&gt;</c>s, and <c>&lt;section&gt;</c>s can have
+<c>&lt;subsection&gt;</c>s.
+        </p>
+        <p>
+Each of these subdivisions needs a <c>&lt;title&gt;</c>, and 
+may have an <c>&lt;introduction&gt;</c> or
+<c>&lt;conclusion&gt;</c>.
+        </p>
+        <p>
+<xref ref="listing-book-source"/> puts some of these elements together for
+a simple <pretext/> project (information on the other elements will come
+in later sections).
+        </p>
+        <listing xml:id="listing-book-source">
+            <caption>Source of a simple <pretext /> book project.</caption>
+            <program language="xml">
+                <input>
+            <![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+<pretext xml:lang="en-US">
+  <!-- (author configurations go in docinfo) -->
+  <docinfo>
+    <macros>
+      \newcommand{\R}{\mathbb R}
+    </macros>
+  </docinfo>
+
+
+  <book xml:id="my-great-book">
+    <title>My Great Book</title>
+    <subtitle>An example to get you started</subtitle>
+
+    <frontmatter xml:id="frontmatter">
+      <titlepage>
+        <author>
+          <personname>You</personname>
+          <department>Your department</department>
+          <institution>Your institution</institution>
+        </author>
+        <date>
+          <today />
+        </date>
+      </titlepage>
+    </frontmatter>
+
+    <chapter xml:id="chapter-welcome">
+      <title>Welcome!</title>
+      <introduction>
+        <p>This chapter is about the real numbers <m>\R</m></p>
+      </introduction>
+
+      <section xml:id="section-getting-started">
+        <title>Let's get started</title>
+        <p>Can you solve <m>ax^2+bx+c=0</m>?</p>
+      </section>
+
+      <section xml:id="section-learning-more">
+        <title>But wait, there's more!</title>
+        <p>Did you know that <me>x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}</me>?</p>
+      </section>
+
+    </chapter>
+
+    <backmatter xml:id="backmatter">
+      <title>Backmatter</title>
+
+      <colophon>
+        <p> This book was authored in <pretext />. </p>
+      </colophon>
+
+    </backmatter>
+
+  </book>
+
+</pretext>
+            ]]>
+                </input>
+            </program>
+        </listing>
+    </section>
+
+    <section xml:id="sec-paragraphs">
+        <title>Paragraphs, Lists, and Blocks</title>
+        <p>
+Within each division (chapter, section, etc., see <xref ref="sec-divisions"/>) of your book,
+you likely want some content (e.g. what you're reading right now!).
+        </p>
+        <p>
+Written content is usually structured as <term>paragraphs</term>, <tag>p</tag> for short.
+If you've ever written <abbr>HTML</abbr>, this tag may be familiar to you, but be warned:
+while PreTeXt is XML (<xref ref="sec-xml"/>),
+<em><pretext/> is not HTML</em>! There is some overlap: you can <em>emphasize</em>
+words or phrases with <tag>em</tag> for instance. However, while HTML uses the full word
+<q>code</q> for its tag, <pretext /> uses the shortened <tag>c</tag> tag.
+        </p>
+        <p>
+Note that these elements are all <term>semantic</term>: they express the <em>meaning</em>
+of content, not its presentation. For example, the word <q>semantic</q> was a <tag>term</tag>,
+we just defined, while we merely emphasized <q>meaning</q> with <tag>em</tag>.
+The presentation of these concepts may vary by output format, likely using some combination of
+boldface, italics, or underlining.
+        </p>
+        <paragraphs>
+            <title>Heads up!</title>
+            <p>
+We'll talk about customizing presentation later,
+but it's important to remember that the PreTeXt community separates such
+<q>publication</q> decisions away from the work of
+<q>authoring</q> content.
+            </p>
+        </paragraphs>
+        <p>
+For users coming from LaTeX, rest assured your mathematical formulas work in <pretext />.
+Inline mathmode <m>ax^2+bx+c=0</m> is invoked with <c>&lt;m&gt;ax^2+bx+c=0&lt;/m&gt;</c>,
+while display mathematics
+like <me>x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}</me> is available via
+<c>&lt;me&gt;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}&lt;/me&gt;</c>.
+(Users from LaTeX will also appreciate that quotes are surrounded with <c>&lt;q&gt;</c>
+in PreTeXt to handle the different way quotation marks are handled in LaTeX vs
+most other markup languages.)
+        </p>
+        <p>
+You may also have lists withinn paragraphs, ordered <c>&lt;ol&gt;</c> and unordered <c>&lt;ul&gt;</c>,
+nested as needed. Each list item is represented by <c>&lt;li&gt;</c>.
+            <ul>
+                <li>
+                    <p>
+                        A single item.
+                    </p>
+                </li>
+                <li>
+                    <p> An item with an ordered list.
+                        <ol>
+                            <li>
+                                <p>
+                                    First item.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Second item.
+                                </p>
+                            </li>
+                        </ol>
+                    </p>
+                </li>
+            </ul>
+        </p>
+        <p>
+Of course, often you have important <term>blocks</term> of content to include,
+such as <c>&lt;definition&gt;</c>s or <c>&lt;claim&gt;</c>s.
+        </p>
+        <definition xml:id="def-pretext">
+            <statement>
+                <p>
+<term>PreTeXt</term> is an uncomplicated XML language for describing
+scholarly documents.
+                </p>
+            </statement>
+        </definition>
+        <claim xml:id="claim-pretext">
+            <statement>
+                <p>
+PreTeXt is the language that will replace LaTeX for authors.
+                </p>
+            </statement>
+            <proof>
+                <p>
+Left to the reader.
+                </p>
+            </proof>
+        </claim>
+        <p>
+Such content is automatically numbered appropriately. Each of the
+blocks above is structured with a <c>&lt;statement&gt;</c>,
+and <xref ref="claim-pretext"/> additionally features a <c>&lt;proof&gt;</c>.
+        </p>
+        <p>
+Content is often <q>knowled</q>. A <term>knowl</term> is a piece of context-independent
+information that is useful to transclude elsewhere in the HTML build of your document.
+For example, in the HTML build for this document,
+the above proof is knowled by default, and clicking the referenced <q>Claim</q>
+in the previous paragraph expands its knowl to reveal the claim for the reader.
+        </p>
+        <note xml:id="note">
+            <p>
+Because this document was edited directly on GitHub using Codespaces, and served
+with GitHub pages, finding its source is simple: head to its
+<url href="https://github.com/openmathbooks/comat/">repository</url>
+and find the
+<url href="https://github.com/openmathbooks/comat/blob/main/source/ch-intro.ptx">corresponding source file</url>.
+Check the link out to see exactly how each claim, list, etc. in this chapter was marked up!
+<!-- Hey, glad you found me! This is a comment that's only available in the source code,
+useful for leaving notes for yourself or future editors... -->
+            </p>
+        </note>
+    </section>
+
+    <section>
+      <title>Links</title>
+
+      <p>
+        In addition to the ability to reference inside a document, such as this one to <xref ref="note"/>, you can also link to files that you might want readers to download.  Here is an example:
+        <url href="external/sheets/Fibonacci.xlsx">Fibonacci Excel Spreadsheet</url>.  Note that this file is stored in your <c>assets</c> folder, and is automatically put in <c>external</c> when pretext build the file.
+      </p>
+
+    </section>
+    <section xml:id="sec-figures">
+        <title>Figures and Diagrams</title>
+        <figure xml:id="figure-braille">
+            <caption>Photograph taken from AIM Press Release on braille, provided as a JPEG in the project <c>assets</c> directory.</caption>
+            <image source="braille_bubble.jpg" width="75%">
+                <description>
+                    Photograph of a hand tracing over braille code. A cartoon thought bubble
+                    contains the quadratic formula in standard mathematical notation, matching the
+                    contents of the braille code in the photograph.
+                </description>
+            </image>
+        </figure>
+<figure xml:id="figure-tikz-electronics">
+  <caption>Electronics Diagram generated with Tikz code</caption>
+  <image xml:id="tikz-electronics">
+    <description>A pile of electronic components wired together</description>
+      <latex-image><![CDATA[ 
+      \tikzset{%
+        block/.style    = {draw, thick, rectangle, minimum height = 3em,
+          minimum width = 3em},
+        sum/.style      = {draw, circle, node distance = 2cm}, % Adder
+        input/.style    = {coordinate}, % Input
+        output/.style   = {coordinate} % Output
+      }
+      % Defining string as labels of certain blocks.
+      \newcommand{\suma}{\Large$+$}
+      \newcommand{\inte}{$\displaystyle \int$}
+      \newcommand{\derv}{\huge$\frac{d}{dt}$}
+      \begin{tikzpicture}[auto, thick, node distance=2cm, >=triangle 45]
+      \draw
+          % Drawing the blocks of first filter :
+          node at (0,0)[right=-3mm]{\Large \textbullet}
+          node [input, name=input1] {}
+          node [sum, right of=input1] (suma1) {\suma}
+          node [block, right of=suma1] (inte1) {\inte}
+               node at (6.8,0)[block] (Q1) {\Large $Q_1$}
+               node [block, below of=inte1] (ret1) {\Large$T_1$};
+          % Joining blocks.
+          % Commands \draw with options like [->] must be written individually
+          \draw[->](input1) -- node {$X(Z)$}(suma1);
+          \draw[->](suma1) -- node {} (inte1);
+          \draw[->](inte1) -- node {} (Q1);
+          \draw[->](ret1) -| node[near end]{} (suma1);
+          % Adder
+      \draw
+          node at (5.4,-4) [sum, name=suma2] {\suma}
+              % Second stage of filter
+          node at  (1,-6) [sum, name=suma3] {\suma}
+          node [block, right of=suma3] (inte2) {\inte}
+          node [sum, right of=inte2] (suma4) {\suma}
+          node [block, right of=suma4] (inte3) {\inte}
+          node [block, right of=inte3] (Q2) {\Large$Q_2$}
+          node at (9,-8) [block, name=ret2] {\Large$T_2$}
+      ;
+          % Joining the blocks of second filter
+          \draw[->] (suma3) -- node {} (inte2);
+          \draw[->] (inte2) -- node {} (suma4);
+          \draw[->] (suma4) -- node {} (inte3);
+          \draw[->] (inte3) -- node {} (Q2);
+          \draw[->] (ret2) -| (suma3);
+          \draw[->] (ret2) -| (suma4);
+               % Third stage of filter:
+          % Defining nodes:
+      \draw
+          node at (11.5, 0) [sum, name=suma5]{\suma}
+          node [output, right of=suma5]{}
+          node [block, below of=suma5] (deriv1){\derv}
+          node [output, right of=suma5] (sal2){}
+      ;
+          % Joining the blocks:
+          \draw[->] (suma2) -| node {}(suma3);
+          \draw[->] (Q1) -- (8,0) |- node {}(ret1);
+          \draw[->] (8,0) |- (suma2);
+          \draw[->] (5.4,0) -- (suma2);
+          \draw[->] (Q1) -- node {}(suma5);
+          \draw[->] (deriv1) -- node {}(suma5);
+          \draw[->] (Q2) -| node {}(deriv1);
+              \draw[<->] (ret2) -| node {}(deriv1);
+              \draw[->] (suma5) -- node {$Y(Z)$}(sal2);
+              % Drawing nodes with \textbullet
+      \draw
+          node at (8,0) {\textbullet}
+          node at (8,-2){\textbullet}
+          node at (5.4,0){\textbullet}
+              node at (5,-8){\textbullet}
+              node at (11.5,-6){\textbullet}
+              ;
+          % Boxing and labelling noise shapers
+          \draw [color=gray,thick](-0.5,-3) rectangle (9,1);
+          %\node at (-0.5,1) [above=5mm, right=0mm] {\textsc{first-order noise shaper}};
+          \draw [color=gray,thick](-0.5,-9) rectangle (12.5,-5);
+          %\node at (-0.5,-9) [below=5mm, right=0mm] {\textsc{second-order noise shaper}};
+      \end{tikzpicture}
+      ]]>
+      </latex-image>
+  </image>
+</figure>
+<figure xml:id="figure-asymptote-contour-plot">
+  <caption>Contour Plot generated from Asymptote code</caption>
+  <image xml:id="asymptote-contour">
+      <asymptote>
+      import graph;
+      import palette;
+      size(10cm,10cm,IgnoreAspect);
+      real f(real x, real y) {
+        return 0.9*pow10(2*sin(x/5+2*y^0.25)) + 0.1*(1+cos(10*log(y)));
+      }
+      scale(Linear,Log,Log);
+      pen[] Palette=BWRainbow();
+      bounds range=image(f,Automatic,(0,1),(100,100),nx=200,Palette);
+      xaxis("$x$",BottomTop,LeftTicks,above=true);
+      yaxis("$y$",LeftRight,RightTicks,above=true);
+      palette("$f(x,y)$",range,(0,200),(100,250),Top,Palette,
+              PaletteTicks(ptick=linewidth(0.5*linewidth())));
+      </asymptote>
+  </image>
+</figure>
+<figure xml:id="figure-asymptote-workcone">
+  <caption>Work Cone generated from Asymptote code</caption>
+  <image xml:id="asymptote-workcone" width="50%">
+      <asymptote>
+      import solids;
+      size(0,150);
+      currentprojection=orthographic(0,-30,5);
+      real r=4;
+      real h=10;
+      real s=8;
+      real x=r*s/h;
+      real sr=5;
+      real xr=r*sr/h;
+      real s1=sr-0.1;
+      real x1=r*s1/h;
+      real s2=sr+0.2;
+      real x2=r*s2/h;
+      render render=render(compression=0,merge=true);
+      draw(scale(x1,x1,-s1)*shift(-Z)*unitcone,lightblue+opacity(0.5),render);
+      path3 p=(x2,0,s2)--(x,0,s+0.005);
+      revolution a=revolution(p,Z);
+      draw(surface(a),lightblue+opacity(0.5),render);
+      path3 q=(x,0,s)--(r,0,h);
+      revolution b=revolution(q,Z);
+      draw(surface(b),white+opacity(0.5),render);
+      draw((-r-1,0,0)--(r+1,0,0));
+      draw((0,0,0)--(0,0,h+1),dashed);
+      path3 w=(x1,0,s1)--(x2,0,s2)--(0,0,s2);
+      revolution b=revolution(w,Z);
+      draw(surface(b),blue+opacity(0.5),render);
+      draw(circle((0,0,s2),x2));
+      draw(circle((0,0,s1),x1));
+      draw("$x$",(xr,0,0)--(xr,0,sr),red,Arrow3,PenMargin3);
+      draw("$r$",(0,0,sr)--(xr,0,sr),N,red);
+      draw((string) r,(0,0,h)--(r,0,h),N,red);
+      draw((string) h,(r,0,0)--(r,0,h),red,Arrow3,PenMargin3);
+      draw((string) s,(-x,0,0)--(-x,0,s),W,red,Arrow3,Bar3,PenMargin3);
+      </asymptote>
+  </image>
+</figure>
+        <figure xml:id="figure-sage-polynomial-approximation">
+            <caption>Polynomial approximations of <m>f(x)=1/(1+25x^2)</m> generated from SageMath code</caption>
+            <image xml:id="sageplot-polynomial-approximation" width="75%">
+                <sageplot variant="2d">
+def f(x):
+    return RDF(1 / (1 + 25 * x^2))
+def runge():
+    R = PolynomialRing(RDF, 'x')
+    g = plot(f, -1, 1, rgbcolor='red', thickness=1)
+    polynom = []
+    for i, n in enumerate([6, 8, 10, 12]):
+        data = [(x, f(x)) for x in xsrange(-1, 1, 2 / (n - 1), include_endpoint=True)]
+        polynom.append(R.lagrange_polynomial(data))
+        g += list_plot(data, rgbcolor='black', pointsize=5)
+    g += plot(polynom, -1, 1, fill=f, fillalpha=0.2, thickness=0)
+    return g
+runge()
+                </sageplot>
+            </image>
+        </figure>
+<figure xml:id="figure-sage-implicit-surface">
+  <caption>An implicitly defined 3D surface generated with SageMath code</caption>
+  <image xml:id="sageplot-implicit-surface" width="80%" margins="15% 5%">
+      <sageplot variant="3d" aspect="1.0">
+      var('x y z')
+      T = RDF(golden_ratio)
+      p = 2 - (cos(x + T*y) + cos(x - T*y) + cos(y + T*z) + cos(y - T*z) + cos(z - T*x) + cos(z + T*x))
+      r = 4.77
+      implicit_plot3d(p, (x, -r, r), (y, -r, r), (z, -r, r), plot_points=50, frame=False)
+      </sageplot>
+  </image>
+</figure>
+
+<p>
+  Videos can be embedded in PreTeXt documents using the <tag>video</tag> element.
+</p>
+<figure>
+  <caption>Big Buck Bunny from
+  <url href="http://camendesign.com/code/video_for_everybody/test.htm" visual="camendesign.com/code/video_for_everybody/test.htm">
+  <q>Video for Everybody</q>
+  Test Page</url>
+  </caption>
+  <video label="big-buck-bunny-frame-one" href="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm" width="70%" preview="preview/big-buck-bunny-frame-one.jpg" />
+</figure>
+    </section>
+
+
+    <section xml:id="sec-interactives">
+        <title>Interactives</title>
+<figure xml:id="figure-geogebra">
+  <caption>Right Triangle Paradox powered by Geogebra</caption>
+  <interactive xml:id="geogebra-right-triangle" geogebra="KGn2d4Qd" aspect="9:5" />
+</figure>
+<figure>
+  <caption>Graph of <m>ln(x^2+5)-3</m> powered by Desmos</caption>
+  <interactive xml:id="desmos-natural-log" desmos="ttox1bvxku" aspect="4:3" />
+</figure>
+<figure xml:id="figure-intersecting-planes">
+  <caption>Intersection of two planes powered by CalcPlot3D</caption>
+  <interactive xml:id="calcplot3d-intersection-planes" aspect="4:3" calcplot3d="type=implicit;equation=2x-y+z~0;cubes=16;visible=true;xmin=-2;xmax=2;ymin=-2;ymax=2;zmin=-2;zmax=2;alpha=-1;format=constant;constcol=rgb(61,133,198)&amp;type=parametric;parametric=2;x=-(u+v)/2;y=(u-v)/2;z=v;visible=true;umin=-3;umax=3;usteps=30;vmin=-2;vmax=2;vsteps=15;alpha=193;format=constant;constcol=rgb(255,161,114)&amp;type=text;text=x%20%2B%20y%20%2B%20z%20~%200;visible=true;point=(.5,-2.5,2.1);color=rgb(0,0,0);font=Times%20New%20Roman;fontsize=14pt;bold=false;italic=false;fontmath=true;align=Upper-right&amp;type=text;text=2x%20-%20y%20%2B%20z%20~%200;visible=true;point=(2,2.2,-1.25);color=rgb(0,0,0);font=Times%20New%20Roman;fontsize=14pt;bold=false;italic=false;fontmath=true;align=Upper-right&amp;type=window;hsrmode=0;anaglyph=-1;center=7.006292692220367,5.09036960455127,4.999999999999999,1;focus=0,0,0,1;up=-0.3290568564833397,-0.23907380036690282,0.9135454576426009,1;transparent=true;alpha=140;edgeson=false;faceson=true;showbox=false;showaxes=true;showticks=true;perspective=true;centerxpercent=0.5;centerypercent=0.5;rotationsteps=30;autospin=true;xygrid=false;yzgrid=false;xzgrid=false;gridsonbox=true;gridplanes=false;gridcolor=rgb(128,128,128);xmin=-2;xmax=2;ymin=-2;ymax=2;zmin=-2;zmax=2;xscale=1;yscale=1;zscale=1;zcmin=-4;zcmax=4;zoom=0.655294;xscalefactor=1;yscalefactor=1;zscalefactor=1" variant="minimal"/>
+</figure>
+<figure xml:id="figure-checkit">
+  <caption>Implicit Differentiation exercises powered by CheckIt</caption>
+  <interactive xml:id="interactive-checkit" iframe="https://teambasedinquirylearning.github.io/calculus/2022/exercises/#/bank/DF7/1/?embed" width="95%" aspect="15:10" />
+</figure>
+    </section>
+
+
+    <section xml:id="sec-exercises">
+        <title>Authoring an Exercise</title>
+        <exercise>
+            <title>Manually-authored exercise</title>
+            <statement><p>What is <m>2+2</m>?</p></statement>
+            <hint><p>We're being a bit tricky here...</p></hint>
+            <answer><p><m>22</m></p></answer>
+            <solution><p><m>22</m>, where <m>+</m> is the concatenation operator.</p></solution>
+        </exercise>
+        <exercise>
+            <title>Using WebWork</title>
+            <webwork>
+                <pg-code>
+                    Context("LimitedNumeric");
+                    $a = Compute(random(1, 9, 1));
+                    $b = Compute(random(1, 9, 1));
+                    $c = $a + $b;
+                </pg-code>
+
+                <statement>
+                    <p>Compute <m><var name="$a"/> + <var name="$b"/></m>.</p>
+                    <instruction>Type your answer without using the <c>+</c> sign.</instruction>
+                    <p>The sum is <var name="$c" width="2"/>.</p>
+                </statement>
+
+                <solution>
+                    <p><m><var name="$a"/> + <var name="$b"/> = <var name="$c"/></m>.</p>
+                </solution>
+            </webwork>
+        </exercise>
+        <aside><p><xref ref="exercise-checkit"/> was taken from
+        <url href="https://teambasedinquirylearning.github.io/linear-algebra/">Linear Algebra for Team-Based Inquiry Learning</url>.</p></aside>
+        <exercise xml:id="exercise-checkit">
+            <title>Generated by CheckIt</title>
+            <introduction>
+            <p> Consider the following  system of linear equations.   <me>\begin{matrix} 4 \, x_{1} &amp; + &amp; 3 \, x_{2} &amp; + &amp; 18 \, x_{3} &amp; - &amp; 11 \, x_{4} &amp; = &amp; -14 \\ -3 \, x_{1} &amp; + &amp; x_{2} &amp; - &amp; 7 \, x_{3} &amp; + &amp; 5 \, x_{4} &amp; = &amp; 4 \\ 3 \, x_{1} &amp; + &amp; 3 \, x_{2} &amp; + &amp; 15 \, x_{3} &amp; - &amp; 9 \, x_{4} &amp; = &amp; -12 \\ \end{matrix}</me> </p>
+            </introduction>
+            <task>
+                <statement>
+                <p> Explain how to find a simpler system or vector equation that has the same solution set. </p>
+                </statement>
+                <answer>
+                <p>
+                    <me>\mathrm{RREF}\left[\begin{array}{cccc|c} 4 &amp; 3 &amp; 18 &amp; -11 &amp; -14 \\ -3 &amp; 1 &amp; -7 &amp; 5 &amp; 4 \\ 3 &amp; 3 &amp; 15 &amp; -9 &amp; -12 \end{array}\right]=\left[\begin{array}{cccc|c} 1 &amp; 0 &amp; 3 &amp; -2 &amp; -2 \\ 0 &amp; 1 &amp; 2 &amp; -1 &amp; -2 \\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \end{array}\right]</me>
+                </p>
+                </answer>
+            </task>
+            <task>
+                <statement>
+                <p> Explain how to describe this solution set using set notation. </p>
+                </statement>
+                <answer>
+                <p>The solution set is <m>\left\{ \left[\begin{array}{c} -3 \, a + 2 \, b - 2 \\ -2 \, a + b - 2 \\ a \\ b \end{array}\right] \,\middle|\, a,b \in\mathbb R \right\}</m>.</p>
+                </answer>
+            </task>
+        </exercise>
+        
+        <exercise xml:id="tfq" label="true-false">
+            <title>Runestone-powered True/False Question</title>
+            <statement correct='yes'>
+            <p>
+                This statement is true or false.
+            </p>
+            </statement>
+            <feedback>
+            <p>
+                Feedback goes here.
+            </p>
+            </feedback>
+        </exercise>
+
+        <exercise label="some-matching">
+            <title>Runestone-powered Matching Problem</title>
+            <statement>
+            <p>
+                A multiple choice question
+            </p>
+            </statement>
+            <choices randomize="yes">
+            <choice correct="yes">
+                <statement>
+                <p>
+                    right answer 1
+                </p>
+                </statement>
+                <feedback>
+                <p>
+                    answer specific feedback
+                </p>
+                </feedback>
+            </choice>
+            <choice correct="yes">
+                <statement>
+                <p>
+                    right answer 1
+                </p>
+                </statement>
+                <feedback>
+                <p>
+                    answer specific feedback
+                </p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                <p>
+                    wrong answer 1
+                </p>
+                </statement>
+                <feedback>
+                <p>
+                    answer specific feedback
+                </p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                <p>
+                    wrong answer 2
+                </p>
+                </statement>
+                <feedback>
+                <p>
+                    answer specific feedback
+                </p>
+                </feedback>
+            </choice>
+            </choices>
+        </exercise>
+
+        <exercise label="parsons">
+            <title>Runestone-powered Parsons Problem</title>
+            <statement>
+            <p>
+                Rearrange the blocks in alphebetical order,
+                ignoring blocks beginning with a number.
+            </p>
+            </statement>
+            <blocks>  
+            <!-- Write problems in correct order. -->
+            <!-- Add correct="no" to distractors -->
+            <!-- @order says how to print the STATIC VERSION -->
+            <block order="5">
+                <p>
+                A
+                </p>
+            </block>
+            <block order="2">
+                <p>
+                B
+                </p>
+            </block>
+            <block order="1">
+                <p>
+                C
+                </p>
+            </block>
+            <block order="4">
+                <p>
+                D
+                </p>
+            </block>
+            <block order="3" correct="no">
+                <p>
+                <m>103</m>
+                </p>
+            </block>
+            </blocks>
+        </exercise>
+
+        <exercise label="matching">
+            <title>Runestone-powered Matching Problem</title>
+            <statement>
+            <p>
+                Match the letters with their order in the alphabet
+            </p>
+            </statement>
+            <matches>
+            <match>
+                <premise>
+                A
+                </premise>
+                <response>
+                1
+                </response>
+            </match>
+            <match>
+                <premise>
+                B
+                </premise>
+                <response>
+                2
+                </response>
+            </match>
+            <match>
+                <premise>
+                C
+                </premise>
+                <response>
+                3
+                </response>
+            </match>
+            </matches>
+        </exercise>
+    </section>
+    <section xml:id="sec-not-just-html-not-just-pdf">
+        <title>Not Just HTML, Not Just PDF</title>
+        <p> This document is available in HTML format at <url
+                href="https://stevenclontz.github.io/pretext-getting-started-2023/" />, and the same document is
+            available in a PDF format at <url
+                href="https://stevenclontz.github.io/pretext-getting-started-2023/print/main.pdf" />. </p>
+        <p> Obtaining these formats from your source is as easy as running clicking a couple buttons in your Codespace.
+            PreTeXt supports other types of output as well, including
+            Jupyter notebooks, ePub, and tacticle braille code.</p>
+        <p> You're encouraged to view authoring in
+            PreTeXt as an <em>investment</em>: you may not need the braille output today, but the little
+            extra thought and care required to author in PreTeXt will allow you to provide this
+            version of your document to a blind student tomorrow. </p>
+    </section>
+    <section xml:id="sec-wrapup">
+        <title>Wrapping Up</title>
+        <p>
+            Go check back on the Codespace you created in 
+            <xref ref="sec-setting-up-codespaces"/>.
+            If it's up and running, you're ready to
+            move on to the next section!
+        </p>
+    </section>
+</chapter>

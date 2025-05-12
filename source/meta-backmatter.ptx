@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file contains all of the "backmatter" material  -->
+<!-- We show examples of how to have hints to divisional  -->
+<!-- excercies appear in a section, and then their        -->
+<!-- solutions in the next.  Then there is an appendix    -->
+<!-- with all notation generated, and finally the index.  -->
+<backmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="meta-backmatter">
+  <xi:include href="./ch-help.ptx" />
+  <appendix>
+    <title>Copyright and Licensing</title>
+    <p><copyright /> 2023 Steven Clontz and Oscar Levin.</p>
+    <p> This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International
+      License. To view a copy of this license, visit <url
+        href="http://creativecommons.org/licenses/by-sa/4.0/"
+        visual="creativecommons.org/licenses/by-sa/4.0">
+        CreativeCommons.org
+      </url>
+    </p>
+
+  </appendix>
+
+  <appendix>
+    <title>Acknowledgement</title>
+    <p> We would like to thank the <url href="https://aimath.org">American Institute of Mathematics</url>
+      for sponsoring us to present this Professional Enhancement Program at the 2023 Joint
+      Mathematics Meeting. </p>
+  </appendix>
+</backmatter>
+

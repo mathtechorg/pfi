@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ch-pre-workshop">
+    <title>Before you arrive...</title>
+    <introduction>
+        <p>
+            Authoring in PreTeXt requires nothing more
+            than a wifi connection and GitHub account.
+            GitHub users also can share their
+            content for free on GitHub Pages!
+        </p>
+
+    </introduction>
+    <section>
+        <title>Setting up your GitHub account</title>
+        <p>
+            To create a GitHub account, 
+            <url href="https://github.com/signup">
+                follow the instructions on GitHub's
+                signup page.
+            </url>
+        </p>
+        <p>
+            Be sure to note your GitHub username and password in your password manager
+            (or however you usually keep track of login credentials) so you can log in
+            again durring the workshop.
+        </p>
+    </section>
+    <section>
+        <title>Apply for your GitHub Education discount</title>
+        <p>
+            Educators and non-profit researchers can get many of GitHub's paid features
+            for free.
+        </p>
+        <p>
+            Apply at
+            <url href="https://education.github.com/discount_requests/pack_application">Education.GitHub.com</url>
+            to unlock these features (in our experience, applications are usually processed quickly for <c>.edu</c>
+            email addresses).
+        </p>
+    </section>
+    <section>
+        <title>And that's it!</title>
+        <p>
+            Even just a last year, the process to get started writing PreTeXt
+            involved several more steps. (Raise your hand if you don't care what a
+            <q>PATH variable</q> is!)
+        </p>
+        <p>
+            The community is streamlining this experience
+            daily, and we look forward to sharing how easy writing in PreTeXt is when we see you at the workshop.
+        </p>
+    </section>
+</chapter>

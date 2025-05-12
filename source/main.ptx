@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <!-- we first include a file which contains the docinfo element: -->
+  <xi:include href="./meta-docinfo.ptx" />
+
+  <!-- The <book> tags wrap all the content.  Change the @xml:id   -->
+  <!-- to some short (non-spaced) description of your book         -->
+  <book xml:id="comat-workshop-2024">
+    <!-- The book needs a title and can have a subtitle  -->
+    <title>Getting Started with PreTeXt</title>
+    <subtitle>COMaT Workshop, May 2024</subtitle>
+
+    <!-- Now we include files containing each main devision.       -->
+
+    <!-- First a frontmatter for prefaces and such. Maybe comment  -->
+    <!-- out for now and write this when the book is more complete -->
+    <xi:include href="./meta-frontmatter.ptx" />
+    
+    <xi:include href="./ch-pre-workshop.ptx" />
+    <xi:include href="./ch-intro.ptx" />
+    <xi:include href="./ch-workflow.ptx" />
+    <xi:include href="./ch-exercises.ptx" />
+    <xi:include href="./ch-project.ptx" />
+    <xi:include href="./ch-publication.ptx" />
+    <xi:include href="./ch-converting-to-pretext.ptx" />
+
+
+    <!-- Finaly we place the backmatter in its own file and inlcude-->
+    <xi:include href="./meta-backmatter.ptx" />
+  </book>
+</pretext>
