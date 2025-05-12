@@ -192,11 +192,10 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-workflow.html" class="internal"><span class="codenumber">3</span> <span class="title">Codespace Workflow</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-workflow.html#sec-prerequisites" class="internal"><span class="codenumber">3.1</span> <span class="title">Prerequisites</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-workflow.html#sec-build" class="internal"><span class="codenumber">3.2</span> <span class="title">Build</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-workflow.html#sec-previewing" class="internal"><span class="codenumber">3.3</span> <span class="title">Previewing</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-workflow.html#sec-build-and-generate" class="internal"><span class="codenumber">3.1</span> <span class="title">Build and Generate</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-workflow.html#sec-previewing" class="internal"><span class="codenumber">3.2</span> <span class="title">Previewing</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-workflow.html#sec-saving" class="internal"><span class="codenumber">3.3</span> <span class="title">Saving your work</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-workflow.html#sec-deploy" class="internal"><span class="codenumber">3.4</span> <span class="title">Deploy</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-workflow.html#sec-saving" class="internal"><span class="codenumber">3.5</span> <span class="title">Important: Saving your work</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
@@ -247,9 +246,7 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-exercises"><h2 class="heading">
 <span class="type">Chapter</span><span class="space"> </span><span class="codenumber">4</span><span class="space"> </span><span class="title">Practice Activities</span>
 </h2>
-<section class="introduction" id="ch-exercises-2"><div class="para" id="ch-exercises-2-1">Let’s get our hands dirty and try writing some PreTeXt.  If you have some ideas of what you want to try, go for it.  Otherwise, try to implement as many of the following as you can.</div>
-<div class="para" id="ch-exercises-2-2">Some of the <dfn class="terminology">practice</dfn> activities below have hints, and if you want to see how to implement it completely, click on the solution.</div>
-<div class="para" id="ch-exercises-2-3">This is a good time to check out the <a class="external" href="https://pretextbook.org/doc/guide/html/part-basics.html" target="_blank">PreTeXt Guide</a><details class="ptx-footnote" aria-live="polite" id="ch-exercises-2-3-2"><summary class="ptx-footnote__number" title="Footnote 4.0.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="ch-exercises-2-3-2"><code class="code-inline tex2jax_ignore">pretextbook.org/doc/guide/html/part-basics.html</code></div></details>.  Two other useful resources are the <a class="external" href="https://pretextbook.org/examples/sample-article/annotated/section-interesting-corollary.html" target="_blank">Annotated Sample Article</a><details class="ptx-footnote" aria-live="polite" id="ch-exercises-2-3-4"><summary class="ptx-footnote__number" title="Footnote 4.0.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="ch-exercises-2-3-4"><code class="code-inline tex2jax_ignore">pretextbook.org/examples/sample-article/annotated/section-interesting-corollary.html</code></div></details> and the <a class="external" href="https://pretextbook.org/examples/sample-book/annotated/rune.html" target="_blank">Annotated Sample Book</a><details class="ptx-footnote" aria-live="polite" id="ch-exercises-2-3-6"><summary class="ptx-footnote__number" title="Footnote 4.0.3"><sup> 3 </sup></summary><div class="ptx-footnote__contents" id="ch-exercises-2-3-6"><code class="code-inline tex2jax_ignore">pretextbook.org/examples/sample-book/annotated/rune.html</code></div></details>.  In each of these, you can see the PreTeXt source for each element to copy/paste examples.</div></section><section class="section" id="ch-exercises-3"><h3 class="heading hide-type">
+<section class="introduction" id="ch-exercises-2"><div class="para" id="ch-exercises-2-1">Let’s get our hands dirty and try writing some PreTeXt.  If you have some ideas of what you want to try, go for it.  Otherwise, try to implement as many of the following as you can. </div></section><section class="section" id="ch-exercises-3"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">4.1</span><span class="space"> </span><span class="title">Basic PreTeXt</span>
 </h3>
 <article class="exploration project-like" id="ch-exercises-3-2"><h4 class="heading">
@@ -266,7 +263,11 @@ eBookConfig.enable_chatcodes =  false;
 f(x) = \begin{cases} 1 \amp x = 1 \\ 0 \amp x \ne 1\end{cases}\text{.}
 \end{equation*}
 </div>
-</div></article></article><article class="exploration project-like" id="ch-exercises-3-3"><h4 class="heading">
+</div>
+<div class="solutions"><details id="ch-exercises-3-2-4-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><pre class="code-block tex2jax_ignore">&lt;me&gt;
+  f(x) = \begin{cases} 1 \amp x = 1 \\ 0 \amp x \ne 1\end{cases}
+&lt;/me&gt;.
+</pre></div></details></div></article></article><article class="exploration project-like" id="ch-exercises-3-3"><h4 class="heading">
 <span class="type">Practice</span><span class="space"> </span><span class="codenumber">4.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Lists and Paragraphs.</span>
 </h4>
 <div class="para" id="ch-exercises-3-3-2-1">Write a numbered list of your favorite three animals and an unnumbered list of your three favorite numbers (in no particular order).  Put text introducing the lists between them.</div>
