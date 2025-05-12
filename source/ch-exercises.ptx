@@ -43,6 +43,15 @@
           </me>.
         </p>
       </statement>
+      <hint>
+        <pre>
+        <![CDATA[ 
+          <me>
+            f(x) = \begin{cases} 1 \amp x = 1 \\ 0 \amp x \ne 1\end{cases}
+          </me>.
+        ]]>
+        </pre>
+      </hint>
     </task>
   </exploration>
 
