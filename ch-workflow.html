@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr" data-legacy-colorscheme="green_plum">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: crc-legacy                     *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>COMaT Codespace Workflow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="PreTeXt for Instructors">
+<meta property="book:author" content="Steven Clontz">
+<meta property="book:author" content="Oscar Levin">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.6.3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.1dbf799015a9933a.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.253ff4af1e53e55f.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.541c9106f2c605b9.css">
+<script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.css" integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.css" integrity="sha512-nXlJLUeqPMp1Q3+Bd8Qds8tXeRVQscMscwysJm821C++9w6WtsFbJjPenZ8cQVMXyqSAismveQJc0C1splFDCA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<img src="external/logo.png" alt="Logo image"><div class="title-container">
+<h1 class="heading"><a href="pfi.html"><span class="title">PreTeXt for Instructors</span></a></h1>
+<p class="byline">Steven Clontz, Oscar Levin</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="ch-intro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="pfi.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-exercises.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="meta-frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-preface"><div class="toc-title-box"><a href="meta-frontmatter-3.html" class="internal"><span class="title">Preface</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-pre-workshop.html" class="internal"><span class="codenumber">1</span> <span class="title">Before you arrive...</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-pre-workshop.html#ch-pre-workshop-3" class="internal"><span class="codenumber">1.1</span> <span class="title">Setting up your GitHub account</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-pre-workshop.html#ch-pre-workshop-4" class="internal"><span class="codenumber">1.2</span> <span class="title">Apply for your GitHub Education discount</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-pre-workshop.html#ch-pre-workshop-5" class="internal"><span class="codenumber">1.3</span> <span class="title">And that’s it!</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-intro.html" class="internal"><span class="codenumber">2</span> <span class="title">Write Once, Read Anywhere</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-intro.html#sec-setting-up-codespaces" class="internal"><span class="codenumber">2.1</span> <span class="title">Setting up Codespaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-intro.html#sec-principles" class="internal"><span class="codenumber">2.2</span> <span class="title">PreTeXt Principles</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-intro.html#sec-xml" class="internal"><span class="codenumber">2.3</span> <span class="title">PreTeXt is XML</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-intro.html#sec-divisions" class="internal"><span class="codenumber">2.4</span> <span class="title">Books and Divisions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-intro.html#sec-paragraphs" class="internal"><span class="codenumber">2.5</span> <span class="title">Paragraphs, Lists, and Blocks</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-intro.html#ch-intro-8" class="internal"><span class="codenumber">2.6</span> <span class="title">Links</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-intro.html#sec-figures" class="internal"><span class="codenumber">2.7</span> <span class="title">Figures and Diagrams</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-intro.html#sec-interactives" class="internal"><span class="codenumber">2.8</span> <span class="title">Interactives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-intro.html#sec-exercises" class="internal"><span class="codenumber">2.9</span> <span class="title">Authoring an Exercise</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-intro.html#sec-not-just-html-not-just-pdf" class="internal"><span class="codenumber">2.10</span> <span class="title">Not Just HTML, Not Just PDF</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-intro.html#sec-wrapup" class="internal"><span class="codenumber">2.11</span> <span class="title">Wrapping Up</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-workflow.html" class="internal"><span class="codenumber">3</span> <span class="title">Codespace Workflow</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-workflow.html#sec-build-and-generate" class="internal"><span class="codenumber">3.1</span> <span class="title">Build and Generate</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-workflow.html#sec-previewing" class="internal"><span class="codenumber">3.2</span> <span class="title">Previewing</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-workflow.html#sec-saving" class="internal"><span class="codenumber">3.3</span> <span class="title">Saving your work</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-workflow.html#sec-deploy" class="internal"><span class="codenumber">3.4</span> <span class="title">Deploy</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-exercises.html" class="internal"><span class="codenumber">4</span> <span class="title">Practice Activities</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-exercises.html#ch-exercises-3" class="internal"><span class="codenumber">4.1</span> <span class="title">Basic PreTeXt</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-exercises.html#sec-blocks-practice" class="internal"><span class="codenumber">4.2</span> <span class="title">Blocks</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-exercises.html#sec-bonus-practice" class="internal"><span class="codenumber">4.3</span> <span class="title">Challenges</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-exercises.html#sec-adapting-example" class="internal"><span class="codenumber">4.4</span> <span class="title">Adapting existing content</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-project.html" class="internal"><span class="codenumber">5</span> <span class="title">Managing Your Project</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-project.html#sec-file-and-directory-structure" class="internal"><span class="codenumber">5.1</span> <span class="title">File and directory structure</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-project.html#sec-project-ptx" class="internal"><span class="codenumber">5.2</span> <span class="title">Project.ptx</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-project.html#sec-versions" class="internal"><span class="codenumber">5.3</span> <span class="title">Versions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-project.html#sec-building-subsets" class="internal"><span class="codenumber">5.4</span> <span class="title">Building subsets</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-project.html#sec-codespaces-github-pages" class="internal"><span class="codenumber">5.5</span> <span class="title">Codespaces, GitHub, and GitHub Pages</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-publication.html" class="internal"><span class="codenumber">6</span> <span class="title">Publishing</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-publication.html#sec-publication-file" class="internal"><span class="codenumber">6.1</span> <span class="title">The publication file</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-publication.html#sec-showing-and-hiding-things" class="internal"><span class="codenumber">6.2</span> <span class="title">Showing and Hiding things</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-publication.html#sec-numbering" class="internal"><span class="codenumber">6.3</span> <span class="title">Numbering</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-publication.html#sec-formatting" class="internal"><span class="codenumber">6.4</span> <span class="title">Formatting</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-converting-to-pretext.html" class="internal"><span class="codenumber">7</span> <span class="title">Converting To PreTeXt</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-converting-to-pretext.html#sec-pandoc" class="internal"><span class="codenumber">7.1</span> <span class="title">Using Pandoc</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-converting-to-pretext.html#sec-using-the-community" class="internal"><span class="codenumber">7.2</span> <span class="title">Using the community</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-converting-to-pretext.html#sec-by-hand" class="internal"><span class="codenumber">7.3</span> <span class="title">By hand</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="meta-backmatter.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="ch-help.html" class="internal"><span class="codenumber">A</span> <span class="title">Getting Help</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="meta-backmatter-2.html" class="internal"><span class="codenumber">B</span> <span class="title">Copyright and Licensing</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="meta-backmatter-3.html" class="internal"><span class="codenumber">C</span> <span class="title">Acknowledgement</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-workflow"><h2 class="heading">
+<span class="type">Chapter</span><span class="space"> </span><span class="codenumber">3</span><span class="space"> </span><span class="title">Codespace Workflow</span>
+</h2>
+<section class="introduction" id="ch-workflow-2"><div class="para" id="ch-workflow-2-1">Once you create content in PreTeXt, it is time to <dfn class="terminology">build</dfn> it, perhaps <dfn class="terminology">generate assets</dfn> (if your project has such assets), <dfn class="terminology">view</dfn> the result to make sure it looks good, and when you are ready, <dfn class="terminology">deploy</dfn> your web output to a live webpage for others to marvel at.</div>
+<div class="para" id="ch-workflow-2-2">In this chapter we will walk through the steps to do this inside a codespace environment.</div></section><section class="section" id="sec-build-and-generate"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.1</span><span class="space"> </span><span class="title">Build and Generate</span>
+</h3>
+<div class="para logical" id="sec-build-and-generate-2">
+<div class="para">Inside the VS Code window you opened through codespaces, have a <code class="code-inline tex2jax_ignore">.ptx</code> file open.  You can build your entire project in a few different ways.</div>
+<ul class="disc" id="sec-build-and-generate-2-2">
+<li id="sec-build-and-generate-2-2-1"><div class="para" id="sec-build-and-generate-2-2-1-1">Click the “PreTeXt” button in the VS Code status bar (just left of center on the bottom of the window), or use the keyboard shortcut <code class="code-inline tex2jax_ignore">CTRL+ALT+p</code>, to bring up the PreTeXt Commands menu.  Select “Build” from the menu.  This will bring up a list of build targets.  Select “web” from the list.  This will build your entire project, and put the output in the <code class="code-inline tex2jax_ignore">build/web</code> folder.</div></li>
+<li id="sec-build-and-generate-2-2-2"><div class="para" id="sec-build-and-generate-2-2-2-1">You can type <code class="code-inline tex2jax_ignore">pretext build web</code> from the terminal (this uses the CLI directly).  If you don’t see a terminal window at the bottom of the screen, you can open it with <code class="code-inline tex2jax_ignore">CTRL+`</code>.</div></li>
+<li id="sec-build-and-generate-2-2-3"><div class="para" id="sec-build-and-generate-2-2-3-1">You can use the keyboard shortcut <code class="code-inline tex2jax_ignore">CTRL+ALT+b</code>.  This will build the project using the last build target you used.  If you haven’t built yet, it will use the default build target, which is “web”.</div></li>
+</ul>
+</div>
+<article class="note remark-like" id="sec-build-and-generate-3"><h4 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span>
+</h4>
+<div class="para" id="sec-build-and-generate-3-1">All shortcuts listed in this guide assume you are using Windows or Linux.  If you are using a Mac, you will need to use <code class="code-inline tex2jax_ignore">CMD</code> instead of <code class="code-inline tex2jax_ignore">CTRL</code>.</div></article><div class="para logical" id="sec-build-and-generate-4">
+<div class="para">If your documentment contains some more complicated elements, you might need to <dfn class="terminology">generate</dfn> them for them to show up.  The elements that require this are (depending on what your build target is):</div>
+<ul class="disc" id="sec-build-and-generate-4-2">
+<li id="sec-build-and-generate-4-2-1"><div class="para" id="p-derived-sec-build-and-generate-4-2-1"><code class="code-inline tex2jax_ignore">&lt;latex-image&gt;</code></div></li>
+<li id="sec-build-and-generate-4-2-2"><div class="para" id="p-derived-sec-build-and-generate-4-2-2"><code class="code-inline tex2jax_ignore">&lt;sagemath&gt;</code></div></li>
+<li id="sec-build-and-generate-4-2-3"><div class="para" id="p-derived-sec-build-and-generate-4-2-3"><code class="code-inline tex2jax_ignore">&lt;asymptote&gt;</code></div></li>
+<li id="sec-build-and-generate-4-2-4"><div class="para" id="p-derived-sec-build-and-generate-4-2-4">
+<code class="code-inline tex2jax_ignore">&lt;youtube&gt;</code> (for thumbnail previews)</div></li>
+<li id="sec-build-and-generate-4-2-5"><div class="para" id="p-derived-sec-build-and-generate-4-2-5"><code class="code-inline tex2jax_ignore">&lt;webwork&gt;</code></div></li>
+<li id="sec-build-and-generate-4-2-6"><div class="para" id="p-derived-sec-build-and-generate-4-2-6"><code class="code-inline tex2jax_ignore">&lt;codelense&gt;</code></div></li>
+</ul>
+</div>
+<div class="para" id="sec-build-and-generate-5">You can generate assets in much the same way you run a build.  The PreTeXt command menu has a <code class="code-inline tex2jax_ignore">Generate</code> choice that you select, and then select your target (different target formats have different requirements for what is generated).  You can also type <code class="code-inline tex2jax_ignore">pretext generate</code> in the terminal, or use the keyboard shortcut <code class="code-inline tex2jax_ignore">CTRL+ALT+g</code>.</div>
+<article class="note remark-like" id="sec-build-and-generate-6"><h4 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="sec-build-and-generate-6-1">
+<div class="para">Note that generating assets requires additional software, like <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span> or Sage.  Depending on your codespace setup, you can likely fix erorrs as follows.</div>
+<ol class="decimal" id="sec-build-and-generate-6-1-2">
+<li id="sec-build-and-generate-6-1-2-1"><div class="para" id="sec-build-and-generate-6-1-2-1-1">Open the file <code class="code-inline tex2jax_ignore">.devcontainer.json</code>
+</div></li>
+<li id="sec-build-and-generate-6-1-2-2"><div class="para" id="sec-build-and-generate-6-1-2-2-1">Delete the first line of the file (so that pretext doesn’t “fix” it for you).</div></li>
+<li id="sec-build-and-generate-6-1-2-3"><div class="para" id="sec-build-and-generate-6-1-2-3-1">Comment out line 18 (add two forward slashes).</div></li>
+<li id="sec-build-and-generate-6-1-2-4"><div class="para" id="sec-build-and-generate-6-1-2-4-1">Uncomment line 20 (remove the two forward slashes).</div></li>
+<li id="sec-build-and-generate-6-1-2-5"><div class="para" id="sec-build-and-generate-6-1-2-5-1">After saving, vs-code should offer to rebuild your “container,” which you should do.  Otherwise, clicking the gree button in the bottom of the window (labeled “Codespaces”) and selecting “Rebuild Container” should get you set up correctly.</div></li>
+</ol>
+</div></article></section><section class="section" id="sec-previewing"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.2</span><span class="space"> </span><span class="title">Previewing</span>
+</h3>
+<div class="para logical" id="sec-previewing-2">
+<div class="para">You can check the output of what you built using the <dfn class="terminology">View</dfn> command.  Again, you can access this in multiple ways. If you use the PreTeXt Commands menu ans select “view”, you will get a choice for your viewer.  We currently suggest using “Live Preview”, although on codespace this requires a few extra steps:</div>
+<ol class="decimal" id="sec-previewing-2-5">
+<li id="sec-previewing-2-5-1"><div class="para" id="sec-previewing-2-5-1-1">When the side preview opens, it will ask you if you want to open in an external browser.  Click “Open in browser”.  If you don’t see the pop-up, you can clicke on “Port: 3000” in the bottom status bar of VS Code and select “Open in browser” from the pop-up menu.</div></li>
+<li id="sec-previewing-2-5-2"><div class="para" id="sec-previewing-2-5-2-1">Now close the new tab that opens, and also close the side panel in VS Code that opened.</div></li>
+<li id="sec-previewing-2-5-3"><div class="para" id="sec-previewing-2-5-3-1">Finally select “View” again, and it should just work.  You can drag the VS Code tab to un-split the window to make it easier to view.</div></li>
+</ol>
+</div>
+<div class="para" id="sec-previewing-3">You can also experiment with the CLI view command, by selecting that from the pop-up menu, or by typing <code class="code-inline tex2jax_ignore">pretext view web</code> in the terminal.  This should pop up a new browser tab with the preview.  The only reason we caution against this currently is that the local server that gets started to preview the files will keep running as long as your codespace is active, and we don’t understand how this affects resource use.</div>
+<div class="para" id="sec-previewing-4">When you make edits to your source files, you will need to build again, and then refresh the preview window to see the changes.</div></section><section class="section" id="sec-saving"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.3</span><span class="space"> </span><span class="title">Saving your work</span>
+</h3>
+<div class="para" id="sec-saving-2">Using codespaces will keep all your files “in the cloud” on GitHub’s server.  As long as you don’t delete your codespace, your files will be saved there.  However, you will want to <dfn class="terminology">push</dfn> these files to your <dfn class="terminology">git repository</dfn> on GitHub to make this save perminent.  This has the benefit of allowing collaborators to access your files as well (your codespace is unique to your account).</div>
+<div class="para" id="sec-saving-3">There is a <em class="emphasis">lot</em> to learn about git, but luckily using VS Code lets you do everything you need using menus (you don’t need to use the command line, unless you want to).  Everything can be controlled using the <dfn class="terminology">Source Control</dfn> view: it should be third from the top on the very left of the window, an icon with splitting paths, and likely a badge showing how many files you have changed.</div>
+<div class="para logical" id="sec-saving-4">
+<div class="para">Here are the basic concepts you need to understand.</div>
+<ul class="disc" id="sec-saving-4-1">
+<li id="sec-saving-4-1-1"><div class="para" id="sec-saving-4-1-1-1">The program <dfn class="terminology">git</dfn> keeps track of all the changes you make to files inside of your <dfn class="terminology">repository</dfn> (in this case, the folder containing your project).</div></li>
+<li id="sec-saving-4-1-2">
+<div class="para" id="sec-saving-4-1-2-1">Once you have edited your files and are happy with all of them, you tell git to track the set of changes as a <dfn class="terminology">commit</dfn>.  This creates a handy <em class="emphasis">breakpoint</em> you could return to if you want to go back to an earlier version.</div>
+<div class="para logical" id="sec-saving-4-1-2-2">
+<div class="para">There are two steps to creating a commit (which you can often do all at once in practice):</div>
+<ol class="decimal" id="sec-saving-4-1-2-2-1"><li id="sec-saving-4-1-2-2-1-1">
+<div class="para" id="sec-saving-4-1-2-2-1-1-1">You <dfn class="terminology">stage</dfn> the files you want to update in the commit.</div>
+<div class="para" id="sec-saving-4-1-2-2-1-1-2">You <dfn class="terminology">commit</dfn> the stage files including a <dfn class="terminology">commit message</dfn>.</div>
+</li></ol>
+<div class="para">Doing this in two steps can be helpful if you want to commit only some of the files that have changed.</div>
+</div>
+</li>
+<li id="sec-saving-4-1-3"><div class="para" id="sec-saving-4-1-3-1">Once you have one or more commits, you need to sync these changes with GitHub.  To “upload” your changes, you <dfn class="terminology">push</dfn> the repository.  To download changes that you are someone else made, you <dfn class="terminology">pull</dfn> the repository.</div></li>
+</ul>
+</div>
+<div class="para" id="sec-saving-5">Now, how do we do these things in VS Code?  Start by looking at the Source Control view.  You will notice a list of files that were changed.  You can click on any of these to see what the changes are (you will see a side-by-side view of the original and updated version).</div>
+<div class="para" id="sec-saving-6">If you are comfortable staging and committing in one step, you can simply write yourself a short message in the textbox above the big green “Commit” button, and click the button.  If you want to stage first, click the + next to each file under “changes” to stage them.</div>
+<div class="para" id="sec-saving-7">The green button should now turn into a “Sync” button.  When you click that, it will do a quick pull and then a push, to sync changes with GitHub.</div>
+<div class="para" id="sec-saving-8">The only small point about using git is that no all files will be tracked.  This is on purpose, since temporary files really should not be “remembered” using this version control setting.  Which files or types of files are ignored by git is controled by the “.gitignore” file in your repository.</div>
+<div class="para" id="sec-saving-9">In particular, we do not track the output of builds.  Git is used to track progress on your source, which you build into output at any time.  If you want others to be able to see the output of your work without building it themselves, you need to deploy your work.</div></section><section class="section" id="sec-deploy"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.4</span><span class="space"> </span><span class="title">Deploy</span>
+</h3>
+<div class="para" id="sec-deploy-2">So you have worked tirelessly to prepare course notes or a book, built and previewed, synced changes using git, and now you are ready to share the results of your efforts with the world.  It’s time to <dfn class="terminology">deploy</dfn> your project.</div>
+<div class="para" id="sec-deploy-3">With our codespace setup this is simple.  From the “PreTeXt Commands” menu, click on “Deploy”.  This will automatically take the most recent build of your web target and host it through <a class="external" href="https://pages.github.com/" target="_blank">GitHub Pages</a><details class="ptx-footnote" aria-live="polite" id="sec-deploy-3-4"><summary class="ptx-footnote__number" title="Footnote 3.4.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="sec-deploy-3-4"><code class="code-inline tex2jax_ignore">pages.github.com/</code></div></details>.  Watch the output pane for a link to your published site. (It can take a few minutes for the site to get set up or updated; there should be another link to view the progress of the GitHub “action” that reports the progress.)</div></section></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="ch-intro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-exercises.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

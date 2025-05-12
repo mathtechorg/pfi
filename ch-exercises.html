@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr" data-legacy-colorscheme="green_plum">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: crc-legacy                     *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>COMaT Practice Activities</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="PreTeXt for Instructors">
+<meta property="book:author" content="Steven Clontz">
+<meta property="book:author" content="Oscar Levin">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.6.3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.1dbf799015a9933a.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.253ff4af1e53e55f.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.541c9106f2c605b9.css">
+<script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.css" integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.css" integrity="sha512-nXlJLUeqPMp1Q3+Bd8Qds8tXeRVQscMscwysJm821C++9w6WtsFbJjPenZ8cQVMXyqSAismveQJc0C1splFDCA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<img src="external/logo.png" alt="Logo image"><div class="title-container">
+<h1 class="heading"><a href="pfi.html"><span class="title">PreTeXt for Instructors</span></a></h1>
+<p class="byline">Steven Clontz, Oscar Levin</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="ch-workflow.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="pfi.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-project.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="meta-frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-preface"><div class="toc-title-box"><a href="meta-frontmatter-3.html" class="internal"><span class="title">Preface</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-pre-workshop.html" class="internal"><span class="codenumber">1</span> <span class="title">Before you arrive...</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-pre-workshop.html#ch-pre-workshop-3" class="internal"><span class="codenumber">1.1</span> <span class="title">Setting up your GitHub account</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-pre-workshop.html#ch-pre-workshop-4" class="internal"><span class="codenumber">1.2</span> <span class="title">Apply for your GitHub Education discount</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-pre-workshop.html#ch-pre-workshop-5" class="internal"><span class="codenumber">1.3</span> <span class="title">And that’s it!</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-intro.html" class="internal"><span class="codenumber">2</span> <span class="title">Write Once, Read Anywhere</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-intro.html#sec-setting-up-codespaces" class="internal"><span class="codenumber">2.1</span> <span class="title">Setting up Codespaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-intro.html#sec-principles" class="internal"><span class="codenumber">2.2</span> <span class="title">PreTeXt Principles</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-intro.html#sec-xml" class="internal"><span class="codenumber">2.3</span> <span class="title">PreTeXt is XML</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-intro.html#sec-divisions" class="internal"><span class="codenumber">2.4</span> <span class="title">Books and Divisions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-intro.html#sec-paragraphs" class="internal"><span class="codenumber">2.5</span> <span class="title">Paragraphs, Lists, and Blocks</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-intro.html#ch-intro-8" class="internal"><span class="codenumber">2.6</span> <span class="title">Links</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-intro.html#sec-figures" class="internal"><span class="codenumber">2.7</span> <span class="title">Figures and Diagrams</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-intro.html#sec-interactives" class="internal"><span class="codenumber">2.8</span> <span class="title">Interactives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-intro.html#sec-exercises" class="internal"><span class="codenumber">2.9</span> <span class="title">Authoring an Exercise</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-intro.html#sec-not-just-html-not-just-pdf" class="internal"><span class="codenumber">2.10</span> <span class="title">Not Just HTML, Not Just PDF</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-intro.html#sec-wrapup" class="internal"><span class="codenumber">2.11</span> <span class="title">Wrapping Up</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-workflow.html" class="internal"><span class="codenumber">3</span> <span class="title">Codespace Workflow</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-workflow.html#sec-build-and-generate" class="internal"><span class="codenumber">3.1</span> <span class="title">Build and Generate</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-workflow.html#sec-previewing" class="internal"><span class="codenumber">3.2</span> <span class="title">Previewing</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-workflow.html#sec-saving" class="internal"><span class="codenumber">3.3</span> <span class="title">Saving your work</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-workflow.html#sec-deploy" class="internal"><span class="codenumber">3.4</span> <span class="title">Deploy</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-exercises.html" class="internal"><span class="codenumber">4</span> <span class="title">Practice Activities</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-exercises.html#ch-exercises-3" class="internal"><span class="codenumber">4.1</span> <span class="title">Basic PreTeXt</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-exercises.html#sec-blocks-practice" class="internal"><span class="codenumber">4.2</span> <span class="title">Blocks</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-exercises.html#sec-bonus-practice" class="internal"><span class="codenumber">4.3</span> <span class="title">Challenges</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-exercises.html#sec-adapting-example" class="internal"><span class="codenumber">4.4</span> <span class="title">Adapting existing content</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-project.html" class="internal"><span class="codenumber">5</span> <span class="title">Managing Your Project</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-project.html#sec-file-and-directory-structure" class="internal"><span class="codenumber">5.1</span> <span class="title">File and directory structure</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-project.html#sec-project-ptx" class="internal"><span class="codenumber">5.2</span> <span class="title">Project.ptx</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-project.html#sec-versions" class="internal"><span class="codenumber">5.3</span> <span class="title">Versions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-project.html#sec-building-subsets" class="internal"><span class="codenumber">5.4</span> <span class="title">Building subsets</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-project.html#sec-codespaces-github-pages" class="internal"><span class="codenumber">5.5</span> <span class="title">Codespaces, GitHub, and GitHub Pages</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-publication.html" class="internal"><span class="codenumber">6</span> <span class="title">Publishing</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-publication.html#sec-publication-file" class="internal"><span class="codenumber">6.1</span> <span class="title">The publication file</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-publication.html#sec-showing-and-hiding-things" class="internal"><span class="codenumber">6.2</span> <span class="title">Showing and Hiding things</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-publication.html#sec-numbering" class="internal"><span class="codenumber">6.3</span> <span class="title">Numbering</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-publication.html#sec-formatting" class="internal"><span class="codenumber">6.4</span> <span class="title">Formatting</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-converting-to-pretext.html" class="internal"><span class="codenumber">7</span> <span class="title">Converting To PreTeXt</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-converting-to-pretext.html#sec-pandoc" class="internal"><span class="codenumber">7.1</span> <span class="title">Using Pandoc</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-converting-to-pretext.html#sec-using-the-community" class="internal"><span class="codenumber">7.2</span> <span class="title">Using the community</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-converting-to-pretext.html#sec-by-hand" class="internal"><span class="codenumber">7.3</span> <span class="title">By hand</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="meta-backmatter.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="ch-help.html" class="internal"><span class="codenumber">A</span> <span class="title">Getting Help</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="meta-backmatter-2.html" class="internal"><span class="codenumber">B</span> <span class="title">Copyright and Licensing</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="meta-backmatter-3.html" class="internal"><span class="codenumber">C</span> <span class="title">Acknowledgement</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-exercises"><h2 class="heading">
+<span class="type">Chapter</span><span class="space"> </span><span class="codenumber">4</span><span class="space"> </span><span class="title">Practice Activities</span>
+</h2>
+<section class="introduction" id="ch-exercises-2"><div class="para" id="ch-exercises-2-1">Let’s get our hands dirty and try writing some PreTeXt.  If you have some ideas of what you want to try, go for it.  Otherwise, try to implement as many of the following as you can. </div></section><section class="section" id="ch-exercises-3"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">4.1</span><span class="space"> </span><span class="title">Basic PreTeXt</span>
+</h3>
+<article class="exploration project-like" id="ch-exercises-3-2"><h4 class="heading">
+<span class="type">Practice</span><span class="space"> </span><span class="codenumber">4.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Paragraph contents.</span>
+</h4>
+<article class="task exercise-like" id="ch-exercises-3-2-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="ch-exercises-3-2-2-1-1">Write a paragraph of text that includes an <em class="emphasis">emphasized</em> word, a “quoted” word, and inline math using a variable like <span class="process-math">\(x\)</span> or <span class="process-math">\(y\text{.}\)</span>
+</div></article><article class="task exercise-like" id="ch-exercises-3-2-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="ch-exercises-3-2-3-1-1">Write the definition of a term inside a paragraph (not as a numbered definition).  The defined word should be clear when you ready it.  For example: a <dfn class="terminology">slark</dfn> is a hybrid of a sloth and a shark.</div></article><article class="task exercise-like" id="ch-exercises-3-2-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para logical" id="ch-exercises-3-2-4-1-1">
+<div class="para">Write a paragraph that includes a math equation on a displayed line.  Like this:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x) = \begin{cases} 1 \amp x = 1 \\ 0 \amp x \ne 1\end{cases}\text{.}
+\end{equation*}
+</div>
+</div></article></article><article class="exploration project-like" id="ch-exercises-3-3"><h4 class="heading">
+<span class="type">Practice</span><span class="space"> </span><span class="codenumber">4.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Lists and Paragraphs.</span>
+</h4>
+<div class="para" id="ch-exercises-3-3-2-1">Write a numbered list of your favorite three animals and an unnumbered list of your three favorite numbers (in no particular order).  Put text introducing the lists between them.</div></article><article class="exploration project-like" id="ch-exercises-3-4"><h4 class="heading">
+<span class="type">Practice</span><span class="space"> </span><span class="codenumber">4.1.3</span><span class="period">.</span>
+</h4>
+<article class="task exercise-like" id="ch-exercises-3-4-1"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="ch-exercises-3-4-1-1-1">Create the following table using the pretext <code class="code-inline tex2jax_ignore">tabular</code> environment.</div> <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r2 l0 t0 lines">1</td>
+<td class="l m b2 r2 l0 t0 lines">2</td>
+<td class="l m b2 r0 l0 t0 lines">3</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">4</td>
+<td class="l m b0 r2 l0 t0 lines">5</td>
+<td class="l m b0 r0 l0 t0 lines">6</td>
+</tr>
+</table></div></article><article class="task exercise-like" id="ch-exercises-3-4-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para logical" id="ch-exercises-3-4-2-1-1">
+<div class="para">Create the same table using a <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span> array environment.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{c|c|c} 
+1 \amp 2 \amp 3 \\ \hline
+4 \amp 5 \amp 6
+\end{array}
+\end{equation*}
+</div>
+</div></article></article></section><section class="section" id="sec-blocks-practice"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">4.2</span><span class="space"> </span><span class="title">Blocks</span>
+</h3>
+<article class="exploration project-like" id="sec-blocks-practice-2"><h4 class="heading">
+<span class="type">Practice</span><span class="space"> </span><span class="codenumber">4.2.1</span><span class="period">.</span>
+</h4>
+<article class="task exercise-like" id="sec-blocks-practice-2-1"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="sec-blocks-practice-2-1-1-1">Write a numbered definition.  Don’t forget to highlight the word that is being defined.</div></article><article class="task exercise-like" id="sec-blocks-practice-2-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="sec-blocks-practice-2-2-1-1">Oh no!  You just realized that your definition is actually more of an axiom.  What are you going to do!?!?</div></article></article><article class="exploration project-like" id="sec-blocks-practice-3"><h4 class="heading">
+<span class="type">Practice</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="period">.</span>
+</h4>
+<article class="task exercise-like" id="sec-blocks-practice-3-1"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="sec-blocks-practice-3-1-1-1">Write a lemma.  Since it is probably obvious, you can leave off the proof.</div></article><article class="task exercise-like" id="sec-blocks-practice-3-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="sec-blocks-practice-3-2-1-1">Write a theorem, and include a proof.  The proof should use (and reference) the lemma (which means you need to go back and identify the lemma some how).</div></article><article class="task exercise-like" id="sec-blocks-practice-3-3"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="sec-blocks-practice-3-3-1-1">What other types of mathematical statements might you want to include now?  Maybe you put a remark or a note or a corollary?  What would you want to do?  What can you do?</div></article></article><article class="exploration project-like" id="sec-blocks-practice-4"><h4 class="heading">
+<span class="type">Practice</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span>
+</h4>
+<article class="task exercise-like" id="sec-blocks-practice-4-1"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="sec-blocks-practice-4-1-1-1">Write a numbered example.</div></article><article class="task exercise-like" id="sec-blocks-practice-4-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="sec-blocks-practice-4-2-1-1">Sometimes an example is of a problem you would ask students to solve.  You might include a hint or solution for such examples.  Give an example of such a thing, with a hint and solution.</div></article></article><article class="exploration project-like" id="sec-blocks-practice-5"><h4 class="heading">
+<span class="type">Practice</span><span class="space"> </span><span class="codenumber">4.2.4</span><span class="period">.</span>
+</h4>
+<article class="task exercise-like" id="sec-blocks-practice-5-1"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="sec-blocks-practice-5-1-1-1">Write an <dfn class="terminology">activity</dfn> that you would want your students to try.  Give your activity a hint.</div></article><article class="task exercise-like" id="sec-blocks-practice-5-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="sec-blocks-practice-5-2-1-1">Sometimes an activity has multiple parts.  You could give each part as an item on a numbered list, but that would not allow parts to have their own hint/answer/solution.</div> <div class="para" id="sec-blocks-practice-5-2-1-2">Instead, you can make each part its own <code class="code-inline tex2jax_ignore">&lt;task&gt;</code>.  Try writing a multi-part activity, some parts having hints, others having a solution.</div></article></article><div class="para" id="sec-blocks-practice-6">Exercises can appear at the end of a section, in an <code class="code-inline tex2jax_ignore">&lt;exercises&gt;</code> division, or they can be “checkpoint” exercises that show up in the middle of a section.</div>
+<article class="exploration project-like" id="sec-blocks-practice-7"><h4 class="heading">
+<span class="type">Practice</span><span class="space"> </span><span class="codenumber">4.2.5</span><span class="period">.</span>
+</h4>
+<div class="para" id="sec-blocks-practice-7-1-1">Write a checkpoint exercise.  Up to you whether it gets parts (i.e. tasks).</div></article><article class="assemblage assemblage-like" id="assemblage-example-for-exercise"><h4 class="heading"><span class="title">What we learned.</span></h4>
+<div class="para" id="assemblage-example-for-exercise-2">You can do lots of things in PreTeXt.</div></article><article class="exploration project-like" id="sec-blocks-practice-9"><h4 class="heading">
+<span class="type">Practice</span><span class="space"> </span><span class="codenumber">4.2.6</span><span class="period">.</span>
+</h4>
+<div class="para" id="sec-blocks-practice-9-1-1">Write a summary box like the one above.  You might say that such a box “assembles” the concepts you have discussed...</div></article></section><section class="section" id="sec-bonus-practice"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">4.3</span><span class="space"> </span><span class="title">Challenges</span>
+</h3>
+<div class="para" id="sec-bonus-practice-2">Want to push yourself a bit?  Try some of these bonus activities</div>
+<article class="investigation project-like" id="sec-bonus-practice-3"><h4 class="heading">
+<span class="type">Challenge</span><span class="space"> </span><span class="codenumber">4.3.1</span><span class="period">.</span>
+</h4>
+<div class="para" id="sec-bonus-practice-3-1-1">Replicated the following:</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel middle" style="width:50%;"><div class="para logical" id="sec-bonus-practice-3-1-2-1"><div class="displaymath process-math">
+\begin{equation*}
+f(x) = x^2
+\end{equation*}
+</div></div></div>
+<div class="sbspanel fixed-width middle" style="width:50%;"><figure class="table table-like" id="sec-bonus-practice-3-1-2-2"><table class="tabular">
+<tr>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(x\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(f(x)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">9</td>
+</tr>
+</table>
+<figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.3.1<span class="period">.</span></span><span class="space"> </span>Table of Values</figcaption></figure></div>
+</div></div></article><article class="investigation project-like" id="sec-bonus-practice-4"><h4 class="heading">
+<span class="type">Challenge</span><span class="space"> </span><span class="codenumber">4.3.2</span><span class="period">.</span>
+</h4>
+<div class="para" id="sec-bonus-practice-4-1-1">Create the folowing images using TikZ</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:11%;margin-right:11%;">
+<div class="sbspanel middle" style="width:42.3076923076923%;"><img src="generated/latex-image/tikz_quick_eg.svg" role="img" class="contained"></div>
+<div class="sbspanel middle" style="width:42.3076923076923%;"><img src="generated/latex-image/image_tikz_eg.svg" role="img" class="contained"></div>
+</div></div></article></section><section class="section" id="sec-adapting-example"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">4.4</span><span class="space"> </span><span class="title">Adapting existing content</span>
+</h3>
+<article class="activity project-like" id="sec-adapting-example-2"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.4.1</span><span class="period">.</span>
+</h4>
+<div class="para" id="sec-adapting-example-2-1-1">Nest the following PreTeXt elements in order to produce the “Graphing a Derivative” subsection of <a class="external" href="https://openstax.org/books/calculus-volume-1/pages/3-2-the-derivative-as-a-function#fs-id1169737770972" target="_blank">OpenStax Calculus Volume 1 Section 3.2</a><details class="ptx-footnote" aria-live="polite" id="sec-adapting-example-2-1-1-3"><summary class="ptx-footnote__number" title="Footnote 4.4.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="sec-adapting-example-2-1-1-3"><code class="code-inline tex2jax_ignore">openstax.org/books/calculus-volume-1/pages/3-2-the-derivative-as-a-function#fs-id1169737770972</code></div></details>.</div> <div class="code-box"><pre class="program"><code class="language-xml">&lt;caption&gt;The derivative &lt;m&gt;f'(x)&lt;/m&gt; is positive everywhere because the function &lt;m&gt;f(x)&lt;/m&gt; is increasing.&lt;/caption&gt;
+&lt;caption&gt;The derivative &lt;m&gt;f'(x)\lt 0&lt;/m&gt; where the function &lt;m&gt;f(x)&lt;/m&gt; is decreasing and &lt;m&gt;f'(x)\gt 0&lt;/m&gt; where &lt;m&gt;f(x)&lt;/m&gt; is increasing...&lt;/caption&gt;
+&lt;description&gt;The function f(x) = the square root of x is graphed as is its derivative f'(x) = 1/(2 times the square root of x).&lt;/description&gt;
+&lt;description&gt;Two functions are graphed here: f(x) and f'(x). The function f(x) is the same as the above graph, that is, roughly sinusoidal, starting at (-4, 3), decreasing to a local minimum at (-2, 2), then increasing to a local maximum at (3, 6), and getting cut off at (7, 2). The function f'(x) is an downward-facing parabola with vertex near (0.5, 1.75), y-intercept (0, 1.5), and x-intercepts (-1.9, 0) and (3, 0).&lt;/description&gt;
+&lt;description&gt;The function f(x) = x squared - 2x is graphed as is its derivative f'(x) = 2x - 2.&lt;/description&gt;
+&lt;description&gt;The function f(x) is roughly sinusoidal, starting at (-4, 3), decreasing to a local minimum at (-2, 2), then increasing to a local maximum at (3, 6), and getting cut off at (7, 2).&lt;/description&gt;
+&lt;example&gt;&lt;/example&gt;
+&lt;exercise&gt;&lt;/exercise&gt;
+&lt;figure&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;/figure&gt;
+&lt;image source="solution-image.jpg"&gt;&lt;/image&gt;
+&lt;image source="fx-sqrt-x.jpg"&gt;&lt;/image&gt;
+&lt;image source="exercise-image.jpg"&gt;&lt;/image&gt;
+&lt;image source="fx-x2-2x.jpg"&gt;&lt;/image&gt;
+&lt;p&gt;We have already discussed how to graph a function...&lt;/p&gt;
+&lt;p&gt;In Example 3.12 we found that for &lt;m&gt;f(x)=x^2-2x,f'(x)=2x-2&lt;/m&gt;...&lt;/p&gt;
+&lt;p&gt;Sketch the graph of &lt;m&gt;f(x)=x^2-4&lt;/m&gt;...&lt;/p&gt;
+&lt;p&gt;In Example 3.11 we found that for &lt;m&gt;f(x)=\sqrt{x},f'(x)=1/2\sqrt{x}&lt;/m&gt;...&lt;/p&gt;
+&lt;p&gt;The solution is shown in the following graph. Observe that...&lt;/p&gt;
+&lt;p&gt;Use the following graph of &lt;m&gt;f(x)&lt;/m&gt; to sketch a graph of &lt;m&gt;f'(x)&lt;/m&gt;.&lt;/p&gt;
+&lt;solution&gt;&lt;/solution&gt;
+&lt;statement&gt;&lt;/statement&gt;
+&lt;statement&gt;&lt;/statement&gt;
+&lt;subsection&gt;&lt;/subsection&gt;
+&lt;title&gt;Graphing a Derivative&lt;/title&gt;
+&lt;title&gt;Sketching a Derivative Using a Function&lt;/title&gt;
+</code></pre></div></article><article class="activity project-like" id="sec-adapting-example-3"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.4.2</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="sec-adapting-example-3-1"><div class="para" id="sec-adapting-example-3-1-1">Consider the following concerning the first two pages (leading up until the “Units” header) of <a class="external" href="https://www.math.miami.edu/~ec/book/ch03.pdf" target="_blank">Elements of Abstract and Linear Algebra</a><details class="ptx-footnote" aria-live="polite" id="sec-adapting-example-3-1-1-3"><summary class="ptx-footnote__number" title="Footnote 4.4.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="sec-adapting-example-3-1-1-3"><code class="code-inline tex2jax_ignore">www.math.miami.edu/~ec/book/ch03.pdf</code></div></details>.</div></div>
+<article class="task exercise-like" id="sec-adapting-example-3-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="sec-adapting-example-3-2-1-1">Consider how this content might be scaffolded in terms of paragraphs, theorems, statements, proofs, and so on (not necessarily in PreTeXt terms).</div></article><article class="task exercise-like" id="sec-adapting-example-3-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="sec-adapting-example-3-3-1-1">Nest the following PreTeXt elements in order to reproduce this portion of .</div> <div class="code-box"><pre class="program"><code class="language-xml">&lt;definition&gt;&lt;/definition&gt;
+&lt;example&gt;&lt;/example&gt;
+&lt;introduction&gt;&lt;/introduction&gt;
+&lt;li&gt;&lt;p&gt;If &lt;m&gt;a,b,c\in R&lt;/m&gt;... (associative)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;m&gt;(-a)\cdot b=a\cdot(-b)=-(a\cdot b)&lt;/m&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;If &lt;m&gt;a,b,c\in R&lt;/m&gt;... (distribuative)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;m&gt;(na)\cdot(mb)=(nm)(a\cdot b)&lt;/m&gt;...&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;m&gt;a\cdot \underline{0}=\underline{0}\cdot=\underline{0}&lt;/m&gt;...&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;m&gt;R&lt;/m&gt; has a multiplicative identity...&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Let &lt;m&gt;\underline{n}=n\underline{1}&lt;/m&gt;. For example...&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;If &lt;m&gt;a,b\in R&lt;/m&gt;... (commutative)&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;Suppose &lt;m&gt;R&lt;/m&gt; is an additive abelian group...&lt;/p&gt;
+&lt;p&gt;The next two theorems show that ring mulitplication...&lt;/p&gt;
+&lt;p&gt;Suppose &lt;m&gt;R&lt;/m&gt; is a ring and &lt;m&gt;a,b\in R&lt;/m&gt;.&lt;/p&gt;
+&lt;p&gt;Suppose &lt;m&gt;a,b\in R&lt;/m&gt; and &lt;m&gt;n,m\in \mathbf Z&lt;/m&gt;.&lt;/p&gt;
+&lt;p&gt;Rings are additive abelian groups with a second operation...&lt;/p&gt;
+&lt;p&gt;The basic commutative rings in mathematics are the integers &lt;m&gt;\mathbf Z&lt;/m&gt;...&lt;/p&gt;
+&lt;p&gt;Recall that, since &lt;m&gt;R&lt;/m&gt; is an additive abelien group...&lt;/p&gt;
+&lt;p&gt;If 1,2,3 are satisfied...&lt;/p&gt;
+&lt;p&gt;&lt;ol&gt;&lt;/ol&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ol&gt;&lt;/ol&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ol&gt;&lt;/ol&gt;&lt;/p&gt;
+&lt;section&gt;&lt;/section&gt;
+&lt;statement&gt;&lt;/statement&gt;
+&lt;statement&gt;&lt;/statement&gt;
+&lt;statement&gt;&lt;/statement&gt;
+&lt;theorem&gt;&lt;/theorem&gt;
+&lt;title&gt;Rings&lt;/title&gt;
+&lt;theorem&gt;&lt;/theorem&gt;
+&lt;statement&gt;&lt;/statement&gt;
+</code></pre></div></article></article></section></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="ch-workflow.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-project.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
