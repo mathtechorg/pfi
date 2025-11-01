@@ -1,97 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ch-pre-workshop">
-    <title>First steps</title>
-    <introduction>
-        <p>
-            Authoring in PreTeXt requires nothing more
-            than a wifi connection and GitHub account.
-            GitHub users also can share their
-            content for free on GitHub Pages!
-        </p>
+  <title>First steps</title>
 
-        <p>
-            If you prefer to use a local setup instead of the cloud-based interface, this is absolutely possible, but requires a bit more setup.  A list of the steps you will need to complete are given below, but remember, this is entirely optional.
-        </p>
+  <introduction>
+    <p>
+      Authoring in PreTeXt requires nothing more than a wifi connection and GitHub account.
+      GitHub users also can share their content for free on GitHub Pages!
+    </p>
 
-    </introduction>
-    <section>
-        <title>Setting up your GitHub account</title>
-        <p>
-            To create a GitHub account, 
-            <url href="https://github.com/signup">
-                follow the instructions on GitHub's
-                signup page.
-            </url>
-        </p>
+    <p>
+      If you prefer to use a local setup instead of the cloud-based interface, this is absolutely possible, but requires a bit more setup.
+      A list of the steps you will need to complete are given in <xref ref="sec-installing-pretext-locally"/>, but remember, this is entirely optional.
+    </p>
+  </introduction>
 
-        <p>
-            <alert>And that's it!</alert>.  Really, unless you want to get everything working locally, you can skip to <xref ref="ch-intro"/>.
-        </p>
-    </section>
+  <section>
+    <title>Setting up your GitHub account</title>
 
+    <p>
+      To create a GitHub account, follow the instructions on <url href="https://github.com/signup"> GitHub's signup page.
+      </url>
+    </p>
 
-    <section>
-        <title>Apply for your GitHub Education discount</title>
-        <p>
-            While you can use GitHub for free, there are some features that require a <q>pro</q> account. The main advantage in this context is that the free Pro account you get access to will allow you to use GitHub Pages to publish your PreTeXt content while still keeping your repository and source files private.
-        </p>
-        <p>
-            Educators and non-profit researchers can get a coupon for a free upgrade to the pro level.  Apply at
-            <url href="https://education.github.com/discount_requests/pack_application">Education.GitHub.com</url>
-            to unlock these features (in our experience, applications are usually processed quickly for <c>.edu</c>
-            email addresses).
-        </p>
-    </section>
+    <p>
+      <alert>And that's it!</alert>.  Really, unless you want to get everything working locally, you can skip to <xref ref="ch-intro"/>.
+    </p>
+  </section>
 
-    <section xml:id="sec-installing-pretext-locally">
-        <title>Installing PreTeXt locally</title>
-        <p>
-            To write in PreTeXt on your own computer, you will definitely need the following.
-            <ul>
-                <li>
-                    <p>
-                        A modern text editor.  We recommend <url href="https://code.visualstudio.com/">Visual Studio Code</url>.  This has the advantage of being exactly the same editor that we will use in the online Codespace workflow.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Python 3.8 or later. You can download the latest version from <url href="https://www.python.org/downloads/">python.org</url>.  <em>Make sure to check the box to add Python to your PATH during installation.</em>
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Once you have Python installed, you can install PreTeXt by running the following command in your terminal or command prompt:
-                        <cd>pip install pretext</cd>
-                        (Depending on your system, you might need to use <c>python -m pip install pretext</c> or <c>python3 -m pip install pretext</c> instead.)
-                    </p>
-                </li>
-            </ul>
-        </p>
-        <p>
-            Depending on what you want to do with PreTeXt, you might need some of the following additional tools.
-            <ul>
-                <li>
-                    <p>
-                        A LaTeX distribution (TeX Live, MikTeX, etc.) if you want to generate PDF output or include TikZ graphics in your PreTeXt document.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        If you want to use GitHub pages or GitHub to manage your project, you will need to install Git (if you have a mac or linux system, you probably already have it installed).  You can download Git from <url href="https://git-scm.com/downloads">git-scm.com</url>.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        To use any of the additional HTML themes, you will need to install Node.js and npm (Node Package Manager).  You can download Node.js from <url href="https://nodejs.org/en/download/">nodejs.org</url>. 
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        If you want to include sageplot graphics in your PreTeXt document, you will need to install SageMath.  You can download SageMath from <url href="https://www.sagemath.org/download.html">sagemath.org</url>.  
-                    </p>
-                </li>
-            </ul>
-        </p>
-    </section>
+  <section>
+    <title>Apply for your GitHub Education discount</title>
 
+    <p>
+      While you can use GitHub for free, there are some features that require a <q>pro</q> account.
+      The main advantage in this context is that the free Pro account you get access to will allow you to use GitHub Pages to publish your PreTeXt content while still keeping your repository and source files private.
+    </p>
+
+    <p>
+      Educators and non-profit researchers can get a coupon for a free upgrade to the pro level.
+      Apply at <url href="https://education.github.com/discount_requests/pack_application">Education.GitHub.com</url> to unlock these features (in our experience, applications are usually processed quickly for <c>.edu</c> email addresses).
+    </p>
+  </section>
+
+  <section xml:id="sec-installing-pretext-locally">
+    <title>Installing PreTeXt locally</title>
+
+    <p>
+      If you would rather author <pretext /> locally on your own computer (which does offer advantages of not requiring an active internet connection, and the security of having your files stored on your device), we suggest one of the two following approaches.
+      <ol>
+        <li>
+          <p>
+            Run all the software <pretext /> needs inside a <term>docker container</term>.  You will have the exact same set of software used for the browser-based authoring experience.  This is easier to set up, but will likely use more storage space.  We recommend this approach if storage is not a concern or you don't already have software like python or <latex /> on your computer.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Install all requirements separately.  More steps, but if you already have some of the required software installed, this will save disk space and might speed up editing. 
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <p>Detailed instructions for both of these options is available in the <url href="https://pretextbook.org/doc/guide/html/tutorial-install.html#tutorial-install"><pretext /> Guide</url>.</p>
+
+    <p>
+      With either approach, you will want a modern text editor to edit the <pretext /> source files.  We strongly recommend using <url href="https://code.visualstudio.com/">Visual Studio Code</url>, which has an extension for writing PreTeXt and will walk you through the docker container setup if you go that route.
+    </p>
+
+  </section>
 </chapter>

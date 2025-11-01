@@ -1,0 +1,17 @@
+<exercise>
+  <statement>
+    <p>
+      What is the sum of the first 100 positive integers?
+    </p>
+  </statement>
+  <hint>
+    <p>
+      Addition is commutative.
+    </p>
+  </hint>
+  <answer>
+    <p>
+      5050.
+    </p>
+  </answer>
+</exercise>
