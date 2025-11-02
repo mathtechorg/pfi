@@ -431,20 +431,21 @@ This chapter is about the real numbers <m>\R</m>
     <figure xml:id="figure-braille">
       <caption>Photograph taken from AIM Press Release on braille, provided as a JPEG in the project <c>assets</c> directory.</caption>
       <image source="braille_bubble.jpg" width="75%">
-        <description>
+        <shortdescription>
           Photograph of a hand tracing over braille code.
           A cartoon thought bubble contains the quadratic formula in standard mathematical notation, matching the contents of the braille code in the photograph.
-        </description>
+        </shortdescription>
       </image>
     </figure>
 
     <figure xml:id="figure-tikz-electronics">
       <caption>Electronics Diagram generated with Tikz code</caption>
       <image xml:id="tikz-electronics">
-        <description>
+        <shortdescription>
           A pile of electronic components wired together
-        </description>
-        <latex-image><![CDATA[ \tikzset{% block/.style    = {draw, thick, rectangle, minimum height = 3em, minimum width = 3em}, sum/.style      = {draw, circle, node distance = 2cm}, % Adder input/.style    = {coordinate}, % Input output/.style   = {coordinate} % Output } % Defining string as labels of certain blocks. \newcommand{\suma}{\Large$+$} \newcommand{\inte}{$\displaystyle \int$} \newcommand{\derv}{\huge$\frac{d}{dt}$} \begin{tikzpicture}[auto, thick, node distance=2cm, >=triangle 45] \draw % Drawing the blocks of first filter : node at (0,0)[right=-3mm]{\Large \textbullet} node [input, name=input1] {} node [sum, right of=input1] (suma1) {\suma} node [block, right of=suma1] (inte1) {\inte} node at (6.8,0)[block] (Q1) {\Large $Q_1$} node [block, below of=inte1] (ret1) {\Large$T_1$}; % Joining blocks. % Commands \draw with options like [->] must be written individually \draw[->](input1) -- node {$X(Z)$}(suma1); \draw[->](suma1) -- node {} (inte1); \draw[->](inte1) -- node {} (Q1); \draw[->](ret1) -| node[near end]{} (suma1); % Adder \draw node at (5.4,-4) [sum, name=suma2] {\suma} % Second stage of filter node at  (1,-6) [sum, name=suma3] {\suma} node [block, right of=suma3] (inte2) {\inte} node [sum, right of=inte2] (suma4) {\suma} node [block, right of=suma4] (inte3) {\inte} node [block, right of=inte3] (Q2) {\Large$Q_2$} node at (9,-8) [block, name=ret2] {\Large$T_2$} ; % Joining the blocks of second filter \draw[->] (suma3) -- node {} (inte2); \draw[->] (inte2) -- node {} (suma4); \draw[->] (suma4) -- node {} (inte3); \draw[->] (inte3) -- node {} (Q2); \draw[->] (ret2) -| (suma3); \draw[->] (ret2) -| (suma4); % Third stage of filter: % Defining nodes: \draw node at (11.5, 0) [sum, name=suma5]{\suma} node [output, right of=suma5]{} node [block, below of=suma5] (deriv1){\derv} node [output, right of=suma5] (sal2){} ; % Joining the blocks: \draw[->] (suma2) -| node {}(suma3); \draw[->] (Q1) -- (8,0) |- node {}(ret1); \draw[->] (8,0) |- (suma2); \draw[->] (5.4,0) -- (suma2); \draw[->] (Q1) -- node {}(suma5); \draw[->] (deriv1) -- node {}(suma5); \draw[->] (Q2) -| node {}(deriv1); \draw[<->] (ret2) -| node {}(deriv1); \draw[->] (suma5) -- node {$Y(Z)$}(sal2); % Drawing nodes with \textbullet \draw node at (8,0) {\textbullet} node at (8,-2){\textbullet} node at (5.4,0){\textbullet} node at (5,-8){\textbullet} node at (11.5,-6){\textbullet} ; % Boxing and labelling noise shapers \draw [color=gray,thick](-0.5,-3) rectangle (9,1); %\node at (-0.5,1) [above=5mm, right=0mm] {\textsc{first-order noise shaper}}; \draw [color=gray,thick](-0.5,-9) rectangle (12.5,-5); %\node at (-0.5,-9) [below=5mm, right=0mm] {\textsc{second-order noise shaper}}; \end{tikzpicture} ]]>
+        </shortdescription>
+        <latex-image>
+          <xi:include href="./images/electronics.tex" parse="text"/>
         </latex-image>
       </image>
     </figure>
@@ -466,14 +467,14 @@ This chapter is about the real numbers <m>\R</m>
       yaxis("$y$",LeftRight,RightTicks,above=true);
       palette("$f(x,y)$",range,(0,200),(100,250),Top,Palette,
               PaletteTicks(ptick=linewidth(0.5*linewidth())));
-                            </asymptote>
-                          </image>
-                        </figure>
+      </asymptote>
+    </image>
+  </figure>
 
-                        <figure xml:id="figure-asymptote-workcone">
-                          <caption>Work Cone generated from Asymptote code</caption>
-                          <image xml:id="asymptote-workcone" width="50%">
-                            <asymptote>
+  <figure xml:id="figure-asymptote-workcone">
+    <caption>Work Cone generated from Asymptote code</caption>
+    <image xml:id="asymptote-workcone" width="50%">
+      <asymptote>
       import solids;
       size(0,150);
       currentprojection=orthographic(0,-30,5);
@@ -511,7 +512,7 @@ This chapter is about the real numbers <m>\R</m>
       </image>
     </figure>
 
-    <figure xml:id="figure-sage-polynomial-approximation">
+    <!-- <figure xml:id="figure-sage-polynomial-approximation">
       <caption>Polynomial approximations of <m>f(x)=1/(1+25x^2)</m> generated from SageMath code</caption>
       <image xml:id="sageplot-polynomial-approximation" width="75%">
         <sageplot variant="2d">
@@ -543,7 +544,7 @@ runge()
       implicit_plot3d(p, (x, -r, r), (y, -r, r), (z, -r, r), plot_points=50, frame=False)
         </sageplot>
       </image>
-    </figure>
+    </figure> -->
 
     <p>
       Videos can be embedded in PreTeXt documents using the <tag>video</tag> element.
@@ -826,12 +827,12 @@ runge()
     <title>Not Just HTML, Not Just PDF</title>
 
     <p>
-      This document is available in HTML format at <url href="https://stevenclontz.github.io/pretext-getting-started-2023/" />, and the same document is available in a PDF format at <url href="https://stevenclontz.github.io/pretext-getting-started-2023/print/main.pdf" />.
+      This document is available in HTML format at <url href="https://pfi.mathtech.org/web/" />, and the same document is available in a PDF format at <url href="https://pfi.mathtech.org/print/main.pdf" />.
     </p>
 
     <p>
-      Obtaining these formats from your source is as easy as running clicking a couple buttons in your Codespace.
-      PreTeXt supports other types of output as well, including Jupyter notebooks, ePub, and tacticle braille code.
+      Obtaining these formats from your source is as easy as clicking a couple buttons in your Codespace.
+      PreTeXt supports other types of output as well, including Jupyter notebooks, ePub, and tacticle braille.
     </p>
 
     <p>
@@ -844,7 +845,7 @@ runge()
 
     <p>
       Go check back on the Codespace you created in <xref ref="sec-setting-up-codespaces"/>.
-      If it's up and running, you're ready to move on to the next section!
+      If it's up and running, you're ready to move on to the next chapter!
     </p>
   </section>
 </chapter>

@@ -14,7 +14,6 @@
       A list of the steps you will need to complete are given in <xref ref="sec-installing-pretext-locally"/>, but remember, this is entirely optional.
     </p>
   </introduction>
-
   <section>
     <title>Setting up your GitHub account</title>
 
@@ -24,7 +23,11 @@
     </p>
 
     <p>
-      <alert>And that's it!</alert>.  Really, unless you want to get everything working locally, you can skip to <xref ref="ch-intro"/>.
+      <alert>And that's it!</alert>.  If you are ready to jump in, proceed to <xref ref="ch-intro"/>.  
+    </p>
+    
+    <p>
+      The remainder of this short chapter contains some optional steps and information.
     </p>
   </section>
 
