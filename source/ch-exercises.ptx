@@ -4,9 +4,9 @@
   <title>Practice Activities</title>
   <introduction>
     <p>
-      Let's get our hands dirty and try writing some PreTeXt.  If you have some ideas of what you want to try, go for it.  Otherwise, try to implement as many of the following as you can.  
+      Let's get our hands dirty and try writing some PreTeXt.  If you have some ideas of what you want to try, go for it.  Otherwise, try to implement as many of the following as you can.
     </p>
-    
+
     <p>
       Some of the <term>practice</term> activities below have hints, and if you want to see how to implement it completely, click on the solution.
     </p>
@@ -54,7 +54,7 @@
       </statement>
       <hint>
         <pre>
-        <![CDATA[ 
+        <![CDATA[
           <me>
             f(x) = \begin{cases} 1 \amp x = 1 \\ 0 \amp x \ne 1\end{cases}
           </me>.
@@ -78,7 +78,7 @@
     </statement>
     <hint>
       <p>
-        You can use the <tag>ol</tag> tag for ordered lists, and <tag>ul</tag> for unordered lists.  Each item should be inside <tag>li</tag>s.  
+        You can use the <tag>ol</tag> tag for ordered lists, and <tag>ul</tag> for unordered lists.  Each item should be inside <tag>li</tag>s.
       </p>
     </hint>
     <hint>
@@ -118,7 +118,7 @@
           Create the following table using the pretext <c>tabular</c> environment.
         </p>
         <tabular>
-          <col right="medium" /><col right="medium" /><col /> 
+          <col right="medium" /><col right="medium" /><col />
           <row bottom="medium">
             <cell>1</cell>
             <cell>2</cell>
@@ -135,7 +135,7 @@
         <pre>
         <![CDATA[
           <tabular>
-            <col right="medium" /><col right="medium" /><col /> 
+            <col right="medium" /><col right="medium" /><col />
             <row bottom="medium">
               <cell>1</cell>
               <cell>2</cell>
@@ -154,9 +154,9 @@
     <task>
       <statement>
         <p>
-          Create the same table using a <latex /> array environment. 
+          Create the same table using a <latex /> array environment.
           <me>
-            \begin{array}{c|c|c} 
+            \begin{array}{c|c|c}
               1 \amp 2 \amp 3 \\ \hline
               4 \amp 5 \amp 6
             \end{array}
@@ -167,7 +167,7 @@
         <pre>
         <![CDATA[
           <me>
-            \begin{array}{c|c|c} 
+            \begin{array}{c|c|c}
               1 \amp 2 \amp 3 \\ \hline
               4 \amp 5 \amp 6
             \end{array}
@@ -178,7 +178,7 @@
     </task>
   </exploration>
 
-  
+
 
   </section>
 
@@ -349,17 +349,17 @@
     <hint>
       <p>
         Use two <c>image</c> environments, each containing a <c>latex-image</c> environment.
-        To display the images side by side, use the <c>sidebyside</c> environment. 
-        To get the sizes and spacing even and uniform, you will need to set <c>@widths</c> and <c>@margins</c> in the <c>sidebyside</c> environment. 
+        To display the images side by side, use the <c>sidebyside</c> environment.
+        To get the sizes and spacing even and uniform, you will need to set <c>@widths</c> and <c>@margins</c> in the <c>sidebyside</c> environment.
       </p>
       <p>
-        Remember that the &lt; and &gt; symbols are restricted.  
-        For lines, it is easiest to use <c>latex</c> or <c>stealth</c> as your arrow style. 
+        Remember that the &lt; and &gt; symbols are restricted.
+        For lines, it is easiest to use <c>latex</c> or <c>stealth</c> as your arrow style.
         If you must use  &lt; and &gt; in your TikZ code, you must replace the symbols with <c>&amp;lt;</c> and <c>&amp;gt;</c> respectively.
       </p>
     </hint>
     <solution>
-        <pre><xi:include href="exercises/sidebyside-tikz.ptx" parse="text"/>          
+        <pre><xi:include href="exercises/sidebyside-tikz.ptx" parse="text"/>
         </pre>
     </solution>
   </investigation>
@@ -367,7 +367,7 @@
 
     <section xml:id="sec-adapting-example">
         <title>Adapting existing content</title>
-        
+
         <activity>
             <statement>
                 <p>
@@ -377,7 +377,7 @@ Nest the following PreTeXt elements in order to produce the <q>Graphing a Deriva
 </url>.
                 </p>
                 <program language="xml">
-                    <input><![CDATA[ 
+                    <input><![CDATA[
 <caption>The derivative <m>f'(x)</m> is positive everywhere because the function <m>f(x)</m> is increasing.</caption>
 <caption>The derivative <m>f'(x)\lt 0</m> where the function <m>f(x)</m> is decreasing and <m>f'(x)\gt 0</m> where <m>f(x)</m> is increasing...</caption>
 <description>The function f(x) = the square root of x is graphed as is its derivative f'(x) = 1/(2 times the square root of x).</description>
@@ -409,7 +409,7 @@ Nest the following PreTeXt elements in order to produce the <q>Graphing a Deriva
             </statement>
         </activity>
 
-<!-- 
+<!--
     <subsection>
         <title>Graphing a Derivative</title>
         <p>We have already discussed how to graph a function...</p>
@@ -470,7 +470,7 @@ so on (not necessarily in PreTeXt terms).
 Nest the following PreTeXt elements in order to reproduce this portion of <title>Elements</title>.
                     </p>
                     <program language="xml">
-                        <input><![CDATA[ 
+                        <input><![CDATA[
 <definition></definition>
 <example></example>
 <introduction></introduction>
@@ -508,7 +508,7 @@ Nest the following PreTeXt elements in order to reproduce this portion of <title
         </activity>
 
     </section>
-<!-- 
+<!--
     <section xml:id="sec-rings">
         <title>Rings</title>
         <introduction>
@@ -550,9 +550,9 @@ Nest the following PreTeXt elements in order to reproduce this portion of <title
                     </ol></p>
                 </statement>
             </theorem>
-            
+
         </introduction>
-    </section> 
+    </section>
 -->
 
 </chapter>

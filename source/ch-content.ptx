@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-content" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Content</title>
+
+  <introduction>
+    <p>
+      You will likely want content beyond text in your course materials.  In this chapter we explore how to include images, videos, interactive elements, and more in your PreTeXt course documents.
+    </p>
+  </introduction>
+
+  <xi:include href="./sec-content-images.ptx" />
+  <xi:include href="./sec-content-video.ptx" />
+  <xi:include href="./sec-content-interactive-exercises.ptx" />
+  <xi:include href="./sec-content-tables.ptx" />
+</chapter>
+

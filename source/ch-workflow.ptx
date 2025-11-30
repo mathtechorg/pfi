@@ -25,7 +25,7 @@
         </li>
         <li>
           <p>
-            If you have a project already (on GitHub, in a repository), then to get back to the codespaces, navigate to the repository on GitHub.com.  When you are on the page for your repository, you can restart or create a Codespace using the green (or blue) <q>Code</q> button. 
+            If you have a project already (on GitHub, in a repository), then to get back to the codespaces, navigate to the repository on GitHub.com.  When you are on the page for your repository, you can restart or create a Codespace using the green (or blue) <q>Code</q> button.
           </p>
         </li>
         <li>
@@ -84,10 +84,10 @@
     </p>
 
     <p>
-      All such elements <em>should</em> get generated automatically when you build.  If you don't change them, then the next time you run a build things should be faster.  
+      All such elements <em>should</em> get generated automatically when you build.  If you don't change them, then the next time you run a build things should be faster.
     </p>
 
-    <note>  
+    <note>
       <p>
         Note that generating assets requires additional software, like <latex /> or Sage.  The default Codespace setup has <latex /> installed, but not Sage.  If you want to use <tag>sageplot</tag> images, or run into problems generateing tikz images, look at the README that is included in your project.
       </p>
@@ -101,7 +101,7 @@
     </p>
 
     <p>
-      If you like using the command line, in a terminal enter <c>pretext view web</c>.  This should open a new tab in your browser that will display your book. 
+      If you like using the command line, in a terminal enter <c>pretext view web</c>.  This should open a new tab in your browser that will display your book.
     </p>
 
     <p>
@@ -166,14 +166,14 @@
       <ul>
         <li>
           <p>
-            The program <term>git</term> keeps track of all the changes you make to files inside of your <term>repository</term> (in this case, the folder containing your project). 
+            The program <term>git</term> keeps track of all the changes you make to files inside of your <term>repository</term> (in this case, the folder containing your project).
           </p>
         </li>
         <li>
           <p>
             Once you have edited your files and are happy with all of them, you tell git to track the set of changes as a <term>commit</term>.  This creates a handy <em>breakpoint</em> you could return to if you want to go back to an earlier version.
-           </p> 
-            
+           </p>
+
            <p>
             There are two steps to creating a commit (which you can often do all at once in practice):
             <ol>
@@ -224,6 +224,6 @@
     <p>If you want to work with colleagues or students on a PreTeXt project, you will each want to work inside your own codespace and use GitHub's collaboration tools to manage sharing updates.  Using Git and GitHub takes practice and there is lots to learn.</p>
 
     <p>Until there are better suggestions in this book, check out <url href="https://g4m.code4math.org/">GitHub 4 Mathematicians</url>, a free PreTeXt book, for all the details.</p>
-    
+
   </section>
 </chapter>

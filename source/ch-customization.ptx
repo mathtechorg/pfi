@@ -8,7 +8,7 @@
         </p>
 
         <p>
-            Another aspect of the publishing process is that of creating the physical book and making it available in bookstores, or making the the web version available on your own website.  The latter can be done automatically through GitHub pages using the <c>pretext deploy</c> function, but perhaps you also want to have a separate landing page that links to a version of the book you are celling on Amazon.com.  However, these steps are beyond the scope of this guide (as for suggestions on the PreTeXt-support group if you would like some assistance getting started with these steps). 
+            Another aspect of the publishing process is that of creating the physical book and making it available in bookstores, or making the the web version available on your own website.  The latter can be done automatically through GitHub pages using the <c>pretext deploy</c> function, but perhaps you also want to have a separate landing page that links to a version of the book you are celling on Amazon.com.  However, these steps are beyond the scope of this guide (as for suggestions on the PreTeXt-support group if you would like some assistance getting started with these steps).
         </p>
 
         <p>
@@ -18,7 +18,7 @@
 
     <section xml:id="sec-publication-file">
         <title>The publication file</title>
-        
+
         <p>
             <pretext /> controls publisher options in a <term>publication file</term>.  The default location of this file is in the folder <c>publication</c> and is itself called <c>publication.ptx</c>.  Open this file and take a look.
         </p>
@@ -44,17 +44,17 @@
 
     <section xml:id="sec-showing-and-hiding-things">
         <title>Showing and Hiding things</title>
-        
+
         <p>
             We have seen that some <term>blocks</term>, like proofs, solutions, examples, are sometimes <em>hidden</em> behind a <term>knowl</term>: when you click on the title, the content expands to reveal itself.  Most of the blocks can be <q>knowled</q> or not.
         </p>
 
         <p>
-            To edit these settings, look for the element <tag>html</tag>, and inside that <tage>knowl</tage>.  This element has a number of <term>attributes</term> (the PreTeXt guide marks attributes with the <c>@</c> symbol, by the way).  You can specify whether elements should be knowled or not by changing the value of the attributes between yes and no. 
+            To edit these settings, look for the element <tag>html</tag>, and inside that <tage>knowl</tage>.  This element has a number of <term>attributes</term> (the PreTeXt guide marks attributes with the <c>@</c> symbol, by the way).  You can specify whether elements should be knowled or not by changing the value of the attributes between yes and no.
         </p>
 
         <p>
-            Whether exercises are knowled depends on the type of exercises.  <pretext /> distinguishes five types of exercise-like elements, since they have hints/answers/solutions that you might want to hide: 
+            Whether exercises are knowled depends on the type of exercises.  <pretext /> distinguishes five types of exercise-like elements, since they have hints/answers/solutions that you might want to hide:
             <ul>
                 <li>
                     <p>
@@ -89,7 +89,7 @@
         </p>
 
         <p>
-            You can, however, control which parts of exercises show up at all.  This is set in a different section of the publication file: <c>publication/common/exercise-inline</c> (that is, in the <tag>common</tag> block in the <tag>exercise-inline</tag> element).  You can replace <c>exercise-inline</c> by any of the five exercise types.  Then as attributes, specify yes or no for the <attr>statement</attr>, <attr>hint</attr>, <attr>answer</attr>, <attr>solution</attr>.  
+            You can, however, control which parts of exercises show up at all.  This is set in a different section of the publication file: <c>publication/common/exercise-inline</c> (that is, in the <tag>common</tag> block in the <tag>exercise-inline</tag> element).  You can replace <c>exercise-inline</c> by any of the five exercise types.  Then as attributes, specify yes or no for the <attr>statement</attr>, <attr>hint</attr>, <attr>answer</attr>, <attr>solution</attr>.
         </p>
 
         <p>
@@ -99,7 +99,7 @@
 
     <section xml:id="sec-numbering">
         <title>Numbering</title>
-        
+
         <p>
             There are a few settings that control how things are numbered.  Most of these live inside the <tag>numbering</tag> element of the publication file.
             <ul>
@@ -130,7 +130,7 @@
     <section xml:id="sec-formatting">
         <title>Formatting</title>
         <p>
-            While there are some ways to control the look of the pdf, that is beyond the scope of this guide.  Web output can be controlled more easily, selecting from a small number of predefined styles.  
+            While there are some ways to control the look of the pdf, that is beyond the scope of this guide.  Web output can be controlled more easily, selecting from a small number of predefined styles.
         </p>
 
         <p>

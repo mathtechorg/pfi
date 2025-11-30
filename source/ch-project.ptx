@@ -48,15 +48,15 @@
             There are a few other files that you might see in a project, such as <c>requirements.txt</c> and <c>.gitignore</c>.  Don't worry about these for now.
         </p>
         <p>
-            When your project grows, you will likely want to separate your <c>main.ptx</c> source file (inside the <c>source</c> folder) into multiple <c>.ptx</c> files.  For example, you might want a single file per chapter, and even a separate file for each section.  You can do this by using the <tag>xi:include</tag> tag.  For example, if you have a file <c>source/chapter1.ptx</c> that contains the first chapter of your book, you can include it in your <c>main.ptx</c> file like this: 
+            When your project grows, you will likely want to separate your <c>main.ptx</c> source file (inside the <c>source</c> folder) into multiple <c>.ptx</c> files.  For example, you might want a single file per chapter, and even a separate file for each section.  You can do this by using the <tag>xi:include</tag> tag.  For example, if you have a file <c>source/chapter1.ptx</c> that contains the first chapter of your book, you can include it in your <c>main.ptx</c> file like this:
             <cd>
                 <cline>&lt;xi:include href="./chapter1.ptx" /&gt;</cline>
             </cd>
-            In the top level tag of the file in which you use <tag>xi:include</tag> (in this case, <c>main.ptx</c>), you must add the following attribute: 
+            In the top level tag of the file in which you use <tag>xi:include</tag> (in this case, <c>main.ptx</c>), you must add the following attribute:
             <cd>
                 <cline>xmlns:xi="http://www.w3.org/2001/XInclude"</cline>
             </cd>
-        </p>    
+        </p>
         <p>
             Then in the <c>chapter1.ptx</c> file, you would start with the standard <tag>?xml version="1.0" encoding="UTF-8"?</tag> followed by the top-level tag <tag>chapter</tag>.  There can only be one top level tag in this file.  A second chapter would need to be its own file and <tag>xi:include</tag> it separately.
         </p>

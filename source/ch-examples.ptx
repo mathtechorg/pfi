@@ -15,14 +15,14 @@
     <task>
       <statement>
         <p>
-          Create an exercise with multiple parts, each with a separate solution.  
+          Create an exercise with multiple parts, each with a separate solution.
         </p>
       </statement>
       <hint>
         <p>
-          This requires the use of <c>task</c> environments inside an <c>exercise</c> or  <c>project-like</c> environment. 
+          This requires the use of <c>task</c> environments inside an <c>exercise</c> or  <c>project-like</c> environment.
           For the syntax to be valid, begin with an <c>introduction</c>, then use a separate <c>task</c> for each part of the question.
-          Each <c>task</c> should consist of a single <c>statement</c> and <c>solution</c>. 
+          Each <c>task</c> should consist of a single <c>statement</c> and <c>solution</c>.
         </p>
       </hint>
       <solution>
@@ -69,7 +69,7 @@
     <title>WebWork Exercises</title>
     <introduction>
       <p>
-        The exercises below illustrate the different kinds of <em>interactive</em> exercises you can write. 
+        The exercises below illustrate the different kinds of <em>interactive</em> exercises you can write.
       </p>
     </introduction>
     <task>
@@ -80,7 +80,7 @@
       </statement>
       <hint>
         <p>
-          This example is taken directly from <url href="https://pretextbook.org/doc/guide/html/webwork-source.html" />.  
+          This example is taken directly from <url href="https://pretextbook.org/doc/guide/html/webwork-source.html" />.
         </p>
         <ol>
           <li>
@@ -113,18 +113,18 @@
             <webwork>
               <setup>
                 <pg-code>
-                  $a = Compute(random(1,5,1));  
-                  $b = Compute(random(6,9,1));  
+                  $a = Compute(random(1,5,1));
+                  $b = Compute(random(6,9,1));
                   $c = Compute("$a+$b");
                 </pg-code>
               </setup>
-            
+
               <statement>
                 <p>Compute <m><var name="$a"/> + <var name="$b"/></m>.</p>
                 <instruction>Type your answer without using the <c>+</c> sign.</instruction>
                 <p>The sum is <var name="$c" width="2"/>.</p>
               </statement>
-              
+
               <solution>
                 <p><m><var name="$a"/> + <var name="$b"/> = <var name="$c"/></m>.</p>
               </solution>
@@ -145,7 +145,7 @@
           For the PreTeXt syntax, see <xref ref=""/> in the documentation.
         </p>
         <p>
-          For the <c>setup</c> portion of the <c>webwork</c> code, follow the WebWork documentation at <url href="https://webwork.maa.org/wiki/PopUpLists" /> and <url href="https://webwork.maa.org/wiki/MultipleChoiceRadio1" />.  Note that you only need to follow the yellow (Setup) portion of the WebWork instructions.  The other sections are managed by PreTeXt. 
+          For the <c>setup</c> portion of the <c>webwork</c> code, follow the WebWork documentation at <url href="https://webwork.maa.org/wiki/PopUpLists" /> and <url href="https://webwork.maa.org/wiki/MultipleChoiceRadio1" />.  Note that you only need to follow the yellow (Setup) portion of the WebWork instructions.  The other sections are managed by PreTeXt.
         </p>
       </hint>
       <solution>
@@ -159,16 +159,16 @@
                   ["?","Red","Blue","Green"],
                   "Blue" );
 
-                $linearfunction=RadioButtons(['\(3(x-2)+1\)','\(2x(x+1)-3\)','\(2\)'], '\(2x(x+1)-3\)');                
+                $linearfunction=RadioButtons(['\(3(x-2)+1\)','\(2x(x+1)-3\)','\(2\)'], '\(2x(x+1)-3\)');
                 </pg-code>
               </setup>
               <statement>
                 <p>
-                    Select the best color from the list 
+                    Select the best color from the list
                     <var name="$color_question" form="popup"/>
                 </p>
                 <p>
-                  Which of the following is <em>not</em> a linear function. 
+                  Which of the following is <em>not</em> a linear function.
                 </p>
                 <p>
                   <var name="$linearfunction" width="buttons"/>
@@ -183,12 +183,12 @@
     <task>
       <statement>
         <p>
-          Write a WebWork Exercise that asks for roots of quadratic functions, such that the functions generated have <em>varying numbers</em> of roots.  
+          Write a WebWork Exercise that asks for roots of quadratic functions, such that the functions generated have <em>varying numbers</em> of roots.
         </p>
       </statement>
       <hint>
         <p>
-          You can use perl control structures in the  <c>&lt;setup&gt;&lt;pg-setup&gt;...&lt;/pg-setup&gt;&lt;/setup&gt;</c> portion of the code. 
+          You can use perl control structures in the  <c>&lt;setup&gt;&lt;pg-setup&gt;...&lt;/pg-setup&gt;&lt;/setup&gt;</c> portion of the code.
         </p>
         <p>
           If you are comparing magnitudes, you <em>must</em> replace <m>a \lt b</m> with <c>a &amp;lt; b</c> and <m>c \gt d</m> with <c>c &amp;gt; d</c>.
@@ -236,16 +236,16 @@
     <task>
       <statement>
         <p>
-          Write a WebWork Exercise that asks for roots of quadratic functions, such that the functions generated <em>always has real roots</em>.  
+          Write a WebWork Exercise that asks for roots of quadratic functions, such that the functions generated <em>always has real roots</em>.
         </p>
       </statement>
       <hint>
         <p>
-          There are two ways to approach this problem. 
-          First, you can manually select the random seed to ensure that all quadratics have real roots. 
+          There are two ways to approach this problem.
+          First, you can manually select the random seed to ensure that all quadratics have real roots.
         </p>
         <p>
-          But you can also use perl structures like <c>do-while</c> to check the discriminant of the quadratic generated, and to rerandomize the problem if no real roots exist.  
+          But you can also use perl structures like <c>do-while</c> to check the discriminant of the quadratic generated, and to rerandomize the problem if no real roots exist.
         </p>
       </hint>
       <solution>
@@ -267,7 +267,7 @@
                     $roots = List($root1,$root2);
                   </pg-code>
                 </setup>
-              
+
                 <statement>
                   <p>
                     Let <m>f(x) = <var name="$a"/>x^2 + <var name="$b"/>x + <var name="$c"/></m>.  Find all <m>x</m> such that <m>f(x) = 0</m>.
@@ -306,12 +306,12 @@
 
         <image width="33%" xml:id="image_tikz_eg">
           <latex-image>
-            \begin{tikzpicture} 
+            \begin{tikzpicture}
               \\ Shade the enclosed area first
-              \draw[color=white,fill=green,opacity=0.33] 
-                (1,0) 
-                -- (1,{cos(1 r)+2}) 
-                -- plot[domain= 1:3] ({\x},{cos(\x r)+2}) 
+              \draw[color=white,fill=green,opacity=0.33]
+                (1,0)
+                -- (1,{cos(1 r)+2})
+                -- plot[domain= 1:3] ({\x},{cos(\x r)+2})
                 -- (3,{cos(3 r)+2})
                 -- (3,0)
                 -- (1,0);
@@ -338,12 +338,12 @@
     <hint>
       <p>
         Use two <c>image</c> environments, each containing a <c>latex-image</c> environment.
-        To display the images side by side, use the <c>sidebyside</c> environment. 
-        To get the sizes and spacing even and uniform, you will need to set <c>@widths</c> and <c>@margins</c> in the <c>sidebyside</c> environment. 
+        To display the images side by side, use the <c>sidebyside</c> environment.
+        To get the sizes and spacing even and uniform, you will need to set <c>@widths</c> and <c>@margins</c> in the <c>sidebyside</c> environment.
       </p>
       <p>
-        Remember that the &lt; and &gt; symbols are restricted.  
-        For lines, it is eaisest to use <c>latex</c> or <c>stealth</c> as your arrow style. 
+        Remember that the &lt; and &gt; symbols are restricted.
+        For lines, it is eaisest to use <c>latex</c> or <c>stealth</c> as your arrow style.
         If you must use  &lt; and &gt; in your TikZ code, you must replace the symbols with <c>&amp;lt;</c> and <c>&amp;gt;</c> respectively.
       </p>
     </hint>
@@ -362,12 +362,12 @@
 
             <image width="33%" xml:id="image_tikz_eg">
               <latex-image>
-                \begin{tikzpicture} 
+                \begin{tikzpicture}
                   \\ Shade the enclosed area first
-                  \draw[color=white,fill=green,opacity=0.33] 
-                    (1,0) 
-                    -- (1,{cos(1 r)+2}) 
-                    -- plot[domain= 1:3] ({\x},{cos(\x r)+2}) 
+                  \draw[color=white,fill=green,opacity=0.33]
+                    (1,0)
+                    -- (1,{cos(1 r)+2})
+                    -- plot[domain= 1:3] ({\x},{cos(\x r)+2})
                     -- (3,{cos(3 r)+2})
                     -- (3,0)
                     -- (1,0);
@@ -398,46 +398,46 @@
   <exploration>
     <statement>
       <p>
-        Create the following interactive JSXGraph graphic 
+        Create the following interactive JSXGraph graphic
       </p>
       <interactive platform="jsxgraph" width="50%">
         <slate xml:id="jsxgraph-slope-via-tangent"  surface="jessiecode" axis="true" grid="true" >
-          // Set the graph window.  
+          // Set the graph window.
           //  The order of values is [xmin, ymax, xmax, ymin]
           //  keepaspectratio=true forces the x and y scales to be equal
           $board.setBoundingBox( [ -5, 10, 7, -6 ] , keepaspectratio=false) ;
 
-          // Create the slider 
+          // Create the slider
           xslider = slider(
                 // Specify slider location
-                  [0.5,-3], [5.5,-3], 
+                  [0.5,-3], [5.5,-3],
                 // Specify smallest/starting/largest value for slider
                   [-5,1,7])
               &lt;&lt;
                   name:"a",
                   snapWidth:0.01
-              &gt;&gt;  ;      
-            
+              &gt;&gt;  ;
+
             // Define a function and its tangent line at the current slider value
             // This will allow us to reference them in several places
-            f1 = function(x) { 
+            f1 = function(x) {
               return 1/5*(x+3)*(x-2)*(x-5)-1;
             } ;
             tangentline = function(x) {
               x0 =  xslider.Value();
               m = (f1(x0+0.00001) - f1(x0))/0.00001;
-              return m*(x-x0) + f1(x0) ; 
+              return m*(x-x0) + f1(x0) ;
             } ;
 
-            // Graph the function and its tangent line 
-            f1Graph = functiongraph( f1 )  
-              &lt;&lt; 
-                  strokeColor:"blue"  
+            // Graph the function and its tangent line
+            f1Graph = functiongraph( f1 )
+              &lt;&lt;
+                  strokeColor:"blue"
               &gt;&gt;;
-            tangentGraph = functiongraph( tangentline )  
-              &lt;&lt; 
+            tangentGraph = functiongraph( tangentline )
+              &lt;&lt;
                   strokeColor:"black",
-                  dash:3  
+                  dash:3
               &gt;&gt;;
 
             // Display the equation of the current tangent line
@@ -446,9 +446,9 @@
                   m = (f1(x0+0.00001) - f1(x0))/0.00001;
                   y0 = f1(x0);
                   return  "y  =  "+ trunc(m,2) + " ( x- " + trunc(x0,2) + " )  +  " + trunc(y0,2) ;
-                  } 
-                ) 
-                      &lt;&lt; 
+                  }
+                )
+                      &lt;&lt;
                         color:"black",
                         fontSize:16
                       &gt;&gt; ;
@@ -456,17 +456,17 @@
             // Graph the lines from the point to the x and y axis
             line( [function() {return xslider.Value();} ,
                         function() {return f1(xslider.Value());}],[0,function() {return f1(xslider.Value());}] )
-                      &lt;&lt; 
+                      &lt;&lt;
                         color:"red",
-                        straightFirst:false, 
+                        straightFirst:false,
                         straightLast:false,
                         dash:1
                       &gt;&gt; ;
             line( [function() {return xslider.Value();} ,
                         function() {return f1(xslider.Value());}],[function() {return xslider.Value();}, 0 ] )
-                      &lt;&lt; 
+                      &lt;&lt;
                         color:"red",
-                        straightFirst:false, 
+                        straightFirst:false,
                         straightLast:false,
                         dash:1
                       &gt;&gt; ;
@@ -474,19 +474,19 @@
 
             // Draw a dot at the current point on the function
             point( function() {return xslider.Value();} ,
-                        function() {return f1(xslider.Value());}) 
-                      &lt;&lt; 
+                        function() {return f1(xslider.Value());})
+                      &lt;&lt;
                         name:"(a,f(a))",
-                        color:"red" 
+                        color:"red"
                       &gt;&gt; ;
             // Label the x and y values of the current point
-            text( -0.75, function() {return f1(xslider.Value());}, "f(a)") 
-                      &lt;&lt; 
-                        color:"red" 
+            text( -0.75, function() {return f1(xslider.Value());}, "f(a)")
+                      &lt;&lt;
+                        color:"red"
                       &gt;&gt; ;
-            text( function() {return xslider.Value();} , -0.25 , "a") 
-                      &lt;&lt; 
-                        color:"red" 
+            text( function() {return xslider.Value();} , -0.25 , "a")
+                      &lt;&lt;
+                        color:"red"
                       &gt;&gt; ;
 
         </slate>
@@ -494,10 +494,10 @@
     </statement>
     <hint>
       <p>
-        See <xref ref=""/> for the pretext reference. 
+        See <xref ref=""/> for the pretext reference.
       </p>
       <p>
-        It is important to note that JessieCode has a different syntax than classic JSXGraph, but has the benefit of being able to write the code directly in the PreTeXt file.   
+        It is important to note that JessieCode has a different syntax than classic JSXGraph, but has the benefit of being able to write the code directly in the PreTeXt file.
       </p>
       <p>
         You can see several examples of JessieCode syntax by going to <url href="https://github.com/jsxgraph/JessieCode" /> and scrolling down to "Element functions", and by reading <url href="https://jsxgraph.uni-bayreuth.de/wp/docs_jessiecode/" />.
@@ -508,8 +508,8 @@
         In PreTeXt, &lt; and &gt; is replaced by &amp;lt; and &amp;gt; , and the code gets a bit messy.
       </p>
       <p>
-        Many, but not all, features of JSXGraph are available in JessieCode.  
-        You can find a <url href="http://jsxgraph.uni-bayreuth.de/wiki/index.php?title=Category:Examples">collection of examples</url> written using classic JSXGraph, and the full <url href="https://jsxgraph.uni-bayreuth.de/docs/">JSXGraph Documentation</url>.  
+        Many, but not all, features of JSXGraph are available in JessieCode.
+        You can find a <url href="http://jsxgraph.uni-bayreuth.de/wiki/index.php?title=Category:Examples">collection of examples</url> written using classic JSXGraph, and the full <url href="https://jsxgraph.uni-bayreuth.de/docs/">JSXGraph Documentation</url>.
         With a bit of experimentation, it is often possible to translate most JSXGraph code into JessieCode.
       </p>
     </hint>
@@ -519,42 +519,42 @@
         <interactive platform="jsxgraph" width="50%">
           <slate xml:id="jsxgraph-slope-via-tangent"  surface="jessiecode" axis="true" grid="true" >
 
-            // Set the graph window.  
+            // Set the graph window.
             //  The order of values is [xmin, ymax, xmax, ymin]
             //  keepaspectratio=true forces the x and y scales to be equal
             $board.setBoundingBox( [ -5, 10, 7, -6 ] , keepaspectratio=false) ;
 
-            // Create the slider 
+            // Create the slider
             xslider = slider(
                   // Specify slider location
-                    [0.5,-3], [5.5,-3], 
+                    [0.5,-3], [5.5,-3],
                   // Specify smallest/starting/largest value for slider
                     [-5,1,7])
                 &lt;&lt;
                     name:"a",
                     snapWidth:0.01
-                &gt;&gt;  ;      
-              
+                &gt;&gt;  ;
+
               // Define a function and its tangent line at the current slider value
               // This will allow us to reference them in several places
-              f1 = function(x) { 
+              f1 = function(x) {
                 return 1/5*(x+3)*(x-2)*(x-5)-1;
               } ;
               tangentline = function(x) {
                 x0 =  xslider.Value();
                 m = (f1(x0+0.00001) - f1(x0))/0.00001;
-                return m*(x-x0) + f1(x0) ; 
+                return m*(x-x0) + f1(x0) ;
               } ;
 
-              // Graph the function and its tangent line 
-              f1Graph = functiongraph( f1 )  
-                &lt;&lt; 
-                    strokeColor:"blue"  
+              // Graph the function and its tangent line
+              f1Graph = functiongraph( f1 )
+                &lt;&lt;
+                    strokeColor:"blue"
                 &gt;&gt;;
-              tangentGraph = functiongraph( tangentline )  
-                &lt;&lt; 
+              tangentGraph = functiongraph( tangentline )
+                &lt;&lt;
                     strokeColor:"black",
-                    dash:3  
+                    dash:3
                 &gt;&gt;;
 
               // Display the equation of the current tangent line
@@ -563,9 +563,9 @@
                     m = (f1(x0+0.00001) - f1(x0))/0.00001;
                     y0 = f1(x0);
                     return  "y  =  "+ trunc(m,2) + " ( x- " + trunc(x0,2) + " )  +  " + trunc(y0,2) ;
-                    } 
-                  ) 
-                        &lt;&lt; 
+                    }
+                  )
+                        &lt;&lt;
                           color:"black",
                           fontSize:16
                         &gt;&gt; ;
@@ -573,17 +573,17 @@
               // Graph the lines from the point to the x and y axis
               line( [function() {return xslider.Value();} ,
                           function() {return f1(xslider.Value());}],[0,function() {return f1(xslider.Value());}] )
-                        &lt;&lt; 
+                        &lt;&lt;
                           color:"red",
-                          straightFirst:false, 
+                          straightFirst:false,
                           straightLast:false,
                           dash:1
                         &gt;&gt; ;
               line( [function() {return xslider.Value();} ,
                           function() {return f1(xslider.Value());}],[function() {return xslider.Value();}, 0 ] )
-                        &lt;&lt; 
+                        &lt;&lt;
                           color:"red",
-                          straightFirst:false, 
+                          straightFirst:false,
                           straightLast:false,
                           dash:1
                         &gt;&gt; ;
@@ -591,19 +591,19 @@
 
               // Draw a dot at the current point on the function
               point( function() {return xslider.Value();} ,
-                          function() {return f1(xslider.Value());}) 
-                        &lt;&lt; 
+                          function() {return f1(xslider.Value());})
+                        &lt;&lt;
                           name:"(a,f(a))",
-                          color:"red" 
+                          color:"red"
                         &gt;&gt; ;
               // Label the x and y values of the current point
-              text( -0.75, function() {return f1(xslider.Value());}, "f(a)") 
-                        &lt;&lt; 
-                          color:"red" 
+              text( -0.75, function() {return f1(xslider.Value());}, "f(a)")
+                        &lt;&lt;
+                          color:"red"
                         &gt;&gt; ;
-              text( function() {return xslider.Value();} , -0.25 , "a") 
-                        &lt;&lt; 
-                          color:"red" 
+              text( function() {return xslider.Value();} , -0.25 , "a")
+                        &lt;&lt;
+                          color:"red"
                         &gt;&gt; ;
 
           </slate>
@@ -621,7 +621,7 @@
           Create the following table using the pretext <c>tabular</c> environment.
         </p>
         <tabular>
-          <col right="medium" /><col right="medium" /><col /> 
+          <col right="medium" /><col right="medium" /><col />
           <row bottom="medium">
             <cell>1</cell>
             <cell>2</cell>
@@ -638,7 +638,7 @@
         <pre>
         <![CDATA[
           <tabular>
-            <col right="medium" /><col right="medium" /><col /> 
+            <col right="medium" /><col right="medium" /><col />
             <row bottom="medium">
               <cell>1</cell>
               <cell>2</cell>
@@ -657,9 +657,9 @@
     <task>
       <statement>
         <p>
-          Create the same table using a <latex /> array environment. 
+          Create the same table using a <latex /> array environment.
           <me>
-            \begin{array}{c|c|c} 
+            \begin{array}{c|c|c}
               1 \amp 2 \amp 3 \\ \hline
               4 \amp 5 \amp 6
             \end{array}
@@ -670,7 +670,7 @@
         <pre>
         <![CDATA[
           <me>
-            \begin{array}{c|c|c} 
+            \begin{array}{c|c|c}
               1 \amp 2 \amp 3 \\ \hline
               4 \amp 5 \amp 6
             \end{array}
@@ -681,7 +681,7 @@
     </task>
   </exploration>
 
-  
+
 
 
 </section>
@@ -693,8 +693,8 @@
       <li>
         <title>Nesting Environments</title>
         <p>
-          All normal text should be contained inside <c>p</c> environments. 
-          Moreover, a <c>p</c> environment should <em>only</em> contain text, math, and lists.  
+          All normal text should be contained inside <c>p</c> environments.
+          Moreover, a <c>p</c> environment should <em>only</em> contain text, math, and lists.
         </p>
         <sidebyside widths="45% 45%" margins="0%" valign="top">
           <paragraphs>
@@ -723,11 +723,11 @@
           </paragraphs>
         </sidebyside>
         <p>
-          Some environments have more complex rules about how they can be combined.  
+          Some environments have more complex rules about how they can be combined.
         </p>
         <p>
-          For example, the <c>example</c>, <c>exercise</c>, <c>project</c>, and <c>task</c> environments are essentially the only environments that can contain <c>solution</c>, <c>hint</c>, and <c>answer</c> sub-environments.  
-          <em>However</em>, these sub-environments are only allowed in a very specific format.  If solutions are to be used, they <em>must</em> be paired with a <c>statement</c> (and optionally hint, answer) and <em>no other divisions</em>, not even a paragraph. 
+          For example, the <c>example</c>, <c>exercise</c>, <c>project</c>, and <c>task</c> environments are essentially the only environments that can contain <c>solution</c>, <c>hint</c>, and <c>answer</c> sub-environments.
+          <em>However</em>, these sub-environments are only allowed in a very specific format.  If solutions are to be used, they <em>must</em> be paired with a <c>statement</c> (and optionally hint, answer) and <em>no other divisions</em>, not even a paragraph.
         </p>
 
         <sidebyside widths="45% 45%" margins="0%" valign="top">
@@ -773,19 +773,19 @@
         <title>References</title>
         <p>
           To reference content on the web, write
-          <c>&lt;url href=""&gt;Display Text/&lt;/url&gt;</c>, or write 
+          <c>&lt;url href=""&gt;Display Text/&lt;/url&gt;</c>, or write
           <c>&lt;url href="" /&gt;</c> if you would like the full URL displayed,
-          or 
+          or
         </p>
         <p>
-          If you would like to reference text inside the PreTeXt document, place that text inside an environment, and include the attribute <c>xml:id="REFNAME"</c> in its opening tag. 
+          If you would like to reference text inside the PreTeXt document, place that text inside an environment, and include the attribute <c>xml:id="REFNAME"</c> in its opening tag.
           To reference the element elsewhere in the document, type <c>&lt;xref ref="REFNAME"/&gt;</c>
         </p>
       </li>
       <li>
         <title>Emphasizing Text</title>
         <p>
-          <c>em</c> <em>emphasizes</em>, while <c>alert</c> <alert>shoults</alert>. 
+          <c>em</c> <em>emphasizes</em>, while <c>alert</c> <alert>shoults</alert>.
         </p>
         <p>
           To add a title without creating a new (sub*)section, use the <c>paragraphs</c> environment.
@@ -804,14 +804,14 @@
       <li>
         <title>Summarizing Concepts</title>
         <p>
-          Use the <c>assemblage</c> environment to summarize content, such as a list of formulas.  
+          Use the <c>assemblage</c> environment to summarize content, such as a list of formulas.
           Assemblages are not numbered, so when you reference them you need to add <c>text='custom'</c> or <c>text='title'</c>.  For example, you would need to type  to any <c>&lt; xref text='title' ref="REFNAME" /&gt;</c>
         </p>
       </li>
       <li>
         <title>Restrictions on Environments</title>
         <p>
-          By design, PreTeXt imposes a rigid framework on the logical environments that can be used.  In fact, some use the name PreTeXt to refer to this framework itself (as distinguished from its current implementation). 
+          By design, PreTeXt imposes a rigid framework on the logical environments that can be used.  In fact, some use the name PreTeXt to refer to this framework itself (as distinguished from its current implementation).
         </p>
         <p>
           This framework is intended to balance two conflicting goals:
@@ -823,22 +823,22 @@
             </li>
             <li>
               <p>
-                Facilitate the OER principles of Adapting and Remixing existing works. 
+                Facilitate the OER principles of Adapting and Remixing existing works.
               </p>
             </li>
           </ol>
-          These principles are in tension because many authors will instinctively use different categories and logical divisions as they author their books.  
-          However, when authors are given free rein to develop their own logical divisions, it becomes very difficult to "remix" (combine sections of) books written by different authors. 
+          These principles are in tension because many authors will instinctively use different categories and logical divisions as they author their books.
+          However, when authors are given free rein to develop their own logical divisions, it becomes very difficult to "remix" (combine sections of) books written by different authors.
         </p>
         <p>
-          It is therefore necessary to draw the line somewhere.  Over many years of careful work, the authors of PreTeXt have come up with one way of drawing this line, that can be made to work for a wide range of mathematical texts. 
+          It is therefore necessary to draw the line somewhere.  Over many years of careful work, the authors of PreTeXt have come up with one way of drawing this line, that can be made to work for a wide range of mathematical texts.
         </p>
       </li>
       <li>
         <title>Principles for the (Current) Web Interfae</title>
         <p>
-          In theory, the <pretext /> language can compile into a variety of different web formats, each with a different philosophy of how to present information to the user.  
-          This is another reason why it is important to carefully follow the syntax as intended, rather than hacking together different elemnts based on their behavior. 
+          In theory, the <pretext /> language can compile into a variety of different web formats, each with a different philosophy of how to present information to the user.
+          This is another reason why it is important to carefully follow the syntax as intended, rather than hacking together different elemnts based on their behavior.
         </p>
         <p>
           At the same time, it will be valuable for an author to understand the core design principles of the <em>current</em> web format.
@@ -847,8 +847,8 @@
           <li>
             <p>
               <em>Collapsed Details Emphasizes Overall Structure</em>.
-              By default, many (even most) environments are collapsed (knowled) when a user first visits the section. 
-              This helps emphasize the overall structure of the material, and can almost act as an automatic summary of the section.  
+              By default, many (even most) environments are collapsed (knowled) when a user first visits the section.
+              This helps emphasize the overall structure of the material, and can almost act as an automatic summary of the section.
               As a student goes through the material, they expand the relevant element they are working on, deepening their knowledge of the material.
             </p>
           </li>
@@ -858,11 +858,11 @@
               Make regular use of the built in environments such as <c>definition</c>, <c>theorem</c>, <c>example</c>, and <c>figure</c>, and make sure you use unique identifiers with the <c>@xml:id</c>  attribute.
             </p>
             <p>
-              Whenever you reference this attribute <pretext /> creates a link which, when you click on it, expands and displays the previous content (e.g. definition) in the current context.   
-              Students can also click on the "show in context" link to go back to the section where this was originally introduced. 
+              Whenever you reference this attribute <pretext /> creates a link which, when you click on it, expands and displays the previous content (e.g. definition) in the current context.
+              Students can also click on the "show in context" link to go back to the section where this was originally introduced.
             </p>
             <p>
-              This helps emphasize how the web of mathematical knowledge develops across larger divisions such as sections, chapters, and parts. 
+              This helps emphasize how the web of mathematical knowledge develops across larger divisions such as sections, chapters, and parts.
             </p>
           </li>
         </ul>
@@ -870,20 +870,20 @@
       <li>
         <title>Mastering PreTeXt Syntax</title>
         <p>
-          When you use a more complex environment for the first time or in a new way, double check the PreTeXt schema <url href="https://pretextbook.org/doc/schema/"/>.  
+          When you use a more complex environment for the first time or in a new way, double check the PreTeXt schema <url href="https://pretextbook.org/doc/schema/"/>.
         </p>
         <p>
           The <em>Content</em> of the <alert>XML Representation Summary</alert> tells you what type of content the environment is allowed to contain.
-          Be careful when reading the Schema, and refer to the abbreviations in <url href="https://pretextbook.org/doc/guide/html/schema-reading-relaxng.html">the documentation</url>.  
+          Be careful when reading the Schema, and refer to the abbreviations in <url href="https://pretextbook.org/doc/guide/html/schema-reading-relaxng.html">the documentation</url>.
         </p>
         <p>
-          For example, consider the entry for the <url href="https://pretextbook.org/doc/schema/schemas/pretext_xsd/elements/exercise.html"><c>exercise</c></url> environment. 
-          Even though the <c>exercise</c> environment permits <c>p</c> and <c>solution</c> environments, they cannot be used at the same time, as they are in separate Groupings ( ) that are combined by a Choice |.  If you want to use a <c>solution</c> in an <c>exercise</c>, the exercise must consist of a <c>statement</c> followed by zero or more <c>hint</c>, <c>answer</c>, or <c>solution</c> environments.  
+          For example, consider the entry for the <url href="https://pretextbook.org/doc/schema/schemas/pretext_xsd/elements/exercise.html"><c>exercise</c></url> environment.
+          Even though the <c>exercise</c> environment permits <c>p</c> and <c>solution</c> environments, they cannot be used at the same time, as they are in separate Groupings ( ) that are combined by a Choice |.  If you want to use a <c>solution</c> in an <c>exercise</c>, the exercise must consist of a <c>statement</c> followed by zero or more <c>hint</c>, <c>answer</c>, or <c>solution</c> environments.
         </p>
         <p>
-          You can also use the Schema to see where an environment can be used, by looking at the <alert>Included in content model of elements</alert> section of the page.  
-          This will help you make sure that you are placing your environment in a valid location. 
-          For example the <url href="https://pretextbook.org/doc/schema/schemas/pretext_xsd/elements/exercise.html"><c>exercise</c></url> environment can be used in (among other places) sections and subsections, but not inside of another exercise.  
+          You can also use the Schema to see where an environment can be used, by looking at the <alert>Included in content model of elements</alert> section of the page.
+          This will help you make sure that you are placing your environment in a valid location.
+          For example the <url href="https://pretextbook.org/doc/schema/schemas/pretext_xsd/elements/exercise.html"><c>exercise</c></url> environment can be used in (among other places) sections and subsections, but not inside of another exercise.
         </p>
       </li>
       <li>
@@ -893,13 +893,13 @@
           Task environments can contain text and images, but they can also contain <c>solution</c> environments, and can even contain nested <c>task</c> environments.
         </p>
         <p>
-          <alert>Note:</alert> PreTeXt does not have a general use "details" environment.  The <c>fn</c> (footnote) environment is officially restricted to text only, even though it currently compiles correctly with content including images, display math, etc.  
+          <alert>Note:</alert> PreTeXt does not have a general use "details" environment.  The <c>fn</c> (footnote) environment is officially restricted to text only, even though it currently compiles correctly with content including images, display math, etc.
         </p>
         <p>
-          The <c>task</c> environment provides an alternative (and officially approved) approach to incorporating knowled text throughout examples and project-like environments: simply write the main content in the <c>statement</c> for the main content, the knowled content in the <c>solution</c>, and add an instruction to the reader to come up with the hidden content on their own.  
+          The <c>task</c> environment provides an alternative (and officially approved) approach to incorporating knowled text throughout examples and project-like environments: simply write the main content in the <c>statement</c> for the main content, the knowled content in the <c>solution</c>, and add an instruction to the reader to come up with the hidden content on their own.
         </p>
         <p>
-          Nested lists are available, since <c>li</c> elements can contain new list environments. 
+          Nested lists are available, since <c>li</c> elements can contain new list environments.
         </p>
       </li>
     </dl>
@@ -920,28 +920,28 @@
     <task>
       <statement>
         <p>
-          Write a True/False question. 
+          Write a True/False question.
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          Write a Multiple Choice question. 
+          Write a Multiple Choice question.
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          Write a Parson's Problem question. 
+          Write a Parson's Problem question.
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          Write a Matching question. 
+          Write a Matching question.
         </p>
       </statement>
     </task>
@@ -1027,7 +1027,7 @@
         Rearrange the blocks in alphebetical order
       </p>
     </statement>
-    <blocks>  
+    <blocks>
       <!-- Write problems in correct order. -->
       <!-- Add correct="no" to distractors -->
       <!-- @order says how to print the STATIC VERSION -->

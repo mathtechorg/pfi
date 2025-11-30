@@ -10,7 +10,7 @@
 
   <paragraphs>
     <title>Official documentation</title>
-    
+
     <p>
       Note that the official <url href="https://pretextbook.org/doc/guide/html/guide-toc.html">PreTeXt Guide</url> can be hard to use because there is so much stuff in it.  Additionally, some of the documentation is out of date.  Still, if you know where to look, it is a great resource.
     </p>
@@ -25,7 +25,7 @@
         </li>
         <li>
           <p>
-            <url href="https://pretextbook.org/doc/guide/html/publication-file-reference.html">Publication File Reference</url>: When you are ready to start changing how your output looks, you can use the <term>publication file</term>, which is described in this part of the guide. 
+            <url href="https://pretextbook.org/doc/guide/html/publication-file-reference.html">Publication File Reference</url>: When you are ready to start changing how your output looks, you can use the <term>publication file</term>, which is described in this part of the guide.
           </p>
         </li>
         <li>
@@ -67,7 +67,7 @@
       </ul>
     </p>
   </paragraphs>
-  
+
   <paragraphs>
     <title>Community Support</title>
     <p>

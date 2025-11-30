@@ -138,22 +138,22 @@
     <section xml:id="sec-structure">
       <title>Structured documents</title>
       <p>
-        We can think of any document as being made up of <term>elements</term> or blocks of various types.  A book is divided up into a number of chapters, each of which might have sections.  Inside the sections you will find paragraphs and perhaps figures, examples, theorems, or maybe subsections. Some of these elements might contain just text, but some of those text elements will be miniature blocks themselves (for example, terms or emphasized text or mathematical formulas).   
+        We can think of any document as being made up of <term>elements</term> or blocks of various types.  A book is divided up into a number of chapters, each of which might have sections.  Inside the sections you will find paragraphs and perhaps figures, examples, theorems, or maybe subsections. Some of these elements might contain just text, but some of those text elements will be miniature blocks themselves (for example, terms or emphasized text or mathematical formulas).
       </p>
       <p>
         At its heart, <pretext /> is a set of rules that specify which elements can be placed inside which other elements (and sometimes, in which order).  It is this semantic structure that allows <pretext /> documents to be translated to multiple output formats and ensure accessibility of output.  As you learn to write <pretext /> source, you will learn these rules (and most of them should make sense).
       </p>
 
       <p>
-        It is common for new <pretext /> authors to see output they did not expect.  This is usually a result of incorrectly structured source.  For example, one of the elements you can specify is a <term>hint</term>.  But you can't put a hint just anywhere: a hint can only go inside elements like examples or exercises.  Further, a hint does not go inside a paragraph, but it does contain paragraphs.          
+        It is common for new <pretext /> authors to see output they did not expect.  This is usually a result of incorrectly structured source.  For example, one of the elements you can specify is a <term>hint</term>.  But you can't put a hint just anywhere: a hint can only go inside elements like examples or exercises.  Further, a hint does not go inside a paragraph, but it does contain paragraphs.
       </p>
     </section>
-    
+
     <section xml:id="sec-xml">
       <title><pretext/> is XML</title>
       <p>
-        To describe the nested elements of a document, 
-        <pretext /> uses the <init>XML</init> markup language. 
+        To describe the nested elements of a document,
+        <pretext /> uses the <init>XML</init> markup language.
         The root <c>pretext</c> element nests many other elements inside of it.
         This is accomplished by surrounding everything with a starting <c>&lt;pretext&gt;</c> <term>tag</term> and an ending <c>&lt;/pretext&gt;</c> tag.
         (Folks with HTML experience will find this pattern familiar, akin to the <q>HTML</q> root element.)
@@ -256,7 +256,7 @@
 
       <introduction>
         <p>
-This chapter is about the real numbers <m>\R</m> 
+This chapter is about the real numbers <m>\R</m>
         </p>
       </introduction>
 
@@ -264,7 +264,7 @@ This chapter is about the real numbers <m>\R</m>
         <title>Let's get started</title>
 
         <p>
-          Can you solve <m>ax^2+bx+c=0</m>? 
+          Can you solve <m>ax^2+bx+c=0</m>?
         </p>
       </section>
 
@@ -272,9 +272,9 @@ This chapter is about the real numbers <m>\R</m>
         <title>But wait, there's more!</title>
 
         <p>
-          Did you know that 
+          Did you know that
           <me>
-          x=\frac{-b\pm\sqrt{b^2-4ac}}{2a} 
+          x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
           </me>?
         </p>
       </section>
@@ -285,7 +285,7 @@ This chapter is about the real numbers <m>\R</m>
 
       <colophon>
         <p>
-          This book was authored in <pretext />. 
+          This book was authored in <pretext />.
         </p>
       </colophon>
     </backmatter>

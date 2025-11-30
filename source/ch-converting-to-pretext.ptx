@@ -9,13 +9,13 @@
         <p>
           Your goal in doing a conversion should be to move all your materials into <pretext /> and then always work from the <pretext /> source, converting back to other formats as needed.  It is simply not feasible to keep converting to <pretext />, since this process is not automatic.
       </p>
-        
+
       </warning>
     </introduction>
     <section xml:id="sec-pandoc">
       <title>Using Pandoc</title>
       <p>
-        If you have a number of individual documents that you would like to convert, from pretty much any format, consider trying <url href="https://pandoc.org/">Pandoc</url>.  This command-line tool can read in lots of different formats and output in lots of different formats.  Unfortunately, <pretext /> is not a default output format, so you need to use a custom <term>writer</term>. 
+        If you have a number of individual documents that you would like to convert, from pretty much any format, consider trying <url href="https://pandoc.org/">Pandoc</url>.  This command-line tool can read in lots of different formats and output in lots of different formats.  Unfortunately, <pretext /> is not a default output format, so you need to use a custom <term>writer</term>.
       </p>
 
       <p>
@@ -23,11 +23,11 @@
       </p>
 
       <p>
-        You can also use Pandoc outside of VS Code.  Install pandoc from their website.  Then download the this <url href="https://raw.githubusercontent.com/oscarlevin/pandoc-pretext/master/pretext.lua">writer</url> and put it somewhere you will remember.   
+        You can also use Pandoc outside of VS Code.  Install pandoc from their website.  Then download the this <url href="https://raw.githubusercontent.com/oscarlevin/pandoc-pretext/master/pretext.lua">writer</url> and put it somewhere you will remember.
         Documentation for how to use this tool is available on its <url href="https://github.com/oscarlevin/pandoc-pretext">GitHub repository</url>.
       </p>
     </section>
-    
+
     <section xml:id="sec-using-the-community">
       <title>Using the community</title>
       <p>
@@ -38,7 +38,7 @@
     <section xml:id="sec-by-hand">
       <title>By hand</title>
       <p>
-        If you have some familiarity with Regex, you can use VS Code's find/replace tools to clean up text that you copied/pasted into your document.  For example, if you entered <c>\$(.*?)\$</c> in the search bar (with the <q>.*</q> setting selected), and put <c>&lt;m&gt;$1&lt;/m&gt;</c> in the replace box, you can easily replace all math in your document with the correct syntax. 
+        If you have some familiarity with Regex, you can use VS Code's find/replace tools to clean up text that you copied/pasted into your document.  For example, if you entered <c>\$(.*?)\$</c> in the search bar (with the <q>.*</q> setting selected), and put <c>&lt;m&gt;$1&lt;/m&gt;</c> in the replace box, you can easily replace all math in your document with the correct syntax.
       </p>
     </section>
 </chapter>

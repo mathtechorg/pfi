@@ -27,7 +27,7 @@
   \usepackage{tikz, pgfplots}
   \usetikzlibrary{positioning,matrix,arrows}
   \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
-  \usetikzlibrary{decorations.markings} 
+  \usetikzlibrary{decorations.markings}
 </latex-image-preamble>
 
 <!-- It is possible to rename elements using the tags below -->
@@ -37,7 +37,7 @@
 
 <!-- Specify the default type of cross reference:           -->
   <cross-references text="type-global" />
-  
+
   <!-- <brandlogo source="logo.png"/> -->
 </docinfo>
 

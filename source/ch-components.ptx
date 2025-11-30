@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-components" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Course Components</title>
+
+  <introduction>
+    <p>
+      In this chapter we explore the main components that you might include in a course document created with <pretext/>.  These include lecture notes, slides, in-class activities, homework sets, and so on.
+    </p>
+  </introduction>
+
+  <xi:include href="./sec-components-syllabus.ptx" />
+  <xi:include href="./sec-components-notes.ptx" />
+  <xi:include href="./sec-components-handouts.ptx" />
+  <xi:include href="./sec-components-assignments.ptx" />
+  <xi:include href="./sec-components-slides.ptx" />
+</chapter>

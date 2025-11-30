@@ -23,9 +23,9 @@
     </p>
 
     <p>
-      <alert>And that's it!</alert>.  If you are ready to jump in, proceed to <xref ref="ch-intro"/>.  
+      <alert>And that's it!</alert>.  If you are ready to jump in, proceed to <xref ref="ch-intro"/>.
     </p>
-    
+
     <p>
       The remainder of this short chapter contains some optional steps and information.
     </p>
@@ -59,7 +59,7 @@
 
         <li>
           <p>
-            Install all requirements separately.  More steps, but if you already have some of the required software installed, this will save disk space and might speed up editing. 
+            Install all requirements separately.  More steps, but if you already have some of the required software installed, this will save disk space and might speed up editing.
           </p>
         </li>
       </ol>

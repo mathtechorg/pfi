@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<frontmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="meta-frontmatter">
+  <bibinfo>
+  <author>
+    <personname>Steven Clontz</personname>
+    <department>Department of Mathematics and Statistics</department>
+    <institution>University of South Alabama</institution>
+  </author>
+
+  <author>
+    <personname>Oscar Levin</personname>
+    <department>Department of Mathematical Sciences</department>
+    <institution>University of Northern Colorado</institution>
+  </author>
+  <date> <today />
+  </date>
+  </bibinfo>
+
+  <titlepage>
+    <titlepage-items />
+  </titlepage>
+
+
+  <preface>
+    <p>
+      <url href="https://pretextbook.org">PreTeXt</url> is a document authoring system that allows you to convert the source of your document into a variety of output formats, including fully accessible webpages, PDF, Epub, Jupyter Notebooks, and braille. This <q>write once, read anywhere</q> approach has made it a popular choice for authors of Open Educational Resources, but PreTeXt can also be used to create other kinds of mathematical documents as well. Recent updates make this process much easier; there has never been a better time to get started with PreTeXt.
+    </p>
+
+    <p>
+      The goal of this guide is to introduce instructors interested in using PreTeXt to create course documents, including lecture notes, slides, in-class activities, homework sets, and so on.  We assume no familiarity with PreTeXt, but do assume you have previously use LaTeX to some extent for these tasks.
+    </p>
+    <p>
+      Specifically, readers of this guide will learn how to:
+    </p>
+
+    <p>
+      <ul>
+        <li>
+          Use GitHub Codespaces to create an editable PreTeXt document in their web browser.
+        </li>
+
+        <li>
+          Write and structure content using PreTeXt markup.
+        </li>
+
+        <li>
+          Add content to the document, including mathematics, graphics, interactive exercises, and more.
+        </li>
+
+        <li>
+          Build accessible and interactive webpages as well as a static PDF from the same PreTeXt source.
+        </li>
+
+        <li>
+          Easily deploy the interactive webpages online (for free).
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      We will also share tips for converting existing documents into PreTeXt.
+    </p>
+
+    <p>
+      More introduction to come, once we know what the rest of the book will look like.
+    </p>
+  </preface>
+</frontmatter>
