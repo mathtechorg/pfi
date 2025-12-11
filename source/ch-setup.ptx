@@ -13,30 +13,59 @@
       If you prefer to use a local setup instead of the cloud-based interface, this is absolutely possible, but requires a bit more setup.
       A list of the steps you will need to complete are given in <xref ref="sec-installing-pretext-locally"/>, but remember, this is entirely optional.
     </p>
-  </introduction>
-  <section>
-    <title>Setting up your GitHub account</title>
 
     <p>
-      To create a GitHub account, follow the instructions on <url href="https://github.com/signup"> GitHub's signup page.
+      If you do not already have a GitHub account, follow the instructions on <url href="https://github.com/signup"> GitHub's signup page.
       </url>
     </p>
+  </introduction>
+  <section>
+    <title>Creating a New Course</title>
 
     <p>
-      <alert>And that's it!</alert>.  If you are ready to jump in, proceed to <xref ref="ch-intro"/>.
+      We are going to create a <term>repository</term> on GitHub that will hold all our course documents. 
+    </p>
+    <p>
+      Go to <url href="https://github.com/pretextbook/pretext-codespace" />.  On that page, below a short list of files, you will see a README that gives instruction for creating a project from that template.
     </p>
 
     <p>
-      The remainder of this short chapter contains some optional steps and information.
+      Once you have a repository created, you will start up a codespace by clicking the green <c>Code</c> button near the top right of the repository page, and then selecting <c>Open with Codespaces</c> and then <c>New codespace</c>.
+      This will create a new codespace for you, which may take a minute or two to start up the first time.
+    </p>
+
+    <p>
+      The advantage to starting from this template is that it contains a <c>.devcontainer</c> file that tells the GitHub Codespace to install the software PreTeXt needs to run.  In particular, once the Codespace is up and running, you can initialize a new PreTeXT course as follows.
+      <ol>
+        <li>
+          <p>
+            Open the <term>command pallet</term> in VS Code by pressing <c>Ctrl+Shift+P</c> (or <c>Cmd+Shift+P</c> on a Mac).  Start typing <q>PreTeXt: New Project</q> and select that option when it appears.
+          </p>
+        </li>
+        <li>
+          Select <q>Course</q> from the available options.
+        </li>
+        <li>
+          <p>
+            You will be prompted to provide a location for the project.  The default location presented in the Codespace is what you want to select.
+          </p>
+        </li>
+      </ol>
+      The page will now refresh and when it does, you will see some new folders and files in the file explorer on the left side of the screen.
+      These are the files that make up your new PreTeXt course!
+    </p>
+
+    <p>
+      You can now proceed to <xref ref="ch-workflow"/>.  The remainder of this chapter contains optional steps for upgrading your GitHub account and installing PreTeXt locally if you prefer to not use the cloud-based interface.
     </p>
   </section>
 
   <section>
-    <title>Apply for your GitHub Education discount</title>
+    <title>Optional: Apply for your GitHub Education discount</title>
 
     <p>
-      While you can use GitHub for free, there are some features that require a <q>pro</q> account.
-      The main advantage in this context is that the free Pro account you get access to will allow you to use GitHub Pages to publish your PreTeXt content while still keeping your repository and source files private.
+      While you can use GitHub for free, there are some useful features that require a <q>pro</q> account.
+      The main advantage in this context is that the free Pro account you get access to will allow you to use GitHub Pages to publish your PreTeXt content while still keeping your repository and source files private.  This can be useful if you want to use a single repository to hold both your assessments and student facing documents.
     </p>
 
     <p>
@@ -46,7 +75,7 @@
   </section>
 
   <section xml:id="sec-installing-pretext-locally">
-    <title>Installing PreTeXt locally</title>
+    <title>Optional: Installing PreTeXt locally</title>
 
     <p>
       If you would rather author <pretext /> locally on your own computer (which does offer advantages of not requiring an active internet connection, and the security of having your files stored on your device), we suggest one of the two following approaches.
