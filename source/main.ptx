@@ -18,6 +18,7 @@
     <xi:include href="./frontmatter.ptx" />
 
     <xi:include href="./ch-introduction.ptx" />
+    <xi:include href="./ch-setup.ptx" />
     <xi:include href="./ch-workflow.ptx" />
     <xi:include href="./ch-course-structure.ptx" />
     <xi:include href="./ch-components.ptx" />

@@ -15,8 +15,18 @@
     <titlepage-items />
   </titlepage>
 
+  <acknowledgement>
+    <p>
+      This book started as a set of notes for a Professional Enhancement Program (PEP) at the 2023 Joint Mathematics Meeting ran by Steven Clontz and Oscar Levin designed to introduce mathematicians to PreTeXt. That guide was co-authored by the presenters.  Since then, the notes evolved and were used in a number of similar workshops. While much of the content has been rewritten to focus on creating course materials in particular, large parts of the original text contributed by Steven Clontz remain.
+    </p>
+
+    <p>
+      The author would also like to thank the other members of the MathTech.org community, specifically Tien Chih and Chrissy Safranski for their feedback on the project as it develops.
+    </p>
+  </acknowledgement>
 
   <preface>
+    <title>About this guide</title>
     <p>
       <url href="https://pretextbook.org">PreTeXt</url> is a document authoring system that allows you to convert the source of your document into a variety of output formats, including fully accessible webpages, PDF, Epub, Jupyter Notebooks, and braille. This <q>write once, read anywhere</q> approach has made it a popular choice for authors of Open Educational Resources, but PreTeXt can also be used to create other kinds of mathematical documents as well. Recent updates make this process much easier; there has never been a better time to get started with PreTeXt.
     </p>

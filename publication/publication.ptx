@@ -10,7 +10,7 @@
 
 <publication>
   <common>
-    <chunking level="1"/>
+    <chunking level="2"/>
     <exercise-project solution="yes" hint="yes"/>
   </common>
   <!-- Set where external assets and generated assets will be   -->
@@ -29,8 +29,8 @@
     <!-- chapter.  @level says how deep (chapter->section->subsection)-->
     <!-- numbering should appear.                                     -->
       For use with a book organized by parts
-    <divisions chapter-start="1" level="2"/>
-     
+    <divisions chapter-start="0" level="2"/>
+
     <!-- The next elements say how the levels deep to break up the    -->
     <!-- numbering of the respective elements. Can't be more than the -->
     <!-- @level on divisions above.                                   -->
@@ -47,7 +47,7 @@
   <latex print="no" sides="one">
     <asymptote links="no"/>
   </latex>
-  
+
   <html>
     <!-- Whether to knowl a particular elements is set here    -->
     <!-- Lots of elements have this possibility; see the guide -->
