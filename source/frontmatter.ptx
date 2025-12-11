@@ -3,12 +3,6 @@
 <frontmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="meta-frontmatter">
   <bibinfo>
   <author>
-    <personname>Steven Clontz</personname>
-    <department>Department of Mathematics and Statistics</department>
-    <institution>University of South Alabama</institution>
-  </author>
-
-  <author>
     <personname>Oscar Levin</personname>
     <department>Department of Mathematical Sciences</department>
     <institution>University of Northern Colorado</institution>
