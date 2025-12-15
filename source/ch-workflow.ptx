@@ -9,7 +9,7 @@
     </p>
 
     <p>
-      In this chapter we will walk through the steps to do this inside a codespace environment.
+      The basic workflow in <pretext/> is to edit source files, build the project, preview the output, and repeat.  Assuming you are working in a codespace, make sure you sync your files to GitHub regularly (see <xref ref="sec-saving"/> for details).
     </p>
   </introduction>
 
@@ -45,23 +45,23 @@
   <section xml:id="sec-build">
     <title>Build</title>
     <p>
-      Inside the VS Code window you opened through codespaces, have a <c>.ptx</c> file open (these should all be inside your <c>source</c> folder).  You can build your entire project in a few different ways.
+      Inside the VS Code window, have a <c>.ptx</c> file open (these are all inside <c>source</c> folder).  You can build your entire project in a few different ways.
       <ul>
         <li>
           <p>
-            Click the <q>PreTeXt</q> button in the VS Code status bar (just left of center on the bottom of the window), or use the keyboard shortcut <c>CTRL+ALT+p</c>, to bring up the PreTeXt Commands menu.  Select <q>Build default target</q> from the menu.  This will build your files and put the output inside the <c>output/web</c> folder.
+            Click the <q>PreTeXt</q> button in the VS Code status bar (just left of center on the bottom of the window), or use the keyboard shortcut <c>CTRL+ALT+p</c>, to bring up the PreTeXt Commands menu.  Select <q>Build default target</q> from the menu.  This will build your files and put the output inside the <c>output/course</c> folder.
           </p>
         </li>
         <li>
           <p>
-            You can type <c>pretext build web</c> from the terminal (this uses the CLI directly).  If you don't see a terminal window at the bottom of the screen, you can open it with <c>CTRL+`</c> or go to <q>Terminal</q> menu and select <q>New Terminal</q>.
+            You can type <c>pretext build course</c> from the terminal (this uses the CLI directly).  If you don't see a terminal window at the bottom of the screen, you can open it with <c>CTRL+`</c> or go to <q>Terminal</q> menu and select <q>New Terminal</q>.
           </p>
         </li>
       </ul>
     </p>
 
     <p>
-      That should be it.  If you get a message proclaiming <q>Build successful!</q>, you can jump to the next section.
+      That's it.  If you get a message proclaiming <q>Build successful!</q>, you can jump to the next section.
     </p>
 
     <note>
@@ -84,7 +84,7 @@
     </p>
 
     <p>
-      All such elements <em>should</em> get generated automatically when you build.  If you don't change them, then the next time you run a build things should be faster.
+      All such elements will get generated automatically when you build.  If you don't change them, then the next time you run a build things should be faster.
     </p>
 
     <note>
@@ -94,14 +94,18 @@
     </note>
   </section>
 
-  <section xml:id="sec-previewing">
-    <title>Previewing</title>
+  <section xml:id="sec-preview">
+    <title>Preview</title>
     <p>
-      You can check the output of what you built using the <term>View</term> command.  Again, you can access this in multiple ways. If you use the <pretext /> menu and select <q>View full document</q>, you will get a choice of targets to view.  At this point, you still want to view the <c>web</c> target.
+      You can check the output of what you built using the <term>View</term> command.  Again, you can access this in multiple ways. If you use the <pretext /> menu and select <q>View full document</q>, you will get a choice of targets to view.  At this point, you still want to view the <c>course</c> target.
     </p>
 
     <p>
-      If you like using the command line, in a terminal enter <c>pretext view web</c>.  This should open a new tab in your browser that will display your book.
+      If you like using the command line, in a terminal enter <c>pretext view course</c>.  This should open a new tab in your browser that will display your book.
+    </p>
+
+    <p>
+      Once you have run the view command once and have a browser window open, any time you make a change to your source files, you simply rebuild (using the build commands from <xref ref="sec-build"/>) and then refresh the browser window to see your changes.
     </p>
 
     <p>

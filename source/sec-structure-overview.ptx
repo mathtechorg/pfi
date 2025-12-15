@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+  <section xml:id="sec-structure-overview" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Course Structure</title>
+
+    <p> The template for a new <pretext /> course assumes you will include most of the course
+      documents inside a single <pretext /> <term>book</term>. This book will be split into chapters
+      for different categories of course materials, and each chapter will be divided into sections
+      representing individual course documents. </p>
+
+    <p> For example, there is a chapter for in-class activities, divided into <term>worksheet</term>
+      elements (which become a type of section since they live inside a chapter). The way the course
+      book is set up, each section gets its own webpage. This allows you to embed that section
+      inside your learning management system (LMS) if you wish. </p>
+
+    <p> Here is how the template is structured by default, as seen in the output. <ol>
+        <li>
+          <p> Course documents <ol>
+              <li>Syllabus</li>
+            </ol>
+          </p>
+        </li>
+        <li>
+          <p> Course Notes <ol>
+              <li>
+                <p>
+                  Week 1
+                </p>
+              </li>
+              <li>
+                <p>
+                  Week 2
+                </p>
+              </li>
+              <li>...</li>
+            </ol>
+          </p>
+        </li>
+        <li>
+          <p> In-Class Activities <ol>
+              <li>Activity 1</li>
+              <li>Activity 2</li>
+              <li>...</li>
+            </ol>
+          </p>
+        </li>
+        <li>
+          <p> Handouts <ol>
+              <li>
+                <p>
+                  Handout 1
+                </p>
+              </li>
+              <li>
+                <p>
+                  Handout 2
+                </p>
+              </li>
+              <li>...</li>
+            </ol>
+          </p>
+        </li>
+        <li>
+          <p> Homework <ol>
+              <li>Homework 1</li>
+              <li>Homework 2</li>
+              <li>...</li>
+            </ol>
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <p> This is accomplished using the following source structure in the <c>main.ptx</c> file. </p>
+
+    <program language="xml">
+      <code><xi:include href="./code/course-structure.ptx" parse="text" /></code>
+    </program>
+
+    <note>
+
+      <p> 
+        Actually, if you look at the <c>main.ptx</c> file, you will see something a little different: the individual sections are not listed since they are separated into individual files and included using <tag>xi:include</tag> elements.  See <xref ref="sec-structure-files"/> for more details on how the source files are organized.
+      </p>
+    </note>
+
+    <p>
+      A big advantage of this structure is that you can cross-reference between different course documents easily.  However, it is possible to organize the course differently, and it is likely you will want to exclude at least some of the files from the main course book.  For example, if you write your quizzes and exams in PreTeXt, you probably want to be able to build these but not deploy them (at least until after the quiz or exam).  Another case is slides, since slideshows are top-level <pretext/> documents.
+    </p>
+  </section>

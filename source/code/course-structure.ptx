@@ -1,0 +1,30 @@
+<book>
+  <title>Course Title</title>
+  <chapter>
+    <title>Course Documents</title>
+    <section>
+      <title>Syllabus</title>
+    </section>
+  </chapter>
+  <chapter>
+    <title>Course Notes</title>
+    <section>
+      <title>Week 1</title>
+    </section>
+    <section>
+      <title>Week 2</title>
+    </section>
+    ...
+  </chapter>
+  <chapter>
+    <title>In-Class Activities</title>
+    <section>
+      <title>Activity 1</title>
+    </section>
+    <section>
+      <title>Activity 2</title>
+    </section>
+    ...
+  </chapter>
+  etc.
+</book>

@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <chapter xml:id="ch-introduction" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Introduction: What is PreTeXt?</title>
+  <title>Introduction: <pretext/> for course materials</title>
 
 <p>
-  In this chapter we will introduce you to PreTeXt, what it can do for you as an instructor, and how it can make you a better writer.
+  <pretext/> is an open-source authoring system designed to make it easy to create high-quality, accessible, scholarly documents.  It is a popular choice for authoring OER textbooks, especially in mathematics.  Recent development has made it a lot easier to use <pretext/> for smaller documents, include research articles and course materials.  This book is intended to help instructors get started using <pretext/> to create course materials such as lecture notes, homework sets, and in-class activities.
+</p>
+
+<p>
+  The introduction of the <url href="https://pretextbook.org/doc/guide/html/start-here.html"><pretext/> guide</url> contains more information about the advantages of philosophy of <pretext/>.
 </p>
 
 </chapter>

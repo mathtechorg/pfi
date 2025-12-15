@@ -30,12 +30,12 @@
     </p>
 
     <p>
-      Once you have a repository created, you will start up a codespace by clicking the green <c>Code</c> button near the top right of the repository page, and then selecting <c>Open with Codespaces</c> and then <c>New codespace</c>.
-      This will create a new codespace for you, which may take a minute or two to start up the first time.
+      Once you have a repository created, you will start up a codespace by clicking the green <c>Code</c> button near the top right of the repository page, and then selecting the <c>Codespaces</c> tab (not <c>Local</c>) and then <c>Create codespace on main</c>.
+      This will create a new codespace for you, which may take a few minutes to start up the first time.
     </p>
 
     <p>
-      The advantage to starting from this template is that it contains a <c>.devcontainer</c> file that tells the GitHub Codespace to install the software PreTeXt needs to run.  In particular, once the Codespace is up and running, you can initialize a new PreTeXT course as follows.
+      The advantage to starting from this template is that it contains a <c>devcontainer.json</c> file that tells the GitHub Codespace to install the software PreTeXt needs to run.  In particular, once the Codespace is up and running, you can initialize a new PreTeXT course as follows.
       <ol>
         <li>
           <p>
@@ -47,7 +47,7 @@
         </li>
         <li>
           <p>
-            You will be prompted to provide a location for the project.  The default location presented in the Codespace is what you want to select.
+            You will be prompted to provide a location for the project.  The default path, which should be <c>/workspaces/[repository-name]</c>, is what you want to select.
           </p>
         </li>
       </ol>
@@ -97,7 +97,7 @@
     <p>Detailed instructions for both of these options is available in the <url href="https://pretextbook.org/doc/guide/html/tutorial-install.html#tutorial-install"><pretext /> Guide</url>.</p>
 
     <p>
-      With either approach, you will want a modern text editor to edit the <pretext /> source files.  We strongly recommend using <url href="https://code.visualstudio.com/">Visual Studio Code</url>, which has an extension for writing PreTeXt and will walk you through the docker container setup if you go that route.
+      With either approach, you will want a modern text editor to edit the <pretext /> source files.  We strongly recommend using <url href="https://code.visualstudio.com/">Visual Studio Code</url>, which has an extension for writing PreTeXt (<c>pretext-tools</c>) and will walk you through the docker container setup if you go that route.
     </p>
 
   </section>

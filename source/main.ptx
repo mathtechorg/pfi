@@ -20,12 +20,13 @@
     <xi:include href="./ch-introduction.ptx" />
     <xi:include href="./ch-setup.ptx" />
     <xi:include href="./ch-workflow.ptx" />
-    <xi:include href="./ch-course-structure.ptx" />
+    <xi:include href="./ch-structure.ptx" />
     <xi:include href="./ch-components.ptx" />
     <xi:include href="./ch-content.ptx" />
     <!-- A chapter on sharing materials, reusing materials from previous semesters, etc? -->
     <!--<xi:include href="./ch-sharing.ptx" />-->
     <xi:include href="./ch-customization.ptx" />
+    <xi:include href="./ch-project.ptx"/>
     <xi:include href="./ch-converting-to-pretext.ptx" />
 
 

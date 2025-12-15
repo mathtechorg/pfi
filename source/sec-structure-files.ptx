@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-structure-files" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>File Structure</title>
+  <p>
+    This section describes how the source files for the course are organized.
+  </p>
+
+  <p>
+    All of the content that you author go in <c>.ptx</c> files inside the <c>source</c> folder.  By default the <em>entry</em> file for the main course book is called <c>main.ptx</c> (you can identify entry files because their root element is <tag>pretext</tag>).
+  </p>
+
+  <p>
+    While we could have authored everything inside this main file, it can be easier to <em>modularize</em> our source and keep individual sections (corresponding to particular course documents) in their own files.  This makes it easier to focus on one piece of content at a time, and also makes it easier to reuse content (like sharing a handout between different courses).
+  </p>
+
+  <p>
+    The course template further organizes the source folder by creating folders for different types of files.  So you will see a <c>syllabus</c> folder, a <c>notes</c> folder, an <c>activities</c> folder, and a <c>handouts</c> folder.  Each of these folders contains the relevant source files for that type of course document.  These can be organized in other ways, pretty much however you like, but if you move a file, you will need to change the path where it is included in the main file.
+  </p>
+
+  <p>
+    In the main file, each file is included using the <tag>xi:include</tag> tag.  For example, the syllabus is included like this:
+    <cd>
+      <cline>&lt;xi:include href="./syllabus/syllabus.ptx"/&gt;</cline>
+    </cd>
+    (The <c>./</c> at the start of the path means to start looking in the same folder as the main file.)
+  </p>
+
+  <p>
+    You can include files like this anywhere in the project, including inside files that are themselves included.  Two important things to make this work though:
+    <ol>
+      <li>
+        <p>
+          The file you include must be a valide <init>XML</init> file, that has a single root element.  It is possible to include other files (like tikz code, for example), but if you do that, then the <tag>xi:include</tag> element should have a <attr>parse</attr> attribute with value <c>text</c>.  That is,
+          <cd>
+            <cline>&lt;xi:include href="./path/to/file" parse="text"/&gt;</cline>
+          </cd>
+        </p>
+      </li>
+      <li>
+        <p>
+          The file that does the including needs to declare the <tag>xi</tag> <tag>namespace</tag> at the top of the file.  This is done by adding the following attribute to the root element of the file:
+          <cd>
+            <cline>xmlns:xi="http://www.w3.org/2001/XInclude"</cline>
+          </cd>
+          See the top of the <c>main.ptx</c> file for an example of this.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <paragraphs>
+    <title>Other files and folders</title>
+    <p>
+      Besides your source files, a few other important files and folders are worth mentioning here.
+      <ul>
+        <li>
+          <p>
+            <c>publication</c> folder: This folder contains the publication files that control <q>publisher decisions</q> for your course, like color theme, what elements are shown and how, and other presentation details.  The default publication file is called <c>publication.ptx</c>.  We will explore how to customize this file in <xref ref="ch-publication"/>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <c>assets</c> folder: Once you have external assets (like images) that you want to include in your course, you can put them in this folder (which you might need to create).  You can create subfolders inside this folder to help organize things if you like.
+          </p>
+        </li>
+        <li>
+          <p>
+            <c>output</c> folder: When you build your course, PreTeXt puts the generated output files (like the web version and the PDF) in this folder.  You should not modify anything in this folder (it will be overwritten the next time you build the course).
+          </p>
+        </li>
+        <li>
+          <p>
+            <c>project.ptx</c> file: This file contains project-level settings, as well as settings for each <q>target</q>, including the main course.  We will discuss this file more in <xref ref="ch-project"/>.
+          </p>
+        </li>
+      </ul>
+    </p>
+  </paragraphs>
+
+</section>
