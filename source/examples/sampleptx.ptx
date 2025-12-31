@@ -1,0 +1,18 @@
+<section xml:id="sec-great-title">
+  <title>Great Title</title>
+  <p>
+    This is a simple paragraph before a theorem.
+  </p>
+  <theorem>
+    <statement>
+      <p>
+        <pretext/> is awesome.
+      </p>
+    </statement>
+    <proof>
+      <p>
+        Obvious.
+      </p>
+    </proof>
+  </theorem>
+</section>

@@ -32,7 +32,7 @@
     </p>
 
     <p>
-      The goal of this guide is to introduce instructors interested in using PreTeXt to create course documents, including lecture notes, slides, in-class activities, homework sets, and so on.  We assume no familiarity with PreTeXt, but do assume you have previously use LaTeX to some extent for these tasks.
+      The goal of this guide is to introduce instructors interested in using PreTeXt to create course documents, including lecture notes, slides, in-class activities, homework sets, and so on.  We assume no familiarity with PreTeXt, but do assume you have previously used LaTeX to some extent for these tasks.
     </p>
     <p>
       Specifically, readers of this guide will learn how to:
@@ -66,8 +66,15 @@
       We will also share tips for converting existing documents into PreTeXt.
     </p>
 
-    <p>
-      More introduction to come, once we know what the rest of the book will look like.
-    </p>
+    <paragraphs>
+      <title>Our Context</title>
+      <p>
+        Think of this guide as a long tutorial for creating an entire set of course materials entirely in <pretext/>.  Along the way, we will explore many of the features of PreTeXt.  For example, we will walk through the process of creating a syllabus, and use that as an opportunity to consider how to divide a document into subsections, use various types of lists, include tables, and so on.
+      </p>
+
+      <p>
+        Of course readers should feel free to skip around to learn about particular topics as needed.  Don't forget that you can also use the official <url href="https://pretextbook.org">PreTeXt documentation</url> as a reference for specific features as well.
+      </p>
+    </paragraphs>
   </preface>
 </frontmatter>

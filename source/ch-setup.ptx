@@ -23,7 +23,7 @@
     <title>Creating a New Course</title>
 
     <p>
-      We are going to create a <term>repository</term> on GitHub that will hold all our course documents. 
+      We are going to create a <term>repository</term> on GitHub that will hold all our course documents.
     </p>
     <p>
       Go to <url href="https://github.com/pretextbook/pretext-codespace" />.  On that page, below a short list of files, you will see a README that gives instruction for creating a project from that template.

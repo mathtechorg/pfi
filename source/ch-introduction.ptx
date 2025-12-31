@@ -1,14 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <chapter xml:id="ch-introduction" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Introduction: <pretext/> for course materials</title>
+  <title>What is PreTeXt?</title>
 
 <p>
-  <pretext/> is an open-source authoring system designed to make it easy to create high-quality, accessible, scholarly documents.  It is a popular choice for authoring OER textbooks, especially in mathematics.  Recent development has made it a lot easier to use <pretext/> for smaller documents, include research articles and course materials.  This book is intended to help instructors get started using <pretext/> to create course materials such as lecture notes, homework sets, and in-class activities.
+  Before we jump in to creating a course in <pretext/>, we should try to understand the approach <pretext/> takes to creating documents, how it is different from other authoring systems, and why the choices <pretext/> makes are beneficial for authors of course materials.
 </p>
 
 <p>
-  The introduction of the <url href="https://pretextbook.org/doc/guide/html/start-here.html"><pretext/> guide</url> contains more information about the advantages of philosophy of <pretext/>.
+  First, <pretext/> is a <term>markup language</term>: you write content in plain text files, using special strings to indicate structure and meaning.  These plain text files are then transformed into various output formats that look nice and are easy to read.  In this way, <pretext/> is similar to <latex/>, as well as other markup languages such as <init>HTML</init> and Markdown.  And while there is work being done to create a <acro>WYSIWYG</acro> (What You See Is What You Get) editor for <pretext/>, the primary way to create documents in <pretext/> is to write the source files directly.
 </p>
+
+<p>
+  When you first start using a markup language, all the extra typing to indicate structure can feel overwhelming.  To emphasize text, you have to type extra characters (in <pretext/>, you would wrap the emphasized text in <tag>em</tag> tags; or in <latex/>, you would use <c>\emph{}</c>).  This may seem more difficult than hitting <kbd>CTRL</kbd>+<kbd>I</kbd> in a word processor to italicize text, or clicking on a button in the interface, but once you get used to it, and use autocomplete, many people find it much easier.  Additionally, features of modern text editors, like VS Code, can make it much easier to edit documents quickly (for example, in VS Code you can use <kbd>ALT</kbd>+<kbd>UP</kbd> to move an entire line of text up without needing to select, copy, and paste it).
+</p>
+
+<paragraphs>
+  <title>Semantic vs Visual Markup</title>
+
+  <p>
+    Another advantage of using a markup language is that it <em>should</em> help you focus on writing your content without getting distracted by making sure it looks a particular way.  When this is achieved, it can speed up writing and make us better communicators.  We admit that actually letting go of formatting focus can be difficult: we have all learned how meaning is communicated visually, and it is tempting to try to mimic similar formatting as a proxy for communicating our meaning clearly.  A few examples might be in order.
+  </p>
+
+  <p>
+    Consider the case of formatting references.  Different publishers have made different decisions about their preferred way to format references, both inline and at the end of a document.  It is uncontroversial that removing the burden of remembering how to format every reference correction is a huge advantage.  Similarly, when cross referencing a theorem, are we, the authors, the best judges of whether <q>Theorem 7.2</q> should be capitalized or bold or underlined?  These are decisions that <em>publishers</em> should make once and let us simply use their style.  Authors should just indicate that the text is a reference.  Another example: when defining a term, it is customary to indicate the words being defined using some special formatting.  So how should an author indicate this?  We don't want to be required to remember that such words should be marked as bold or italic, but rather we should proclaim that the words are <term>terms</term> (in <pretext/>, this is done using a <tag>term</tag> tag).
+  </p>
+
+  <p>
+    Both <pretext/> and <latex/> allow for this <term>semantic markup</term>, where authors indicate the meaning of the text rather than its appearance.  Unfortunately, <latex/> is so powerful that it is very easy to extend it to include purely visual formatting markup.  This leads to documents that are impossible to convert to accessible formats, since the <em>intended</em> meaning of the visual markup is obscured.  If a particular author has decided to mark both terms and emphasized text using <c>\textit{}</c>, how can we infer meaning to produce a useful braille version, for example?  Or perhaps a more common example: if an author specifies a page break, what should that look like when the document is viewed as a web page?
+  </p>
+
+  <p>
+    With very few exceptions, <pretext/> forces authors to use semantic markup.  This makes it much easier to produce multiple output formats from the same source files, and ensures that documents are accessible to all readers.  This does require a shift in thinking about how we write.  If we ever find ourselves asking <q>How do I make this text look like ...?</q>, we should pause and instead ask <q>Why did I want to make the text look like...?</q>  Once we have answered that question, we can use the appropriate semantic markup to indicate the intended meaning, and let the output format decide how best to represent it visually (or non-visually, to a visually impaired reader).
+  </p>
+</paragraphs>
+
+<paragraphs>
+  <title>Source Format</title>
+
+  <p>
+    <pretext/> source files are written in <init>XML</init> (eXtensible Markup Language), a widely used markup language for storing structured data.  XML is a very flexible language, and <pretext/> defines a particular <term>schema</term> (a set of rules) describing which document parts can or must contain which other parts.
+  </p>
+
+  <p>
+    Think of a document as a collection of nested boxes.  A book contains chapter boxes, which may contains section boxes.  A chapter or section contains text, but that text is organized into paragraph boxes, theorem boxes, and so on.  It makes sense for a section box to hold a lemma box, but you would not expect a section to be inside a lemma.  You also can't have a section start in one chapter and end in the next.  XML allows us to represent this nested structure clearly, and the <pretext/> schema defines which boxes can go inside which other boxes. Being required to follow good document structure is another way that <pretext/> helps authors focus on creating well organized and understandable content.
+  </p>
+
+  <p>
+    Practically, <pretext/> source files look something like the following.
+  </p>
+
+  <listing>
+    <title>Sample <pretext/> Markup</title>
+
+    <program language="xml">
+      <code><xi:include href="examples/sampleptx.ptx" parse="text"/></code>
+    </program>
+  </listing>
+
+  <p>
+    The <q>sides</q> of the boxes are represented by <term>tags</term>, each a word inside angle brackets.  An opening tag, like <tag>theorem</tag>, indicates the start of a box, and a closing tag, like <tag>/theorem</tag>, indicates the end of that box.  Some tags are self-closing, like <tage>pretext</tage> which indicates an empty box; the box <em>is</em> the content, not a container for contents (in this case, the tag is a macro that expands to <q><pretext/></q>).
+  </p>
+
+  <p>
+    Some tags can have <term>attributes</term>, like the <attr>xml:id</attr> attribute in the opening <tag>section</tag> tag above (xml-ids provide a code to be used by a cross reference, much like the <c>\label{}</c> markup in <latex/>).  It is conventional to refer to attributes in our documentation using an <q>@</q> sign before the name of the attribute.  However, in the actual source that we write, we don't type the <q>@</q> symbol.
+  </p>
+
+  <p>
+    When you start out writing <pretext/>, all this extra markup seems like a lot.  We promise that with practice and by using a good text editor with autocomplete features, the extra typing is not as bad as it seems.  You will soon find your eyes skipping over the markup parts and focusing on the content itself.  Remember the learning curve you experienced with <latex/>.  It will be okay, and totally worth it.
+  </p>
+</paragraphs>
+
+<paragraphs>
+  <title>Building</title>
+
+  <p>
+    Like <latex/>, we will need to transform our <pretext/> source files into output formats that are easy to read.  We call this processing of source into output <term>building</term> the document.  In <xref ref="ch-workflow"/> we will cover the steps to build, view, and <term>deploy</term> projects.
+  </p>
+
+  <p>
+    This brings up another difference with <latex/>: default setup for <pretext/> documents is to think of each document as a <term>project</term>, consisting of a folder containing all the source files, external assets (like images), and configuration options needed to build the document.  It will also contain the output files, in their own subfolders of <c>output</c> (web output will contain many <init>HTML</init> files, images, and other assets; PDF output will be a single <c>.pdf</c> file).  This project-based approach makes it easy to manage all the files needed for a document in one place, and makes it easy to share the entire document with others (for example, by hosting the project folder in a GitHub repository).
+  </p>
+</paragraphs>
 
 </chapter>
