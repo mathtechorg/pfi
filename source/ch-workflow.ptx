@@ -42,7 +42,7 @@
     </p>
   </section>
 
-  <section xml:id="sec-build">
+  <section xml:id="sec-workflow-build">
     <title>Build</title>
     <p>
       Inside the VS Code window, have a <c>.ptx</c> file open (these are all inside <c>source</c> folder).  You can build your entire project in a few different ways.
@@ -105,7 +105,7 @@
     </p>
 
     <p>
-      Once you have run the view command once and have a browser window open, any time you make a change to your source files, you simply rebuild (using the build commands from <xref ref="sec-build"/>) and then refresh the browser window to see your changes.
+      Once you have run the view command once and have a browser window open, any time you make a change to your source files, you simply rebuild (using the build commands from <xref ref="sec-workflow-build"/>) and then refresh the browser window to see your changes.
     </p>
 
     <p>

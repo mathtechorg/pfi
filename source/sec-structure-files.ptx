@@ -31,7 +31,7 @@
     <ol>
       <li>
         <p>
-          The file you include must be a valide <init>XML</init> file, that has a single root element.  It is possible to include other files (like tikz code, for example), but if you do that, then the <tag>xi:include</tag> element should have a <attr>parse</attr> attribute with value <c>text</c>.  That is,
+          The file you include must be a valid <init>XML</init> file, that has a single root element.  It is possible to include other files (like tikz code, for example), but if you do that, then the <tag>xi:include</tag> element should have a <attr>parse</attr> attribute with value <c>text</c>.  That is,
           <cd>
             <cline>&lt;xi:include href="./path/to/file" parse="text"/&gt;</cline>
           </cd>

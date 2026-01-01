@@ -54,7 +54,7 @@
     <title>Sample <pretext/> Markup</title>
 
     <program language="xml">
-      <code><xi:include href="examples/sampleptx.ptx" parse="text"/></code>
+      <code><xi:include href="code/sampleptx.ptx" parse="text"/></code>
     </program>
   </listing>
 

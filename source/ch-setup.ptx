@@ -58,6 +58,14 @@
     <p>
       You can now proceed to <xref ref="ch-workflow"/>.  The remainder of this chapter contains optional steps for upgrading your GitHub account and installing PreTeXt locally if you prefer to not use the cloud-based interface.
     </p>
+
+
+    <note>
+      <title>Demo Course Code</title>
+      <p>
+        Completing the steps above should put your folder in the same state as the <c>1-initial-setup</c> branch of the <url href="https://github.com/mathtechorg/demo-course/tree/1-initial-setup">Demo Course repository</url>.
+      </p>
+    </note>
   </section>
 
   <section>
@@ -99,6 +107,7 @@
     <p>
       With either approach, you will want a modern text editor to edit the <pretext /> source files.  We strongly recommend using <url href="https://code.visualstudio.com/">Visual Studio Code</url>, which has an extension for writing PreTeXt (<c>pretext-tools</c>) and will walk you through the docker container setup if you go that route.
     </p>
+
 
   </section>
 

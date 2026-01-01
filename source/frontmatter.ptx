@@ -76,5 +76,17 @@
         Of course readers should feel free to skip around to learn about particular topics as needed.  Don't forget that you can also use the official <url href="https://pretextbook.org">PreTeXt documentation</url> as a reference for specific features as well.
       </p>
     </paragraphs>
+
+    <paragraphs>
+      <title>Demo Course</title>
+
+      <p>
+        If you would like to see what the final product of the tutorial looks like, visit the <url href="https://mathtech.org/demo-course/">Demo Course</url> on MathTech.org.  The source code for the demo course is available on <url href="https://github.com/mathtech/demo-course">GitHub</url>.  In the GitHub repository, you can view the source at various states of completion, corresponding to different stages of the tutorial, by selecting different branches.
+      </p>
+
+      <p>
+        Throughout this guide, we will indicate which branch corresponds to the completion of each section.
+      </p>
+    </paragraphs>
   </preface>
 </frontmatter>

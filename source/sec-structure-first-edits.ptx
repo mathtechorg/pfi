@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-structure-updates" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>First Edits</title>
+
+  <p>
+    Let's make our course our own by updating some of the basic course information.
+  </p>
+
+  <paragraphs>
+    <title>Change the course title</title>
+    <p>
+      Open the <c>main.ptx</c> file (inside the <c>source</c> folder).  The top of the file will have the following lines.
+    </p>
+
+    <program language="xml" line-numbers="yes">
+      <code><xi:include href="./code/initial-mainptx-top.ptx" parse="text" /></code>
+    </program>
+
+    <p>
+      Let's take it line-by-line.  The first line is the XML declaration, which should be included in all PreTeXt files (and will be automatically added if missing when you format your code).  This just identifies the file as XML.
+    </p>
+
+    <p>
+      Lines 3, 5, and 7 are comments.  In XML a comment starts with <c>&lt;!--</c> and ends with <c>--&gt;</c>.  Comments are ignored by PreTeXt and are just there to help human readers understand the source.  You can change or delete these comments as you like.
+    </p>
+
+    <p>
+      Line 4 is the opening <tag>pretext</tag> element.  This identifies this file as a PreTeXt document (all the way at the bottom of the file is the closing <tag>/pretext</tag> element, indicating the end of the document).  The <attr>xmlns:xi</attr> attribute declares the XML namespace for XInclude, which is needed to use the <tag>xi:include</tag> element later in the file.
+    </p>
+
+    <p>
+      That is what happens on line 6, where we include the <c>docinfo.ptx</c> file that contains common macros and other information for the course.
+    </p>
+
+    <p>
+      Finally on line 8 we open the <tag>book</tag> element, which contains all the content for the course.  And directly after this on line 9 (the first child of the <tag>book</tag>) is the <tag>title</tag> element, which contains the title of the course.  Let's change that now.
+    </p>
+
+    <p>
+      It is the contents of this <tag>title</tag> element that will appear as the main title of the course in the generated output.  Change the text <c>Course Name (change me)</c> to the actual name of your course.  We will call our course <em>PreTeXt by Example</em>, so our updated line 9 looks :
+      <cd>
+        <cline>&lt;title&gt;PreTeXt by Example&lt;/title&gt;</cline>
+      </cd>
+    </p>
+
+    <p>
+      Let's also update the subtitle (on line 11) to look something like this:
+      <cd>
+        <cline>&lt;subtitle&gt;PTX 101 Spring 2026&lt;/subtitle&gt;</cline>
+      </cd>
+    </p>
+
+    <p>
+      Now we can rebuild the course (see <xref ref="sec-workflow-build"/>) and see our updated title and subtitle in the output (go back to the tab where the course is open and refresh the page to see the changes, or run <c>pretext view</c> if you have closed that tab).
+    </p>
+  </paragraphs>
+
+  <paragraphs>
+    <title>Changing Author Information</title>
+
+    <p>
+      The next non-comment line in the <c>main.ptx</c> file is the inclusion of the <c>frontmatter.ptx</c> file.  You can open this file by finding it in the explorer panel on the left side of the screen, or by clicking on the link in the <attr>href</attr> attribute of the <tag>xi:include</tag> element, while holding down the <c>Ctrl</c> key (or <c>Cmd</c> on a Mac).
+    </p>
+  </paragraphs>
+
+</section>
