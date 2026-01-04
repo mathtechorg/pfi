@@ -9,11 +9,11 @@
     </p>
 
     <p>
-      The basic workflow in <pretext/> is to edit source files, build the project, preview the output, and repeat.  Assuming you are working in a codespace, make sure you sync your files to GitHub regularly (see <xref ref="sec-saving"/> for details).
+      The basic workflow in <pretext/> is to edit source files, build the project, preview the output, and repeat.  Assuming you are working in a codespace, make sure you sync your files to GitHub regularly (see <xref ref="sec-workflow-save"/> for details).
     </p>
   </introduction>
 
-  <section xml:id="sec-prerequisites">
+  <section xml:id="sec-workflow-prerequisites">
     <title>Prerequisites</title>
     <p>
       In this chapter we assume you are working in a GitHub Codespaces, and have already initialized a <pretext /> project there.  A few notes:
@@ -94,7 +94,7 @@
     </note>
   </section>
 
-  <section xml:id="sec-preview">
+  <section xml:id="sec-workflow-preview">
     <title>Preview</title>
     <p>
       You can check the output of what you built using the <term>View</term> command.  Again, you can access this in multiple ways. If you use the <pretext /> menu and select <q>View full document</q>, you will get a choice of targets to view.  At this point, you still want to view the <c>course</c> target.
@@ -136,7 +136,7 @@
     </note>
   </section>
 
-  <section xml:id="sec-deploy">
+  <section xml:id="sec-workflow-deploy">
     <title>Deploy</title>
     <p>
       So you have worked tirelessly to prepare course notes or a book, built and previewed, and now you are ready to share the results of your efforts with the world.  It's time to <term>deploy</term> your project.
@@ -151,7 +151,7 @@
     </p>
   </section>
 
-  <section xml:id="sec-saving">
+  <section xml:id="sec-workflow-save">
     <title>Important: Saving your work</title>
     <p>
       Using codespaces will keep all your files <q>in the cloud</q> on GitHub's server.  As long as you don't delete your codespace (which GitHub might do after a few days automatically, depending on your settings), your files will be saved there.  However, you will want to <term>push</term> these files to your <term>repository</term> on GitHub to make this save permanent.  This has the benefit of allowing collaborators to access your files as well (your codespace is unique to your account).
@@ -222,7 +222,7 @@
     </p>
   </section>
 
-  <section xml:id="sec-Collaborating">
+  <section xml:id="sec-workflow-collaborate">
     <title>Collaborating</title>
 
     <p>If you want to work with colleagues or students on a PreTeXt project, you will each want to work inside your own codespace and use GitHub's collaboration tools to manage sharing updates.  Using Git and GitHub takes practice and there is lots to learn.</p>

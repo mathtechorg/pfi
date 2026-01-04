@@ -5,7 +5,7 @@
 
   <p>
     The template for a new <pretext /> course assumes you will include most of the course documents inside a single <pretext /> <term>book</term>.
-    This book will be split into chapters for different categories of course materials, and each chapter will be divided into sections representing individual course documents.
+    This book will be split into <term>chapters</term> for different categories of course materials, and each chapter will be divided into <term>sections</term> representing individual course documents.
   </p>
 
   <p>

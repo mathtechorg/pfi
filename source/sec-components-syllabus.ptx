@@ -3,6 +3,145 @@
 <section xml:id="sec-components-syllabus" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Syllabus</title>
 
-  <p>Coming soon</p>
+  <introduction>
+
+    <p>
+      The course template has set up the syllabus as a <em>section</em> of our course, inside the <em>Course Documents</em> chapter.  This can be seen by looking at the <c>main.ptx</c> file, on the lines following the inclusion of the frontmatter file.
+    </p>
+
+    <listing>
+      <title>Fragment of <c>main.ptx</c> after the <tag>subtitle</tag></title>
+    <program language="xml">
+      <code><xi:include href="./code/main-ptx-2.ptx" parse="text"/></code>
+    </program>
+  </listing>
+
+    <p>
+      We also see that the file for the syllabus is inside a <c>syllabus</c> folder, and is called <c>syllabus.ptx</c>.  Opening this file we see that the root element (there can only be one) is indeed a <tag>section</tag>, and that we have titled the section <em>Syllabus</em>.
+    </p>
+
+    <listing>
+      <title>First part of the <c>syllabus.ptx</c> file template</title>
+
+      <program language="xml">
+        <code><xi:include href="./code/syllabus-start.ptx" parse="text"/></code>
+      </program>
+    </listing>
+
+    <p>
+      The next element provided by the template is an <tag>introduction</tag>.  It contains a single paragraph, but you can add more.  Each paragraph is enclosed in a <tag>p</tag> tag (think of this as the analogue of text separated by a blank line in <latex/>).
+    </p>
+
+  </introduction>
+
+  <subsection xml:id="subsec-divisions-and-their-structure">
+    <title>Divisions and their Structure</title>
+    <p>
+      Let's pause and briefly consider how <term>divisions</term> work in <pretext/>, and what their structure can be.  See also the section on divisions in the <url href="https://pretextbook.org/doc/guide/html/topic-divisions.html"><pretext /> Guide</url>.
+    </p>
+
+    <p>
+      The main divisions of a <pretext/> book are either <term>chapters</term> or <term>parts</term> that themselves contain chapters.  Chapters can contain <term>sections</term>, which can contain <term>subsections</term> (there is an even a <term>subsubsection</term> that can belong to a subsection).  The same structure applies to a <pretext/> <term>article</term>, although there the divisions start with sections (no chapters or parts).
+    </p>
+
+    <p>
+      For each sort of division, there are exactly two choices about their structure.
+      <ol>
+        <li>
+          <p>
+            The division can contain smaller divisions, exactly one level lower than itself (so chapters can have sections, sections can have subsections, but chapters cannot have subsections as direct children).
+          </p>
+        </li>
+        <li>
+          <p>
+            The division can contain only content, with no further divisions.
+          </p>
+        </li>
+      </ol>
+      In particular, you cannot mix and match these approaches.  It is impossible for a section to have subsections and <em>also</em> content outside of a subsection, for example.
+    </p>
+
+    <p>
+      However, there are situations where it makes sense to start a subdivided section with some sort of <q>introduction</q>, and perhaps end it with a conclusion.  In this case, content that comes before the first subdivision <em>must</em> be placed inside an <tag>introduction</tag> (and content after the last subdivision must be inside a <tag>conclusion</tag>).
+    </p>
+
+    <p>
+      An introduction and conclusion should not contain <q>real</q> content though.  In particular, don't include blocks that could get a number in these.
+    </p>
+
+    <p>
+      For the syllabus section, there are subsections, so the short introduction before the first subsection is inside an <tag>introduction</tag>.  After the close of the introduction, we start the first <tag>subsection</tag>.
+    </p>
+  </subsection>
+
+  <subsection xml:id="subsec-Course-Info">
+    <title>Course Info: Description Lists and text <q>styling</q></title>
+
+    <p>
+      The first subsection of the syllabus has a title of <q>Course Info</q> (which we could certainly change if we wanted).  Perhaps we should start with some basic info, like who the instructor is, where their office is, what textbook will be used, and so on.  One way we can organize this list of information is to use a <term>description list</term>.
+    </p>
+
+    <p>
+      <pretext/> offers three sorts of lists: unordered (using tag <tag>ul</tag>), ordered (<tag>ol</tag>), and description (<tag>dl</tag>). The first two are analogous to <latex/>'s <c>\begin{itemize}</c> and <c>\begin{enumerate}</c> respectively.  Each <term>item</term> of the list is wrapped in the <tag>li</tag> tag (for <term>list item</term>).
+    </p>
+
+    <p>
+      For description lists, since we are providing a description of a particular thing, each <tag>li</tag> gets both a <tag>title</tag> and a paragraph (using the <tag>p</tag> tag).
+    </p>
+
+    <listing>
+      <title>Description list included in a <tag>p</tag> tag after some text.</title>
+      <program language="xml">
+        <code><xi:include href="./code/syllabus-dl.ptx" parse="text" /></code>
+      </program>
+    </listing>
+
+    <p>
+      Of coruse you can edit the titles and <tag>p</tag> elements of each <tag>li</tag>, and add additional <tag>li</tag> as well. You will notice a few additional tags in the template that are worth mentioning.
+      <dl>
+        <li>
+          <title><tag>url</tag></title>
+          <p>
+            In the item for the instructor, the template suggests adding a link to the email (using the <c>href="mailto:..."</c> hyperlink).  The <tag>url</tag> element is how you can link to <em>external</em> documents.  You provide the external location as the value of the <attr>href</attr> attribute.  If you would like the text for the link to be something other than the url itself, you can put that as the <em>contents</em> of the <tag>url</tag> element (i.e., between the opening and closing <tag>url</tag> tags).
+          </p>
+        </li>
+        <li>
+          <title><tag>alert</tag></title>
+          <p>
+            The second paragraph of the <q>student hours</q> item starts with an <tag>alert</tag> element.  In some output formats, text inside an <tag>alert</tag> will be rendered as bold, but remember, we are not using this tag because we want the words <q>Important</q> to be bold, but because we think the reader should be alerted to this word.            
+          </p>
+        </li>
+        <li>
+          <title><tag>em</tag></title>
+          
+          <p>
+            Similar to the <tag>alert</tag> element, an <tag>em</tag> element is intended to designate that the contents is <term>emphasized</term>.  This is usually displayed as italic text.
+          </p>
+        </li>
+        <li>
+          <title><tag>pubtitle</tag></title>
+          <p>
+            The title of the course textbook can be wrapped in <tag>pubtitle</tag> tags.  I believe this will style the title as italic as well, but honestly I'm not sure.  This is the great thing about <pretext/>: I don't need to know the <q>correct</q> way to style the title of a textbook, I just need to say that the title <em>is</em> the title of a textbook.
+          </p>
+        </li>
+      </dl>
+    </p>
+  </subsection>
+
+  <subsection>
+    <title>Keep going</title>
+    
+    <p>
+      The next tag you will see in the template is a <tag>paragraphs</tag>. This is sort of like a division, although it can go at any <q>level</q> and doesn't need to follow the same rules about structured divisions we mentioned earlier.  It would have been fine to use <tag>subsubsection</tag> instead of <tag>paragraphs</tag>, but then we would have needed to decide what goes in the <tag>introduction</tag> of each <tag>subsection</tag>.
+    </p>
+
+    <p>
+      The remainder of the syllabus template is divided into additional subsections and paragraphs.  This should be sufficient for any organization you need in a syllabus.
+    </p>
+
+    <p>
+      One mechanism we have not yet mentioned though is using a table, which could be useful for describing how grades will be assigned (based on points or percentages).  See the <url href="https://pretextbook.org/doc/guide/html/topic-tabular.html">Tables and Tabulars</url> section of the <pretext/> Guide to learn about these.
+    </p>
+  </subsection>
 
 </section>

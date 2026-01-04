@@ -19,7 +19,7 @@
       </url>
     </p>
   </introduction>
-  <section>
+  <section xml:id="sec-setup-new-course">
     <title>Creating a New Course</title>
 
     <p>
@@ -60,12 +60,13 @@
     </p>
 
 
-    <note>
-      <title>Demo Course Code</title>
-      <p>
-        Completing the steps above should put your folder in the same state as the <c>1-initial-setup</c> branch of the <url href="https://github.com/mathtechorg/demo-course/tree/1-initial-setup">Demo Course repository</url>.
-      </p>
-    </note>
+    <outcomes>
+      <introduction>
+        <p>
+          Completing the steps above should put your folder in the same state as the <c>1-initial-setup</c> branch of the <url href="https://github.com/mathtechorg/demo-course/tree/1-initial-setup">Demo Course repository</url>.
+        </p>
+      </introduction>
+    </outcomes>
   </section>
 
   <section>

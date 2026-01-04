@@ -34,6 +34,8 @@
   <rename element="investigation" xml:lang="en-US">Challenge</rename>
   <rename element="exploration" xml:lang="en-US">Practice</rename>
   <rename element="assemblage" xml:lang="en-US">Summary</rename>
+  <rename element="insight" xml:lang="en-US">Tip</rename>
+  <rename element="outcomes" xml:lang="en-US">Demo Course Code</rename>
 
 <!-- Specify the default type of cross reference:           -->
   <cross-references text="type-global" />

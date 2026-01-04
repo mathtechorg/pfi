@@ -40,7 +40,7 @@
     <p>
       It is the contents of this <tag>title</tag> element that will appear as the main title of the course in the generated output.  Change the text <c>Course Name (change me)</c> to the actual name of your course.  We will call our course <em>PreTeXt by Example</em>, so our updated line 9 looks :
       <cd>
-        <cline>&lt;title&gt;PreTeXt by Example&lt;/title&gt;</cline>
+        <cline>&lt;title&gt;Demo PreTeXt Course&lt;/title&gt;</cline>
       </cd>
     </p>
 
@@ -62,6 +62,53 @@
     <p>
       The next non-comment line in the <c>main.ptx</c> file is the inclusion of the <c>frontmatter.ptx</c> file.  You can open this file by finding it in the explorer panel on the left side of the screen, or by clicking on the link in the <attr>href</attr> attribute of the <tag>xi:include</tag> element, while holding down the <c>Ctrl</c> key (or <c>Cmd</c> on a Mac).
     </p>
+
+    <p>
+      In the <c>frontmatter.ptx</c> file, we see the root element is <tag>frontmatter</tag>; since we included this file using the <tag>xi:include</tag> mechanism, we can only have one root element.  The entire contents of this element (including the start and end tags) will be inserted into the parent document (<c>main.ptx</c> in this case) at the location of the <tag>xi:include</tag>.
+    </p>
+
+   <program language="xml">
+    <code><xi:include href="code/frontmatter-example.ptx" parse="text"/></code>
+   </program>
+
+    <p>
+      The two child elements of <tag>frontmatter</tag> are <tag>bibinfo</tag> and <tag>titlepage</tag>.  The first of these contains information about authors and other document data.  Go ahead and change the author information here.  You can also read the <url href="https://pretextbook.org/doc/guide/html/topic-front-matter.html#topic-front-matter-3">Bibinfo section of the PreTeXt Guide</url> for additional content you can add to this element.
+    </p>
+
+    <p>
+      The <tag>titlepage</tag> element contains a <term>generator</term> element, <tag>titlepage-items</tag> which will automatically insert the parts of bibinfo that should go on a title page.  So don't edit anything there.
+    </p>
+
+    <p>
+      Go ahead and rebuild the course and see the changes.  At this point you might also want to see what happens if you remove the frontmatter element entirely (should a <q>course</q> have frontmatter?).  You can return to the <c>main.ptx</c> file and comment out the <tag>xi:include</tag> element that includes the frontmatter.
+    </p>
+
+    <insight>
+      <title>Keyboard Shortcut for Comments</title>
+      <p>
+        In VS Code, you can toggle comments for one or more lines with the <kbd>CTRL</kbd>+<kbd>/</kbd> shortcut (or <kbd>⌘</kbd>+<kbd>/</kbd> for Mac).
+      </p>
+      
+    </insight>
+  </paragraphs>
+
+  <paragraphs>
+    <title>Next Steps</title>
+    <p>
+      Now would be a good time to save our work.  Commit and sync your repository as described in <xref ref="sec-workflow-save"/>.
+    </p>
+
+    <p>
+      Next up we will start adding components of the course, starting with a syllabus.
+    </p>
+
+    <outcomes>
+      <introduction>
+        <p>
+          Completing the steps above should put your folder in the same state as the <c>2-first-edits</c> branch of the <url href="https://github.com/mathtechorg/demo-course/tree/2-first-edits">Demo Course repository</url>.
+        </p>
+      </introduction>
+    </outcomes>
   </paragraphs>
 
 </section>
