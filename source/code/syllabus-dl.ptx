@@ -1,0 +1,26 @@
+<dl>
+  <li>
+    <title>Instructor</title>
+    <p>
+      Prof. Lastname, Office Location, 
+      <url href="mailto:prof.lastname@example.edu">prof.lastname@example.edu</url>.
+    </p>
+  </li>
+
+  <li>
+    <title>Student Hours</title>
+    <p>
+      TBD
+    </p>
+    <p>
+      <alert>Important</alert>: I <em>want</em> to see you 
+      in student hours,...
+    </p>
+  </li>
+
+  <li>
+    <title>Class meets</title>
+    <p>
+      course times and location.
+    </p>
+  </li>

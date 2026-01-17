@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<section xml:id="syllabus" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Syllabus</title>
+
+  <introduction>
+    <p>
+      Welcome to what promises to be an exciting and fun semester of ...
+    </p>
+  </introduction>
+  <!-- Include subsections -->
