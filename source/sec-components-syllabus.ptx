@@ -97,8 +97,8 @@
     </listing>
 
     <p>
-      Of coruse you can edit the titles and <tag>p</tag> elements of each <tag>li</tag>, and add additional <tag>li</tag> as well. You will notice a few additional tags in the template that are worth mentioning.
-      <dl>
+      Of course you can edit the titles and <tag>p</tag> elements of each <tag>li</tag>, and add additional <tag>li</tag> as well. You will notice a few additional tags in the template that are worth mentioning.
+      <dl width="narrow">
         <li>
           <title><tag>url</tag></title>
           <p>
@@ -108,12 +108,12 @@
         <li>
           <title><tag>alert</tag></title>
           <p>
-            The second paragraph of the <q>student hours</q> item starts with an <tag>alert</tag> element.  In some output formats, text inside an <tag>alert</tag> will be rendered as bold, but remember, we are not using this tag because we want the words <q>Important</q> to be bold, but because we think the reader should be alerted to this word.            
+            The second paragraph of the <q>student hours</q> item starts with an <tag>alert</tag> element.  In some output formats, text inside an <tag>alert</tag> will be rendered as bold, but remember, we are not using this tag because we want the words <q>Important</q> to be bold, but because we think the reader should be alerted to this word.
           </p>
         </li>
         <li>
           <title><tag>em</tag></title>
-          
+
           <p>
             Similar to the <tag>alert</tag> element, an <tag>em</tag> element is intended to designate that the contents is <term>emphasized</term>.  This is usually displayed as italic text.
           </p>
@@ -130,18 +130,31 @@
 
   <subsection>
     <title>Keep going</title>
-    
+
     <p>
       The next tag you will see in the template is a <tag>paragraphs</tag>. This is sort of like a division, although it can go at any <q>level</q> and doesn't need to follow the same rules about structured divisions we mentioned earlier.  It would have been fine to use <tag>subsubsection</tag> instead of <tag>paragraphs</tag>, but then we would have needed to decide what goes in the <tag>introduction</tag> of each <tag>subsection</tag>.
     </p>
 
     <p>
-      The remainder of the syllabus template is divided into additional subsections and paragraphs.  This should be sufficient for any organization you need in a syllabus.
+      The remainder of the syllabus template is divided into additional subsections and paragraphs.  This should be sufficient for any organization you need in a syllabus.  My general approach is to think of each subsection as a major divider, with paragraphs inside each subsection to break up the content into manageable pieces.  For subdivisions of these pieces, I use description lists, like we did for the parts of course info above.
     </p>
 
     <p>
       One mechanism we have not yet mentioned though is using a table, which could be useful for describing how grades will be assigned (based on points or percentages).  See the <url href="https://pretextbook.org/doc/guide/html/topic-tabular.html">Tables and Tabulars</url> section of the <pretext/> Guide to learn about these.
     </p>
+
+    <p>
+      Finally, you might consider breaking the content of the syllabus across multiple files.  This is especially useful if all your courses will have the same <term>course policies</term> subsection, for example.  Having a separate file that you <tag>xi:include</tag> in all your syllabi can make copying that between courses easier.
+    </p>
+
   </subsection>
+
+    <outcomes>
+      <introduction>
+        <p>
+          Completing the steps above should put your folder in the same state as the <c>3-syllabus</c> branch of the <url href="https://github.com/mathtechorg/demo-course/tree/3-syllabus">Demo Course repository</url>.  There you will see examples of a completed syllabus, including a table for grading breakdown and an external file for course policies.
+        </p>
+      </introduction>
+    </outcomes>
 
 </section>
