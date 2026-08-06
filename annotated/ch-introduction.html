@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>PFI What is PreTeXt?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="PreTeXt for Instructors">
+<meta property="book:author" content="Oscar Levin">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.2.2';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.ed2cce180827a7ad.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.18fa7ea1d9f376c1.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8086b62682b271d1.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="pfi.html"><span class="title">PreTeXt for Instructors</span></a></h1>
+<p class="byline">Oscar Levin</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="meta-frontmatter-4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="pfi.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-setup.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="meta-frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="meta-frontmatter-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="meta-frontmatter-4.html" class="internal"><span class="title">About this guide</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter active"><div class="toc-title-box"><a href="ch-introduction.html" class="internal"><span class="codenumber">0</span> <span class="title">What is PreTeXt?</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-setup.html" class="internal"><span class="codenumber">1</span> <span class="title">Setup</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-setup-new-course.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Creating a New Course</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch-setup-4.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Optional: Apply for your GitHub Education discount</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-installing-pretext-locally.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Optional: Installing PreTeXt locally</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-workflow.html" class="internal"><span class="codenumber">2</span> <span class="title">Workflow</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-workflow-prerequisites.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Prerequisites</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-workflow-build.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Build</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-workflow-preview.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Preview</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-workflow-deploy.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Deploy</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-workflow-save.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Important: Saving your work</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-workflow-collaborate.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Collaborating</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-course-structure.html" class="internal"><span class="codenumber">3</span> <span class="title">Organization</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-structure-overview.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Course Structure</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-structure-files.html" class="internal"><span class="codenumber">3.2</span> <span class="title">File Structure</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-structure-updates.html" class="internal"><span class="codenumber">3.3</span> <span class="title">First Edits</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-components.html" class="internal"><span class="codenumber">4</span> <span class="title">Course Components</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-components-syllabus.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Syllabus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-components-syllabus.html#subsec-divisions-and-their-structure" class="internal"><span class="title">Divisions and their Structure</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-components-syllabus.html#subsec-Course-Info" class="internal"><span class="title">Course Info: Description Lists and text “styling”</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-components-syllabus.html#sec-components-syllabus-5" class="internal"><span class="title">Keep going</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-components-notes.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Notes</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-components-handouts.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Handouts</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-components-assignments.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Assignments</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-components-slides.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Slides</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-content.html" class="internal"><span class="codenumber">5</span> <span class="title">Content</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-content-images.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Images</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-content-video.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Video</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-content-interactive-exercises.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Interactive Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-content-tables.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Tables</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-publication.html" class="internal"><span class="codenumber">6</span> <span class="title">Publishing</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-publication-file.html" class="internal"><span class="codenumber">6.1</span> <span class="title">The publication file</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-showing-and-hiding-things.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Showing and Hiding things</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-numbering.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Numbering</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-formatting.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Formatting</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-project.html" class="internal"><span class="codenumber">7</span> <span class="title">Managing Your Project</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-file-and-directory-structure.html" class="internal"><span class="codenumber">7.1</span> <span class="title">File and directory structure</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-project-ptx.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Project.ptx</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-versions.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Versions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-building-subsets.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Building subsets</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-codespaces-github-pages.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Codespaces, GitHub, and GitHub Pages</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-converting-to-pretext.html" class="internal"><span class="codenumber">8</span> <span class="title">Converting To PreTeXt</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pandoc.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Using Pandoc</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-using-the-community.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Using the community</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-by-hand.html" class="internal"><span class="codenumber">8.3</span> <span class="title">By hand</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="meta-backmatter.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="ch-help.html" class="internal"><span class="codenumber">A</span> <span class="title">Getting Help</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="meta-backmatter-2.html" class="internal"><span class="codenumber">B</span> <span class="title">Copyright and Licensing</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="meta-backmatter-3.html" class="internal"><span class="codenumber">C</span> <span class="title">Acknowledgement</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-introduction"><h2 class="heading">
+<span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">0</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">What is PreTeXt?</span>
+</h2>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for chapter</summary><article class="view-source-view__content"><pre><code class="language-xml">    &lt;chapter xml:id="ch-introduction"&gt;
+  &lt;title&gt;What is PreTeXt?&lt;/title&gt;
+
+&lt;p&gt;
+  Before we jump in to creating a course in &lt;pretext/&gt;, we should try to understand the approach &lt;pretext/&gt; takes to creating documents, how it is different from other authoring systems, and why the choices &lt;pretext/&gt; makes are beneficial for authors of course materials.
+&lt;/p&gt;
+
+&lt;p&gt;
+  First, &lt;pretext/&gt; is a &lt;term&gt;markup language&lt;/term&gt;: you write content in plain text files, using special strings to indicate structure and meaning.  These plain text files are then transformed into various output formats that look nice and are easy to read.  In this way, &lt;pretext/&gt; is similar to &lt;latex/&gt;, as well as other markup languages such as &lt;init&gt;HTML&lt;/init&gt; and Markdown.  And while there is work being done to create a &lt;acro&gt;WYSIWYG&lt;/acro&gt; (What You See Is What You Get) editor for &lt;pretext/&gt;, the primary way to create documents in &lt;pretext/&gt; is to write the source files directly.
+&lt;/p&gt;
+
+&lt;p&gt;
+  When you first start using a markup language, all the extra typing to indicate structure can feel overwhelming.  To emphasize text, you have to type extra characters (in &lt;pretext/&gt;, you would wrap the emphasized text in &lt;tag&gt;em&lt;/tag&gt; tags; or in &lt;latex/&gt;, you would use &lt;c&gt;\emph{}&lt;/c&gt;).  This may seem more difficult than hitting &lt;kbd&gt;CTRL&lt;/kbd&gt;+&lt;kbd&gt;I&lt;/kbd&gt; in a word processor to italicize text, or clicking on a button in the interface, but once you get used to it, and use autocomplete, many people find it much easier.  Additionally, features of modern text editors, like VS Code, can make it much easier to edit documents quickly (for example, in VS Code you can use &lt;kbd&gt;ALT&lt;/kbd&gt;+&lt;kbd&gt;UP&lt;/kbd&gt; to move an entire line of text up without needing to select, copy, and paste it).
+&lt;/p&gt;
+
+&lt;paragraphs&gt;
+  &lt;title&gt;Semantic vs Visual Markup&lt;/title&gt;
+
+  &lt;p&gt;
+    Another advantage of using a markup language is that it &lt;em&gt;should&lt;/em&gt; help you focus on writing your content without getting distracted by making sure it looks a particular way.  When this is achieved, it can speed up writing and make us better communicators.  We admit that actually letting go of formatting focus can be difficult: we have all learned how meaning is communicated visually, and it is tempting to try to mimic similar formatting as a proxy for communicating our meaning clearly.  A few examples might be in order.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    Consider the case of formatting references.  Different publishers have made different decisions about their preferred way to format references, both inline and at the end of a document.  It is uncontroversial that removing the burden of remembering how to format every reference correction is a huge advantage.  Similarly, when cross referencing a theorem, are we, the authors, the best judges of whether &lt;q&gt;Theorem 7.2&lt;/q&gt; should be capitalized or bold or underlined?  These are decisions that &lt;em&gt;publishers&lt;/em&gt; should make once and let us simply use their style.  Authors should just indicate that the text is a reference.  Another example: when defining a term, it is customary to indicate the words being defined using some special formatting.  So how should an author indicate this?  We don't want to be required to remember that such words should be marked as bold or italic, but rather we should proclaim that the words are &lt;term&gt;terms&lt;/term&gt; (in &lt;pretext/&gt;, this is done using a &lt;tag&gt;term&lt;/tag&gt; tag).
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    Both &lt;pretext/&gt; and &lt;latex/&gt; allow for this &lt;term&gt;semantic markup&lt;/term&gt;, where authors indicate the meaning of the text rather than its appearance.  Unfortunately, &lt;latex/&gt; is so powerful that it is very easy to extend it to include purely visual formatting markup.  This leads to documents that are impossible to convert to accessible formats, since the &lt;em&gt;intended&lt;/em&gt; meaning of the visual markup is obscured.  If a particular author has decided to mark both terms and emphasized text using &lt;c&gt;\textit{}&lt;/c&gt;, how can we infer meaning to produce a useful braille version, for example?  Or perhaps a more common example: if an author specifies a page break, what should that look like when the document is viewed as a web page?
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    With very few exceptions, &lt;pretext/&gt; forces authors to use semantic markup.  This makes it much easier to produce multiple output formats from the same source files, and ensures that documents are accessible to all readers.  This does require a shift in thinking about how we write.  If we ever find ourselves asking &lt;q&gt;How do I make this text look like ...?&lt;/q&gt;, we should pause and instead ask &lt;q&gt;Why did I want to make the text look like...?&lt;/q&gt;  Once we have answered that question, we can use the appropriate semantic markup to indicate the intended meaning, and let the output format decide how best to represent it visually (or non-visually, to a visually impaired reader).
+  &lt;/p&gt;
+&lt;/paragraphs&gt;
+
+&lt;paragraphs&gt;
+  &lt;title&gt;Source Format&lt;/title&gt;
+
+  &lt;p&gt;
+    &lt;pretext/&gt; source files are written in &lt;init&gt;XML&lt;/init&gt; (eXtensible Markup Language), a widely used markup language for storing structured data.  XML is a very flexible language, and &lt;pretext/&gt; defines a particular &lt;term&gt;schema&lt;/term&gt; (a set of rules) describing which document parts can or must contain which other parts.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    Think of a document as a collection of nested boxes.  A book contains chapter boxes, which may contains section boxes.  A chapter or section contains text, but that text is organized into paragraph boxes, theorem boxes, and so on.  It makes sense for a section box to hold a lemma box, but you would not expect a section to be inside a lemma.  You also can't have a section start in one chapter and end in the next.  XML allows us to represent this nested structure clearly, and the &lt;pretext/&gt; schema defines which boxes can go inside which other boxes. Being required to follow good document structure is another way that &lt;pretext/&gt; helps authors focus on creating well organized and understandable content.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    Practically, &lt;pretext/&gt; source files look something like the following.
+  &lt;/p&gt;
+
+  &lt;listing&gt;
+    &lt;title&gt;Sample &lt;pretext/&gt; Markup&lt;/title&gt;
+
+    &lt;program language="xml"&gt;
+      &lt;code&gt;&amp;lt;section xml:id="sec-great-title"&amp;gt;
+  &amp;lt;title&amp;gt;Great Title&amp;lt;/title&amp;gt;
+  &amp;lt;p&amp;gt;
+    This is a simple paragraph before a theorem.
+  &amp;lt;/p&amp;gt;
+  &amp;lt;theorem&amp;gt;
+    &amp;lt;statement&amp;gt;
+      &amp;lt;p&amp;gt;
+        &amp;lt;pretext/&amp;gt; is awesome.
+      &amp;lt;/p&amp;gt;
+    &amp;lt;/statement&amp;gt;
+    &amp;lt;proof&amp;gt;
+      &amp;lt;p&amp;gt;
+        Obvious.
+      &amp;lt;/p&amp;gt;
+    &amp;lt;/proof&amp;gt;
+  &amp;lt;/theorem&amp;gt;
+&amp;lt;/section&amp;gt;
+&lt;/code&gt;
+    &lt;/program&gt;
+  &lt;/listing&gt;
+
+  &lt;p&gt;
+    The &lt;q&gt;sides&lt;/q&gt; of the boxes are represented by &lt;term&gt;tags&lt;/term&gt;, each a word inside angle brackets.  An opening tag, like &lt;tag&gt;theorem&lt;/tag&gt;, indicates the start of a box, and a closing tag, like &lt;tag&gt;/theorem&lt;/tag&gt;, indicates the end of that box.  Some tags are self-closing, like &lt;tage&gt;pretext&lt;/tage&gt; which indicates an empty box; the box &lt;em&gt;is&lt;/em&gt; the content, not a container for contents (in this case, the tag is a macro that expands to &lt;q&gt;&lt;pretext/&gt;&lt;/q&gt;).
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    Some tags can have &lt;term&gt;attributes&lt;/term&gt;, like the &lt;attr&gt;xml:id&lt;/attr&gt; attribute in the opening &lt;tag&gt;section&lt;/tag&gt; tag above (xml-ids provide a code to be used by a cross reference, much like the &lt;c&gt;\label{}&lt;/c&gt; markup in &lt;latex/&gt;).  It is conventional to refer to attributes in our documentation using an &lt;q&gt;@&lt;/q&gt; sign before the name of the attribute.  However, in the actual source that we write, we don't type the &lt;q&gt;@&lt;/q&gt; symbol.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    When you start out writing &lt;pretext/&gt;, all this extra markup seems like a lot.  We promise that with practice and by using a good text editor with autocomplete features, the extra typing is not as bad as it seems.  You will soon find your eyes skipping over the markup parts and focusing on the content itself.  Remember the learning curve you experienced with &lt;latex/&gt;.  It will be okay, and totally worth it.
+  &lt;/p&gt;
+&lt;/paragraphs&gt;
+
+&lt;paragraphs&gt;
+  &lt;title&gt;Building&lt;/title&gt;
+
+  &lt;p&gt;
+    Like &lt;latex/&gt;, we will need to transform our &lt;pretext/&gt; source files into output formats that are easy to read.  We call this processing of source into output &lt;term&gt;building&lt;/term&gt; the document.  In &lt;xref ref="ch-workflow"/&gt; we will cover the steps to build, view, and &lt;term&gt;deploy&lt;/term&gt; projects.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    This brings up another difference with &lt;latex/&gt;: default setup for &lt;pretext/&gt; documents is to think of each document as a &lt;term&gt;project&lt;/term&gt;, consisting of a folder containing all the source files, external assets (like images), and configuration options needed to build the document.  It will also contain the output files, in their own subfolders of &lt;c&gt;output&lt;/c&gt; (web output will contain many &lt;init&gt;HTML&lt;/init&gt; files, images, and other assets; PDF output will be a single &lt;c&gt;.pdf&lt;/c&gt; file).  This project-based approach makes it easy to manage all the files needed for a document in one place, and makes it easy to share the entire document with others (for example, by hosting the project folder in a GitHub repository).
+  &lt;/p&gt;
+&lt;/paragraphs&gt;
+
+&lt;/chapter&gt;
+</code></pre></article></details><div class="para" id="ch-introduction-2">Before we jump in to creating a course in PreTeXt, we should try to understand the approach PreTeXt takes to creating documents, how it is different from other authoring systems, and why the choices PreTeXt makes are beneficial for authors of course materials.<div class="autopermalink" data-description="Paragraph"><a href="#ch-introduction-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch-introduction-3">First, PreTeXt is a <dfn class="terminology">markup language</dfn>: you write content in plain text files, using special strings to indicate structure and meaning.  These plain text files are then transformed into various output formats that look nice and are easy to read.  In this way, PreTeXt is similar to <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span>, as well as other markup languages such as <abbr class="initialism">HTML</abbr> and Markdown.  And while there is work being done to create a <abbr class="acronym">WYSIWYG</abbr> (What You See Is What You Get) editor for PreTeXt, the primary way to create documents in PreTeXt is to write the source files directly.<div class="autopermalink" data-description="Paragraph"><a href="#ch-introduction-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch-introduction-4">When you first start using a markup language, all the extra typing to indicate structure can feel overwhelming.  To emphasize text, you have to type extra characters (in PreTeXt, you would wrap the emphasized text in <code class="code-inline tex2jax_ignore">&lt;em&gt;</code> tags; or in <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span>, you would use <code class="code-inline tex2jax_ignore">\emph{}</code>).  This may seem more difficult than hitting <kbd class="kbdkey">CTRL</kbd>+<kbd class="kbdkey">I</kbd> in a word processor to italicize text, or clicking on a button in the interface, but once you get used to it, and use autocomplete, many people find it much easier.  Additionally, features of modern text editors, like VS Code, can make it much easier to edit documents quickly (for example, in VS Code you can use <kbd class="kbdkey">ALT</kbd>+<kbd class="kbdkey">UP</kbd> to move an entire line of text up without needing to select, copy, and paste it).<div class="autopermalink" data-description="Paragraph"><a href="#ch-introduction-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="paragraphs" id="ch-introduction-5"><h2 class="heading"><span class="title">Semantic vs Visual Markup.</span></h2>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for paragraphs</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;paragraphs&gt;
+  &lt;title&gt;Semantic vs Visual Markup&lt;/title&gt;
+
+  &lt;p&gt;
+    Another advantage of using a markup language is that it &lt;em&gt;should&lt;/em&gt; help you focus on writing your content without getting distracted by making sure it looks a particular way.  When this is achieved, it can speed up writing and make us better communicators.  We admit that actually letting go of formatting focus can be difficult: we have all learned how meaning is communicated visually, and it is tempting to try to mimic similar formatting as a proxy for communicating our meaning clearly.  A few examples might be in order.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    Consider the case of formatting references.  Different publishers have made different decisions about their preferred way to format references, both inline and at the end of a document.  It is uncontroversial that removing the burden of remembering how to format every reference correction is a huge advantage.  Similarly, when cross referencing a theorem, are we, the authors, the best judges of whether &lt;q&gt;Theorem 7.2&lt;/q&gt; should be capitalized or bold or underlined?  These are decisions that &lt;em&gt;publishers&lt;/em&gt; should make once and let us simply use their style.  Authors should just indicate that the text is a reference.  Another example: when defining a term, it is customary to indicate the words being defined using some special formatting.  So how should an author indicate this?  We don't want to be required to remember that such words should be marked as bold or italic, but rather we should proclaim that the words are &lt;term&gt;terms&lt;/term&gt; (in &lt;pretext/&gt;, this is done using a &lt;tag&gt;term&lt;/tag&gt; tag).
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    Both &lt;pretext/&gt; and &lt;latex/&gt; allow for this &lt;term&gt;semantic markup&lt;/term&gt;, where authors indicate the meaning of the text rather than its appearance.  Unfortunately, &lt;latex/&gt; is so powerful that it is very easy to extend it to include purely visual formatting markup.  This leads to documents that are impossible to convert to accessible formats, since the &lt;em&gt;intended&lt;/em&gt; meaning of the visual markup is obscured.  If a particular author has decided to mark both terms and emphasized text using &lt;c&gt;\textit{}&lt;/c&gt;, how can we infer meaning to produce a useful braille version, for example?  Or perhaps a more common example: if an author specifies a page break, what should that look like when the document is viewed as a web page?
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    With very few exceptions, &lt;pretext/&gt; forces authors to use semantic markup.  This makes it much easier to produce multiple output formats from the same source files, and ensures that documents are accessible to all readers.  This does require a shift in thinking about how we write.  If we ever find ourselves asking &lt;q&gt;How do I make this text look like ...?&lt;/q&gt;, we should pause and instead ask &lt;q&gt;Why did I want to make the text look like...?&lt;/q&gt;  Once we have answered that question, we can use the appropriate semantic markup to indicate the intended meaning, and let the output format decide how best to represent it visually (or non-visually, to a visually impaired reader).
+  &lt;/p&gt;
+&lt;/paragraphs&gt;
+</code></pre></article></details><div class="para" id="ch-introduction-5-2">Another advantage of using a markup language is that it <em class="emphasis">should</em> help you focus on writing your content without getting distracted by making sure it looks a particular way.  When this is achieved, it can speed up writing and make us better communicators.  We admit that actually letting go of formatting focus can be difficult: we have all learned how meaning is communicated visually, and it is tempting to try to mimic similar formatting as a proxy for communicating our meaning clearly.  A few examples might be in order.<div class="autopermalink" data-description="Paragraph"><a href="#ch-introduction-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch-introduction-5-3">Consider the case of formatting references.  Different publishers have made different decisions about their preferred way to format references, both inline and at the end of a document.  It is uncontroversial that removing the burden of remembering how to format every reference correction is a huge advantage.  Similarly, when cross referencing a theorem, are we, the authors, the best judges of whether “Theorem 7.2” should be capitalized or bold or underlined?  These are decisions that <em class="emphasis">publishers</em> should make once and let us simply use their style.  Authors should just indicate that the text is a reference.  Another example: when defining a term, it is customary to indicate the words being defined using some special formatting.  So how should an author indicate this?  We don’t want to be required to remember that such words should be marked as bold or italic, but rather we should proclaim that the words are <dfn class="terminology">terms</dfn> (in PreTeXt, this is done using a <code class="code-inline tex2jax_ignore">&lt;term&gt;</code> tag).<div class="autopermalink" data-description="Paragraph"><a href="#ch-introduction-5-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch-introduction-5-4">Both PreTeXt and <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span> allow for this <dfn class="terminology">semantic markup</dfn>, where authors indicate the meaning of the text rather than its appearance.  Unfortunately, <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span> is so powerful that it is very easy to extend it to include purely visual formatting markup.  This leads to documents that are impossible to convert to accessible formats, since the <em class="emphasis">intended</em> meaning of the visual markup is obscured.  If a particular author has decided to mark both terms and emphasized text using <code class="code-inline tex2jax_ignore">\textit{}</code>, how can we infer meaning to produce a useful braille version, for example?  Or perhaps a more common example: if an author specifies a page break, what should that look like when the document is viewed as a web page?<div class="autopermalink" data-description="Paragraph"><a href="#ch-introduction-5-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch-introduction-5-5">With very few exceptions, PreTeXt forces authors to use semantic markup.  This makes it much easier to produce multiple output formats from the same source files, and ensures that documents are accessible to all readers.  This does require a shift in thinking about how we write.  If we ever find ourselves asking “How do I make this text look like ...?”, we should pause and instead ask “Why did I want to make the text look like...?”  Once we have answered that question, we can use the appropriate semantic markup to indicate the intended meaning, and let the output format decide how best to represent it visually (or non-visually, to a visually impaired reader).<div class="autopermalink" data-description="Paragraph"><a href="#ch-introduction-5-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Paragraphs: Semantic vs Visual Markup"><a href="#ch-introduction-5" title="Copy heading and permalink for Paragraphs: Semantic vs Visual Markup" aria-label="Copy heading and permalink for Paragraphs: Semantic vs Visual Markup">🔗</a></div></section><section class="paragraphs" id="ch-introduction-6"><h2 class="heading"><span class="title">Source Format.</span></h2>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for paragraphs</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;paragraphs&gt;
+  &lt;title&gt;Source Format&lt;/title&gt;
+
+  &lt;p&gt;
+    &lt;pretext/&gt; source files are written in &lt;init&gt;XML&lt;/init&gt; (eXtensible Markup Language), a widely used markup language for storing structured data.  XML is a very flexible language, and &lt;pretext/&gt; defines a particular &lt;term&gt;schema&lt;/term&gt; (a set of rules) describing which document parts can or must contain which other parts.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    Think of a document as a collection of nested boxes.  A book contains chapter boxes, which may contains section boxes.  A chapter or section contains text, but that text is organized into paragraph boxes, theorem boxes, and so on.  It makes sense for a section box to hold a lemma box, but you would not expect a section to be inside a lemma.  You also can't have a section start in one chapter and end in the next.  XML allows us to represent this nested structure clearly, and the &lt;pretext/&gt; schema defines which boxes can go inside which other boxes. Being required to follow good document structure is another way that &lt;pretext/&gt; helps authors focus on creating well organized and understandable content.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    Practically, &lt;pretext/&gt; source files look something like the following.
+  &lt;/p&gt;
+
+  &lt;listing&gt;
+    &lt;title&gt;Sample &lt;pretext/&gt; Markup&lt;/title&gt;
+
+    &lt;program language="xml"&gt;
+      &lt;code&gt;&amp;lt;section xml:id="sec-great-title"&amp;gt;
+  &amp;lt;title&amp;gt;Great Title&amp;lt;/title&amp;gt;
+  &amp;lt;p&amp;gt;
+    This is a simple paragraph before a theorem.
+  &amp;lt;/p&amp;gt;
+  &amp;lt;theorem&amp;gt;
+    &amp;lt;statement&amp;gt;
+      &amp;lt;p&amp;gt;
+        &amp;lt;pretext/&amp;gt; is awesome.
+      &amp;lt;/p&amp;gt;
+    &amp;lt;/statement&amp;gt;
+    &amp;lt;proof&amp;gt;
+      &amp;lt;p&amp;gt;
+        Obvious.
+      &amp;lt;/p&amp;gt;
+    &amp;lt;/proof&amp;gt;
+  &amp;lt;/theorem&amp;gt;
+&amp;lt;/section&amp;gt;
+&lt;/code&gt;
+    &lt;/program&gt;
+  &lt;/listing&gt;
+
+  &lt;p&gt;
+    The &lt;q&gt;sides&lt;/q&gt; of the boxes are represented by &lt;term&gt;tags&lt;/term&gt;, each a word inside angle brackets.  An opening tag, like &lt;tag&gt;theorem&lt;/tag&gt;, indicates the start of a box, and a closing tag, like &lt;tag&gt;/theorem&lt;/tag&gt;, indicates the end of that box.  Some tags are self-closing, like &lt;tage&gt;pretext&lt;/tage&gt; which indicates an empty box; the box &lt;em&gt;is&lt;/em&gt; the content, not a container for contents (in this case, the tag is a macro that expands to &lt;q&gt;&lt;pretext/&gt;&lt;/q&gt;).
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    Some tags can have &lt;term&gt;attributes&lt;/term&gt;, like the &lt;attr&gt;xml:id&lt;/attr&gt; attribute in the opening &lt;tag&gt;section&lt;/tag&gt; tag above (xml-ids provide a code to be used by a cross reference, much like the &lt;c&gt;\label{}&lt;/c&gt; markup in &lt;latex/&gt;).  It is conventional to refer to attributes in our documentation using an &lt;q&gt;@&lt;/q&gt; sign before the name of the attribute.  However, in the actual source that we write, we don't type the &lt;q&gt;@&lt;/q&gt; symbol.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    When you start out writing &lt;pretext/&gt;, all this extra markup seems like a lot.  We promise that with practice and by using a good text editor with autocomplete features, the extra typing is not as bad as it seems.  You will soon find your eyes skipping over the markup parts and focusing on the content itself.  Remember the learning curve you experienced with &lt;latex/&gt;.  It will be okay, and totally worth it.
+  &lt;/p&gt;
+&lt;/paragraphs&gt;
+</code></pre></article></details><div class="para" id="ch-introduction-6-2">PreTeXt source files are written in <abbr class="initialism">XML</abbr> (eXtensible Markup Language), a widely used markup language for storing structured data.  XML is a very flexible language, and PreTeXt defines a particular <dfn class="terminology">schema</dfn> (a set of rules) describing which document parts can or must contain which other parts.<div class="autopermalink" data-description="Paragraph"><a href="#ch-introduction-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch-introduction-6-3">Think of a document as a collection of nested boxes.  A book contains chapter boxes, which may contains section boxes.  A chapter or section contains text, but that text is organized into paragraph boxes, theorem boxes, and so on.  It makes sense for a section box to hold a lemma box, but you would not expect a section to be inside a lemma.  You also can’t have a section start in one chapter and end in the next.  XML allows us to represent this nested structure clearly, and the PreTeXt schema defines which boxes can go inside which other boxes. Being required to follow good document structure is another way that PreTeXt helps authors focus on creating well organized and understandable content.<div class="autopermalink" data-description="Paragraph"><a href="#ch-introduction-6-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch-introduction-6-4">Practically, PreTeXt source files look something like the following.<div class="autopermalink" data-description="Paragraph"><a href="#ch-introduction-6-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="listing figure-like" id="ch-introduction-6-5"><details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for listing</summary><article class="view-source-view__content"><pre><code class="language-xml">  &lt;listing&gt;
+    &lt;title&gt;Sample &lt;pretext/&gt; Markup&lt;/title&gt;
+
+    &lt;program language="xml"&gt;
+      &lt;code&gt;&amp;lt;section xml:id="sec-great-title"&amp;gt;
+  &amp;lt;title&amp;gt;Great Title&amp;lt;/title&amp;gt;
+  &amp;lt;p&amp;gt;
+    This is a simple paragraph before a theorem.
+  &amp;lt;/p&amp;gt;
+  &amp;lt;theorem&amp;gt;
+    &amp;lt;statement&amp;gt;
+      &amp;lt;p&amp;gt;
+        &amp;lt;pretext/&amp;gt; is awesome.
+      &amp;lt;/p&amp;gt;
+    &amp;lt;/statement&amp;gt;
+    &amp;lt;proof&amp;gt;
+      &amp;lt;p&amp;gt;
+        Obvious.
+      &amp;lt;/p&amp;gt;
+    &amp;lt;/proof&amp;gt;
+  &amp;lt;/theorem&amp;gt;
+&amp;lt;/section&amp;gt;
+&lt;/code&gt;
+    &lt;/program&gt;
+  &lt;/listing&gt;
+</code></pre></article></details><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">0.0.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Sample PreTeXt Markup<div class="autopermalink" data-description="Listing 0.0.1: Sample PreTeXt Markup"><a href="#ch-introduction-6-5" title="Copy heading and permalink for Listing 0.0.1: Sample PreTeXt Markup" aria-label="Copy heading and permalink for Listing 0.0.1: Sample PreTeXt Markup">🔗</a></div></figcaption><div class="listing__contents">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for program</summary><article class="view-source-view__content"><pre><code class="language-xml">    &lt;program language="xml"&gt;
+      &lt;code&gt;&amp;lt;section xml:id="sec-great-title"&amp;gt;
+  &amp;lt;title&amp;gt;Great Title&amp;lt;/title&amp;gt;
+  &amp;lt;p&amp;gt;
+    This is a simple paragraph before a theorem.
+  &amp;lt;/p&amp;gt;
+  &amp;lt;theorem&amp;gt;
+    &amp;lt;statement&amp;gt;
+      &amp;lt;p&amp;gt;
+        &amp;lt;pretext/&amp;gt; is awesome.
+      &amp;lt;/p&amp;gt;
+    &amp;lt;/statement&amp;gt;
+    &amp;lt;proof&amp;gt;
+      &amp;lt;p&amp;gt;
+        Obvious.
+      &amp;lt;/p&amp;gt;
+    &amp;lt;/proof&amp;gt;
+  &amp;lt;/theorem&amp;gt;
+&amp;lt;/section&amp;gt;
+&lt;/code&gt;
+    &lt;/program&gt;
+</code></pre></article></details><div class="code-box"><pre class="program clipboardable"><code class="language-xml">&lt;section xml:id="sec-great-title"&gt;
+  &lt;title&gt;Great Title&lt;/title&gt;
+  &lt;p&gt;
+    This is a simple paragraph before a theorem.
+  &lt;/p&gt;
+  &lt;theorem&gt;
+    &lt;statement&gt;
+      &lt;p&gt;
+        &lt;pretext/&gt; is awesome.
+      &lt;/p&gt;
+    &lt;/statement&gt;
+    &lt;proof&gt;
+      &lt;p&gt;
+        Obvious.
+      &lt;/p&gt;
+    &lt;/proof&gt;
+  &lt;/theorem&gt;
+&lt;/section&gt;
+</code></pre></div>
+</div></figure><div class="para" id="ch-introduction-6-6">The “sides” of the boxes are represented by <dfn class="terminology">tags</dfn>, each a word inside angle brackets.  An opening tag, like <code class="code-inline tex2jax_ignore">&lt;theorem&gt;</code>, indicates the start of a box, and a closing tag, like <code class="code-inline tex2jax_ignore">&lt;/theorem&gt;</code>, indicates the end of that box.  Some tags are self-closing, like <code class="code-inline tex2jax_ignore">&lt;pretext/&gt;</code> which indicates an empty box; the box <em class="emphasis">is</em> the content, not a container for contents (in this case, the tag is a macro that expands to “PreTeXt”).<div class="autopermalink" data-description="Paragraph"><a href="#ch-introduction-6-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch-introduction-6-7">Some tags can have <dfn class="terminology">attributes</dfn>, like the <code class="code-inline tex2jax_ignore">@xml:id</code> attribute in the opening <code class="code-inline tex2jax_ignore">&lt;section&gt;</code> tag above (xml-ids provide a code to be used by a cross reference, much like the <code class="code-inline tex2jax_ignore">\label{}</code> markup in <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span>).  It is conventional to refer to attributes in our documentation using an “@” sign before the name of the attribute.  However, in the actual source that we write, we don’t type the “@” symbol.<div class="autopermalink" data-description="Paragraph"><a href="#ch-introduction-6-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch-introduction-6-8">When you start out writing PreTeXt, all this extra markup seems like a lot.  We promise that with practice and by using a good text editor with autocomplete features, the extra typing is not as bad as it seems.  You will soon find your eyes skipping over the markup parts and focusing on the content itself.  Remember the learning curve you experienced with <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span>.  It will be okay, and totally worth it.<div class="autopermalink" data-description="Paragraph"><a href="#ch-introduction-6-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Paragraphs: Source Format"><a href="#ch-introduction-6" title="Copy heading and permalink for Paragraphs: Source Format" aria-label="Copy heading and permalink for Paragraphs: Source Format">🔗</a></div></section><section class="paragraphs" id="ch-introduction-7"><h2 class="heading"><span class="title">Building.</span></h2>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for paragraphs</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;paragraphs&gt;
+  &lt;title&gt;Building&lt;/title&gt;
+
+  &lt;p&gt;
+    Like &lt;latex/&gt;, we will need to transform our &lt;pretext/&gt; source files into output formats that are easy to read.  We call this processing of source into output &lt;term&gt;building&lt;/term&gt; the document.  In &lt;xref ref="ch-workflow"/&gt; we will cover the steps to build, view, and &lt;term&gt;deploy&lt;/term&gt; projects.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    This brings up another difference with &lt;latex/&gt;: default setup for &lt;pretext/&gt; documents is to think of each document as a &lt;term&gt;project&lt;/term&gt;, consisting of a folder containing all the source files, external assets (like images), and configuration options needed to build the document.  It will also contain the output files, in their own subfolders of &lt;c&gt;output&lt;/c&gt; (web output will contain many &lt;init&gt;HTML&lt;/init&gt; files, images, and other assets; PDF output will be a single &lt;c&gt;.pdf&lt;/c&gt; file).  This project-based approach makes it easy to manage all the files needed for a document in one place, and makes it easy to share the entire document with others (for example, by hosting the project folder in a GitHub repository).
+  &lt;/p&gt;
+&lt;/paragraphs&gt;
+</code></pre></article></details><div class="para" id="ch-introduction-7-2">Like <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span>, we will need to transform our PreTeXt source files into output formats that are easy to read.  We call this processing of source into output <dfn class="terminology">building</dfn> the document.  In <a href="ch-workflow.html" class="internal" title="Chapter 2: Workflow">Chapter 2</a> we will cover the steps to build, view, and <dfn class="terminology">deploy</dfn> projects.<div class="autopermalink" data-description="Paragraph"><a href="#ch-introduction-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch-introduction-7-3">This brings up another difference with <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span>: default setup for PreTeXt documents is to think of each document as a <dfn class="terminology">project</dfn>, consisting of a folder containing all the source files, external assets (like images), and configuration options needed to build the document.  It will also contain the output files, in their own subfolders of <code class="code-inline tex2jax_ignore">output</code> (web output will contain many <abbr class="initialism">HTML</abbr> files, images, and other assets; PDF output will be a single <code class="code-inline tex2jax_ignore">.pdf</code> file).  This project-based approach makes it easy to manage all the files needed for a document in one place, and makes it easy to share the entire document with others (for example, by hosting the project folder in a GitHub repository).<div class="autopermalink" data-description="Paragraph"><a href="#ch-introduction-7-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Paragraphs: Building"><a href="#ch-introduction-7" title="Copy heading and permalink for Paragraphs: Building" aria-label="Copy heading and permalink for Paragraphs: Building">🔗</a></div></section><div class="autopermalink" data-description="Chapter 0: What is PreTeXt?"><a href="#ch-introduction" title="Copy heading and permalink for Chapter 0: What is PreTeXt?" aria-label="Copy heading and permalink for Chapter 0: What is PreTeXt?">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="meta-frontmatter-4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-setup.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
